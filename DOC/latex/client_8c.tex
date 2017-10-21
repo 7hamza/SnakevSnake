@@ -1,0 +1,518 @@
+\hypertarget{client_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/client.c}
+\label{client_8c}\index{S\+O\+U\+R\+C\+E/client.\+c@{S\+O\+U\+R\+C\+E/client.\+c}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$netdb.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$strings.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/snakelib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+Graphe des dépendances par inclusion de client.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{client_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(msg)~\{fprintf(stderr, \char`\"{}\%s\textbackslash{}n\char`\"{}, msg);exit(1);\}
+\item 
+\#define \hyperlink{client_8c_a614217d263be1fb1a5f76e2ff7be19a2}{P\+O\+RT}~1234
+\item 
+\#define \hyperlink{client_8c_ac9f31f726d2933782e2efda7136a25fd}{A\+D\+DR}~\char`\"{}localhost\char`\"{}
+\item 
+\#define \hyperlink{client_8c_a9e9d90aaed8d1c89d7431024da9feb39}{tabX}~51
+\item 
+\#define \hyperlink{client_8c_a8c281530fd59455d29f70006bc720f6d}{tabY}~31
+\item 
+\#define \hyperlink{client_8c_a8373df012cb4cb326153306f7ebf43f8}{slen}~3
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{client_8c_a7b1f2521e5756d5157688c8517538a14}{client\+\_\+socket} ()
+\item 
+void \hyperlink{client_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\+\_\+print} ()
+\item 
+void $\ast$ \hyperlink{client_8c_af424c7fd4c84203cddfb7230bbe15401}{sdl\+\_\+move} ()
+\item 
+void $\ast$ \hyperlink{client_8c_ace514d3ea0e685be64430b930ef23b46}{sdl\+\_\+turn} ()
+\item 
+int \hyperlink{client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+t \hyperlink{client_8c_acdb501237bbfd1adad2d00fc7052a767}{threadpt}
+\item 
+pthread\+\_\+mutex\+\_\+t \hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex} = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{client_8c_a79a54bef7bf02b18264c38fc90549a04}{A}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{client_8c_ab7d76262118cf1d4da44315136e542ca}{C}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}
+\item 
+\hyperlink{structboard}{board} \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}
+\item 
+\hyperlink{structsnake}{snake} \hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}
+\item 
+\hyperlink{structsnake}{snake} \hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c}
+\item 
+bool \hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X}
+\item 
+char \hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t}
+\item 
+char \hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o}
+\item 
+char \hyperlink{client_8c_a6edfa8f60e57212495b55b6b96c92cc5}{r}
+\item 
+char \hyperlink{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}{l}
+\item 
+char \hyperlink{client_8c_a67668278838ab1eb0065ef9218c8de00}{m}
+\item 
+int \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\index{client.\+c@{client.\+c}!A\+D\+DR@{A\+D\+DR}}
+\index{A\+D\+DR@{A\+D\+DR}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+DR}{ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+D\+DR~\char`\"{}localhost\char`\"{}}\hypertarget{client_8c_ac9f31f726d2933782e2efda7136a25fd}{}\label{client_8c_ac9f31f726d2933782e2efda7136a25fd}
+\index{client.\+c@{client.\+c}!err@{err}}
+\index{err@{err}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{err}{err}}]{\setlength{\rightskip}{0pt plus 5cm}\#define err(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~\{fprintf(stderr, \char`\"{}\%s\textbackslash{}n\char`\"{}, msg);exit(1);\}}\hypertarget{client_8c_a18bd5b46e04e0010b0163f03741a2521}{}\label{client_8c_a18bd5b46e04e0010b0163f03741a2521}
+\index{client.\+c@{client.\+c}!P\+O\+RT@{P\+O\+RT}}
+\index{P\+O\+RT@{P\+O\+RT}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{P\+O\+RT}{PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+RT~1234}\hypertarget{client_8c_a614217d263be1fb1a5f76e2ff7be19a2}{}\label{client_8c_a614217d263be1fb1a5f76e2ff7be19a2}
+\index{client.\+c@{client.\+c}!slen@{slen}}
+\index{slen@{slen}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{slen}{slen}}]{\setlength{\rightskip}{0pt plus 5cm}\#define slen~3}\hypertarget{client_8c_a8373df012cb4cb326153306f7ebf43f8}{}\label{client_8c_a8373df012cb4cb326153306f7ebf43f8}
+\index{client.\+c@{client.\+c}!tabX@{tabX}}
+\index{tabX@{tabX}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{tabX}{tabX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tabX~51}\hypertarget{client_8c_a9e9d90aaed8d1c89d7431024da9feb39}{}\label{client_8c_a9e9d90aaed8d1c89d7431024da9feb39}
+\index{client.\+c@{client.\+c}!tabY@{tabY}}
+\index{tabY@{tabY}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{tabY}{tabY}}]{\setlength{\rightskip}{0pt plus 5cm}\#define tabY~31}\hypertarget{client_8c_a8c281530fd59455d29f70006bc720f6d}{}\label{client_8c_a8c281530fd59455d29f70006bc720f6d}
+
+
+\subsection{Documentation des fonctions}
+\index{client.\+c@{client.\+c}!client\+\_\+socket@{client\+\_\+socket}}
+\index{client\+\_\+socket@{client\+\_\+socket}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{client\+\_\+socket()}{client_socket()}}]{\setlength{\rightskip}{0pt plus 5cm}static int client\+\_\+socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{client_8c_a7b1f2521e5756d5157688c8517538a14}{}\label{client_8c_a7b1f2521e5756d5157688c8517538a14}
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordtype}{int} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = socket(AF\_INET, SOCK\_STREAM, 0);
+40     \textcolor{keywordflow}{if}(0 > n) \hyperlink{client_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"socket()"});
+41 
+42     \textcolor{keyword}{struct }hostent* server\_host = gethostbyname(\hyperlink{client_8c_ac9f31f726d2933782e2efda7136a25fd}{ADDR});
+43     \textcolor{keywordflow}{if}(NULL == server\_host) \hyperlink{client_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"gethostbyname()"});
+44 
+45     \textcolor{keyword}{struct }sockaddr\_in server\_addr;
+46     bzero(&server\_addr,\textcolor{keyword}{sizeof}(server\_addr));
+47     server\_addr.sin\_family = AF\_INET;
+48     server\_addr.sin\_port = htons(\hyperlink{client_8c_a614217d263be1fb1a5f76e2ff7be19a2}{PORT});
+49 
+50     bcopy((\textcolor{keywordtype}{char} *)server\_host->h\_addr\_list[0], (\textcolor{keywordtype}{char} *)&server\_addr.sin\_addr.s\_addr, server\_host->h\_length)
+      ;
+51     \textcolor{keywordflow}{if}(0 > connect(n, (\textcolor{keyword}{struct} sockaddr*)&server\_addr, \textcolor{keyword}{sizeof}(server\_addr))) \hyperlink{client_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"connect()"});
+52     \textcolor{keywordflow}{return} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n};
+53 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{client_8c_a7b1f2521e5756d5157688c8517538a14_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{client.\+c@{client.\+c}!main@{main}}
+\index{main@{main}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+204 \{
+205     \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = \hyperlink{client_8c_a7b1f2521e5756d5157688c8517538a14}{client\_socket}();
+206     read(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t},\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+207     \hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o} = (\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t} == \textcolor{charliteral}{'@'})? \textcolor{charliteral}{'&'} : \textcolor{charliteral}{'@'};
+208     \hyperlink{client_8c_a67668278838ab1eb0065ef9218c8de00}{m} = \textcolor{charliteral}{'m'};
+209     \hyperlink{client_8c_a6edfa8f60e57212495b55b6b96c92cc5}{r} = \textcolor{charliteral}{'r'};
+210     \hyperlink{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}{l} = \textcolor{charliteral}{'l'};
+211     \textcolor{comment}{/* la variable globale du jeu */}
+212     \hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{true};
+213     \textcolor{comment}{/* rand init */}
+214     srand(time(0));
+215     \textcolor{comment}{/* init board + snake */}
+216     \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b} = \hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(\hyperlink{client_8c_a9e9d90aaed8d1c89d7431024da9feb39}{tabX},\hyperlink{client_8c_a8c281530fd59455d29f70006bc720f6d}{tabY});
+217     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},\hyperlink{client_8c_a8373df012cb4cb326153306f7ebf43f8}{slen},\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t});
+218     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a8373df012cb4cb326153306f7ebf43f8}{slen},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o});
+219     \textcolor{comment}{/* init sdl en mode video */}
+220     SDL\_Init(SDL\_INIT\_VIDEO);
+221     \textcolor{comment}{/* init surface E avec une taille 20*tabX et 20*tabY */}
+222     \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E} = SDL\_SetVideoMode(20*\hyperlink{client_8c_a9e9d90aaed8d1c89d7431024da9feb39}{tabX}, 20*\hyperlink{client_8c_a8c281530fd59455d29f70006bc720f6d}{tabY}, 32, SDL\_HWSURFACE);
+223     \textcolor{comment}{/* creer le reste des surfaces avec une taille de 20*20 px */}
+224     \hyperlink{client_8c_a79a54bef7bf02b18264c38fc90549a04}{A} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+225     \hyperlink{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{B} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+226     \hyperlink{client_8c_ab7d76262118cf1d4da44315136e542ca}{C} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+227     \hyperlink{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+228     \textcolor{comment}{/* init avec couleur rgb */}
+229     SDL\_FillRect(\hyperlink{client_8c_a79a54bef7bf02b18264c38fc90549a04}{A}, 0, SDL\_MapRGB(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 95, 0, 0));
+230     SDL\_FillRect(\hyperlink{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}, 0, SDL\_MapRGB(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 137, 137, 137));
+231     SDL\_FillRect(\hyperlink{client_8c_ab7d76262118cf1d4da44315136e542ca}{C}, 0, SDL\_MapRGB(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 47, 47, 47));
+232     SDL\_FillRect(\hyperlink{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}, 0, SDL\_MapRGB(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 157, 62, 12));
+233     \textcolor{comment}{/* init barre de fenetre */}
+234     SDL\_WM\_SetCaption(\textcolor{stringliteral}{"Snack"}, 0);
+235     \textcolor{comment}{/* nos variabe de thread */}
+236     pthread\_t thread\_turn;
+237     pthread\_t thread\_move;
+238     \textcolor{comment}{/* creer les thread */}
+239     pthread\_create (&thread\_turn, 0, &\hyperlink{client_8c_ace514d3ea0e685be64430b930ef23b46}{sdl\_turn}, 0);
+240     pthread\_create (&thread\_move, 0, &\hyperlink{client_8c_af424c7fd4c84203cddfb7230bbe15401}{sdl\_move},0);
+241     \textcolor{comment}{/* attendre leurs fin */}
+242     pthread\_join(thread\_turn, 0);
+243     pthread\_join(thread\_move, 0);
+244     \textcolor{comment}{/* libere surface */}
+245     SDL\_FreeSurface(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E});
+246     SDL\_FreeSurface(\hyperlink{client_8c_a79a54bef7bf02b18264c38fc90549a04}{A});
+247     SDL\_FreeSurface(\hyperlink{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{B});
+248     SDL\_FreeSurface(\hyperlink{client_8c_ab7d76262118cf1d4da44315136e542ca}{C});
+249     \textcolor{comment}{/* libere board + snake */}
+250     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b});
+251     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s});
+252     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c});
+253     SDL\_Quit();
+254     \textcolor{keywordflow}{return} 0;
+255 \}\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{client.\+c@{client.\+c}!sdl\+\_\+move@{sdl\+\_\+move}}
+\index{sdl\+\_\+move@{sdl\+\_\+move}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+move()}{sdl_move()}}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ sdl\+\_\+move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8c_af424c7fd4c84203cddfb7230bbe15401}{}\label{client_8c_af424c7fd4c84203cddfb7230bbe15401}
+
+\begin{DoxyCode}
+90 \{
+91     \textcolor{keywordtype}{char} buff;
+92     \textcolor{keywordflow}{while}(\hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X})
+93     \{
+94         \textcolor{comment}{/* on ferme la variable mutex */}
+95         pthread\_mutex\_lock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+96         \textcolor{comment}{/* move snake */}
+97         \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t});
+98         write(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&\hyperlink{client_8c_a67668278838ab1eb0065ef9218c8de00}{m},1);
+99         read(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&buff,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+100         \textcolor{keywordflow}{switch}(buff)
+101         \{
+102             \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}:
+103                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o});
+104                 \textcolor{keywordflow}{break};
+105             \textcolor{keywordflow}{case} \textcolor{charliteral}{'l'}:
+106                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},-1);
+107                 \textcolor{keywordflow}{break};
+108             \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+109                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},1);
+110                 \textcolor{keywordflow}{break};
+111         \}
+112         \textcolor{comment}{/* affiche SDL */}
+113         \textcolor{keywordflow}{if} ((\hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(\hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&
+      \hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+114             \hyperlink{client_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+115         \textcolor{comment}{/* libere le mutex pour les autres thread */}
+116         pthread\_mutex\_unlock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+117         \textcolor{comment}{/*u*/}sleep (1\textcolor{comment}{/*00000*/});
+118     \}
+119     pthread\_exit(0);
+120 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8c_af424c7fd4c84203cddfb7230bbe15401_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{client_8c_af424c7fd4c84203cddfb7230bbe15401_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{client.\+c@{client.\+c}!sdl\+\_\+print@{sdl\+\_\+print}}
+\index{sdl\+\_\+print@{sdl\+\_\+print}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+print()}{sdl_print()}}]{\setlength{\rightskip}{0pt plus 5cm}void sdl\+\_\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8c_a2cfeae643e415db24e85db6c4994b071}{}\label{client_8c_a2cfeae643e415db24e85db6c4994b071}
+
+\begin{DoxyCode}
+56                  \{
+57     \textcolor{keywordtype}{int} x,y, dx = \hyperlink{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}{board\_size\_x} (&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}), dy = \hyperlink{snakelib_8c_a01be021996158cf01e830b56e41be904}{board\_size\_y} (&
+      \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b});
+58     \textcolor{comment}{/* def une position */}
+59     SDL\_Rect p;
+60     \textcolor{keywordflow}{for} (x = 0; x < dx; x++)
+61     \{
+62         \textcolor{keywordflow}{for} (y = 0; y < dy; y++)
+63         \{
+64             p.x = x * 20 ; p.y = y * 20 ;
+65             \textcolor{comment}{/* lire dans le plateau et dessiner la surface */}
+66             \textcolor{keywordflow}{switch} (\hyperlink{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{board\_get} (&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},x,y))
+67             \{
+68                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'@'}:
+69                     SDL\_BlitSurface(\hyperlink{client_8c_a79a54bef7bf02b18264c38fc90549a04}{A}, 0, \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+70                     \textcolor{keywordflow}{break};
+71                 \textcolor{keywordflow}{case} \textcolor{charliteral}{' '}:
+72                     SDL\_BlitSurface(\hyperlink{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}, 0, \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+73                     \textcolor{keywordflow}{break};
+74                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'#'}:
+75                     SDL\_BlitSurface(\hyperlink{client_8c_ab7d76262118cf1d4da44315136e542ca}{C}, 0, \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+76                     \textcolor{keywordflow}{break};
+77                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'&'}:
+78                     SDL\_BlitSurface(\hyperlink{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}, 0, \hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+79                     \textcolor{keywordflow}{break};
+80             \}
+81         \}
+82     \}
+83     \textcolor{comment}{/* reafficher un nouvelle ecran */}
+84     SDL\_Flip(\hyperlink{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E});
+85 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{client_8c_a2cfeae643e415db24e85db6c4994b071_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{client_8c_a2cfeae643e415db24e85db6c4994b071_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{client.\+c@{client.\+c}!sdl\+\_\+turn@{sdl\+\_\+turn}}
+\index{sdl\+\_\+turn@{sdl\+\_\+turn}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+turn()}{sdl_turn()}}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ sdl\+\_\+turn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8c_ace514d3ea0e685be64430b930ef23b46}{}\label{client_8c_ace514d3ea0e685be64430b930ef23b46}
+
+\begin{DoxyCode}
+123 \{
+124     SDL\_Event event;
+125     \textcolor{keywordtype}{char} buff;
+126     \textcolor{keywordflow}{while} (\hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X})
+127     \{
+128     SDL\_WaitEvent(&event);
+129         \textcolor{keywordflow}{switch} (event.type)
+130         \{
+131             \textcolor{keywordflow}{case} SDL\_QUIT:
+132                 \hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{false};
+133                 \textcolor{keywordflow}{break};
+134             \textcolor{keywordflow}{case} SDL\_KEYDOWN:
+135                 \textcolor{keywordflow}{switch} (event.key.keysym.sym)
+136                 \{
+137                     \textcolor{keywordflow}{case} SDLK\_ESCAPE:
+138                         \hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{false};
+139                         \textcolor{keywordflow}{break};
+140                     \textcolor{keywordflow}{case} SDLK\_RIGHT:\textcolor{comment}{/* key right */}
+141                     \textcolor{keywordflow}{case} SDLK\_KP3:\textcolor{comment}{/* keypad 3 */}
+142                     \textcolor{keywordflow}{case} SDLK\_KP9:\textcolor{comment}{/* keypad 3 */}
+143                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:\textcolor{comment}{/* code ascii */}
+144                         \textcolor{comment}{/* on ferme la variable mutex */}
+145                         pthread\_mutex\_lock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+146                         \textcolor{comment}{/* turn snake */}
+147                         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},1,\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t});
+148                         write(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&\hyperlink{client_8c_a6edfa8f60e57212495b55b6b96c92cc5}{r},1);
+149                         read(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&buff,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+150                         \textcolor{keywordflow}{switch}(buff)
+151                         \{
+152                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}:
+153                                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o});
+154                                 \textcolor{keywordflow}{break};
+155                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'l'}:
+156                                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},-1);
+157                                 \textcolor{keywordflow}{break};
+158                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+159                                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},1);
+160                                 \textcolor{keywordflow}{break};
+161                         \}
+162                         \textcolor{comment}{/* affiche SDL */}
+163                         \textcolor{keywordflow}{if} ((\hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(
+      \hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+164                             \hyperlink{client_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+165                         pthread\_mutex\_unlock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+166                         \textcolor{keywordflow}{break};
+167                     \textcolor{keywordflow}{case} SDLK\_LEFT:\textcolor{comment}{/* key left */}
+168                     \textcolor{keywordflow}{case} SDLK\_KP1:\textcolor{comment}{/* keypad 1*/}
+169                     \textcolor{keywordflow}{case} SDLK\_KP7:\textcolor{comment}{/* keypad 7*/}
+170                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'a'}:\textcolor{comment}{/* code ascii */}
+171                         \textcolor{comment}{/* on ferme la variable mutex */}
+172                         pthread\_mutex\_lock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+173                         \textcolor{comment}{/* turn snake */}
+174                         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},-1,\hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t});
+175                         write(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&\hyperlink{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}{l},1);
+176                         read(\hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n},&buff,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+177                         \textcolor{keywordflow}{switch}(buff)
+178                         \{
+179                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}:
+180                                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o});
+181                                 \textcolor{keywordflow}{break};
+182                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'l'}:
+183                                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},-1);
+184                                 \textcolor{keywordflow}{break};
+185                             \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+186                                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c},\hyperlink{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{o},1);
+187                                 \textcolor{keywordflow}{break};
+188                         \}
+189                         \textcolor{comment}{/* affiche SDL */}
+190                         \textcolor{keywordflow}{if} ((\hyperlink{client_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(
+      \hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+191                             \hyperlink{client_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+192                         \textcolor{comment}{/* libere le mutex pour les autres thread */}
+193                         pthread\_mutex\_unlock(&\hyperlink{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+194                         \textcolor{keywordflow}{break};
+195                     \textcolor{keywordflow}{default}:\textcolor{comment}{/* ne fait rien */}\textcolor{keywordflow}{break};
+196                 \}   
+197             \textcolor{keywordflow}{default}:\textcolor{comment}{/* ne fait rien */}\textcolor{keywordflow}{break};
+198         \}
+199     \}
+200     pthread\_exit(0);
+201 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{client_8c_ace514d3ea0e685be64430b930ef23b46_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{client_8c_ace514d3ea0e685be64430b930ef23b46_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\index{client.\+c@{client.\+c}!A@{A}}
+\index{A@{A}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{A}{A}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ A}\hypertarget{client_8c_a79a54bef7bf02b18264c38fc90549a04}{}\label{client_8c_a79a54bef7bf02b18264c38fc90549a04}
+\index{client.\+c@{client.\+c}!B@{B}}
+\index{B@{B}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{B}{B}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ B}\hypertarget{client_8c_ac54b5255531a4799123d0f8dca96a7cc}{}\label{client_8c_ac54b5255531a4799123d0f8dca96a7cc}
+\index{client.\+c@{client.\+c}!b@{b}}
+\index{b@{b}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{b}{b}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf board} b}\hypertarget{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{}\label{client_8c_a20fdbd342281b7b5b77945c79d176b9f}
+\index{client.\+c@{client.\+c}!C@{C}}
+\index{C@{C}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{C}{C}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ C}\hypertarget{client_8c_ab7d76262118cf1d4da44315136e542ca}{}\label{client_8c_ab7d76262118cf1d4da44315136e542ca}
+\index{client.\+c@{client.\+c}!c@{c}}
+\index{c@{c}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{c}{c}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf snake} c}\hypertarget{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{}\label{client_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}
+\index{client.\+c@{client.\+c}!D@{D}}
+\index{D@{D}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{D}{D}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ D}\hypertarget{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{}\label{client_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}
+\index{client.\+c@{client.\+c}!E@{E}}
+\index{E@{E}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{E}{E}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface$\ast$ E}\hypertarget{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{}\label{client_8c_ae8dfea36e66ed4b47c61a7ea5212e164}
+\index{client.\+c@{client.\+c}!l@{l}}
+\index{l@{l}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{l}{l}}]{\setlength{\rightskip}{0pt plus 5cm}char l}\hypertarget{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}{}\label{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}
+\index{client.\+c@{client.\+c}!m@{m}}
+\index{m@{m}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{m}{m}}]{\setlength{\rightskip}{0pt plus 5cm}char m}\hypertarget{client_8c_a67668278838ab1eb0065ef9218c8de00}{}\label{client_8c_a67668278838ab1eb0065ef9218c8de00}
+\index{client.\+c@{client.\+c}!mutex@{mutex}}
+\index{mutex@{mutex}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{mutex}{mutex}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t mutex = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}\hypertarget{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{}\label{client_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}
+\index{client.\+c@{client.\+c}!n@{n}}
+\index{n@{n}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}int n}\hypertarget{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{}\label{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}
+\index{client.\+c@{client.\+c}!o@{o}}
+\index{o@{o}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{o}{o}}]{\setlength{\rightskip}{0pt plus 5cm}char o}\hypertarget{client_8c_a0318530b7ab3cba31a8e7213e34351cc}{}\label{client_8c_a0318530b7ab3cba31a8e7213e34351cc}
+\index{client.\+c@{client.\+c}!r@{r}}
+\index{r@{r}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{r}{r}}]{\setlength{\rightskip}{0pt plus 5cm}char r}\hypertarget{client_8c_a6edfa8f60e57212495b55b6b96c92cc5}{}\label{client_8c_a6edfa8f60e57212495b55b6b96c92cc5}
+\index{client.\+c@{client.\+c}!s@{s}}
+\index{s@{s}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf snake} s}\hypertarget{client_8c_a71e92e96b65208605aca57598cc827f1}{}\label{client_8c_a71e92e96b65208605aca57598cc827f1}
+\index{client.\+c@{client.\+c}!t@{t}}
+\index{t@{t}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{t}{t}}]{\setlength{\rightskip}{0pt plus 5cm}char t}\hypertarget{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{}\label{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}
+\index{client.\+c@{client.\+c}!threadpt@{threadpt}}
+\index{threadpt@{threadpt}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{threadpt}{threadpt}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+t threadpt}\hypertarget{client_8c_acdb501237bbfd1adad2d00fc7052a767}{}\label{client_8c_acdb501237bbfd1adad2d00fc7052a767}
+\index{client.\+c@{client.\+c}!X@{X}}
+\index{X@{X}!client.\+c@{client.\+c}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}bool X}\hypertarget{client_8c_aab1bde286e010d81472b269b419806d6}{}\label{client_8c_aab1bde286e010d81472b269b419806d6}

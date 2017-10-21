@@ -1,0 +1,5 @@
+<map id="board_apple" name="board_apple">
+<area shape="rect" id="node2" href="$snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="147,5,222,32"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="145,56,224,83"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="145,107,224,133"/>
+</map>

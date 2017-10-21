@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Snake: Référence du fichier SOURCE/server.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08351310ddebaca638dbb30498c8cafd.html">SOURCE</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier server.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;strings.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de server.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="server_8c__incl.png" border="0" usemap="#SOURCE_2server_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a18bd5b46e04e0010b0163f03741a2521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(msg)&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg);exit(1);}</td></tr>
+<tr class="separator:a18bd5b46e04e0010b0163f03741a2521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>&#160;&#160;&#160;1234</td></tr>
+<tr class="separator:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f31f726d2933782e2efda7136a25fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a>&#160;&#160;&#160;INADDR_ANY</td></tr>
+<tr class="separator:ac9f31f726d2933782e2efda7136a25fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeefbbafa97642defe3ee6c3080b7d66f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#aeefbbafa97642defe3ee6c3080b7d66f">BACKLOG</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:aeefbbafa97642defe3ee6c3080b7d66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a38df5ddef8f9bd2822d20cfb442ed31d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d">server_socket</a> ()</td></tr>
+<tr class="separator:a38df5ddef8f9bd2822d20cfb442ed31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc414ff242b33f2b06ce38596e387696"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#acc414ff242b33f2b06ce38596e387696">server_accept</a> (int p)</td></tr>
+<tr class="separator:acc414ff242b33f2b06ce38596e387696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb20b510d7e0de1e191ec039faefe3f"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#accb20b510d7e0de1e191ec039faefe3f">server_handler</a> (void *arg)</td></tr>
+<tr class="separator:accb20b510d7e0de1e191ec039faefe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6b3389b5ab3e0759c218482f79fef158"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a> [2]</td></tr>
+<tr class="separator:a6b3389b5ab3e0759c218482f79fef158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480e6e6f47d688e8e7f8d62f44aece5e"><td class="memItemLeft" align="right" valign="top">static pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8c.html#a480e6e6f47d688e8e7f8d62f44aece5e">threadpt</a> [2]</td></tr>
+<tr class="separator:a480e6e6f47d688e8e7f8d62f44aece5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="ac9f31f726d2933782e2efda7136a25fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDR&#160;&#160;&#160;INADDR_ANY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeefbbafa97642defe3ee6c3080b7d66f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BACKLOG&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18bd5b46e04e0010b0163f03741a2521"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define err</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td>&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg);exit(1);}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a614217d263be1fb1a5f76e2ff7be19a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT&#160;&#160;&#160;1234</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">short</span> count = 0;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = <a class="code" href="server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d">server_socket</a>();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">while</span>(2 != count)</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[count] = <a class="code" href="server_8c.html#acc414ff242b33f2b06ce38596e387696">server_accept</a>(n);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        ++count;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">for</span>(count = 0; count != 2; count++)</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> pth = pthread_create(&amp;<a class="code" href="server_8c.html#a480e6e6f47d688e8e7f8d62f44aece5e">threadpt</a>[count], NULL, &amp;<a class="code" href="server_8c.html#accb20b510d7e0de1e191ec039faefe3f">server_handler</a>, &amp;<a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[count]);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span>(0 &gt; pth) <a class="code" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;pthread_create()&quot;</span>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">char</span> buf[2] = {<span class="charliteral">&#39;@&#39;</span>,<span class="charliteral">&#39;&amp;&#39;</span>};</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">for</span>(count = 0; count != 2; count++)</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        write(<a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[count], &amp;buf[count], 1);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(count = 0; count != 2; count++)</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        pthread_join(<a class="code" href="server_8c.html#a480e6e6f47d688e8e7f8d62f44aece5e">threadpt</a>[count],NULL);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}<div class="ttc" id="server_8c_html_acc414ff242b33f2b06ce38596e387696"><div class="ttname"><a href="server_8c.html#acc414ff242b33f2b06ce38596e387696">server_accept</a></div><div class="ttdeci">static int server_accept(int p)</div><div class="ttdef"><b>Definition:</b> server.c:35</div></div>
+<div class="ttc" id="server_8c_html_accb20b510d7e0de1e191ec039faefe3f"><div class="ttname"><a href="server_8c.html#accb20b510d7e0de1e191ec039faefe3f">server_handler</a></div><div class="ttdeci">static void * server_handler(void *arg)</div><div class="ttdef"><b>Definition:</b> server.c:44</div></div>
+<div class="ttc" id="server_8c_html_a480e6e6f47d688e8e7f8d62f44aece5e"><div class="ttname"><a href="server_8c.html#a480e6e6f47d688e8e7f8d62f44aece5e">threadpt</a></div><div class="ttdeci">static pthread_t threadpt[2]</div><div class="ttdef"><b>Definition:</b> server.c:17</div></div>
+<div class="ttc" id="server_8c_html_a18bd5b46e04e0010b0163f03741a2521"><div class="ttname"><a href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a></div><div class="ttdeci">#define err(msg)</div><div class="ttdef"><b>Definition:</b> server.c:11</div></div>
+<div class="ttc" id="server_8c_html_a38df5ddef8f9bd2822d20cfb442ed31d"><div class="ttname"><a href="server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d">server_socket</a></div><div class="ttdeci">static int server_socket()</div><div class="ttdef"><b>Definition:</b> server.c:19</div></div>
+<div class="ttc" id="server_8c_html_a6b3389b5ab3e0759c218482f79fef158"><div class="ttname"><a href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a></div><div class="ttdeci">static int clients[2]</div><div class="ttdef"><b>Definition:</b> server.c:16</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d" title="server_socket" alt="" coords="105,5,209,32"/>
+<area shape="rect" id="node3" href="server_8c.html#acc414ff242b33f2b06ce38596e387696" title="server_accept" alt="" coords="105,56,209,83"/>
+<area shape="rect" id="node4" href="server_8c.html#accb20b510d7e0de1e191ec039faefe3f" title="server_handler" alt="" coords="104,107,211,133"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acc414ff242b33f2b06ce38596e387696"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int server_accept </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">struct </span>sockaddr_in client_addr;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> len = <span class="keyword">sizeof</span>(client_addr);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = accept(p, (<span class="keyword">struct</span> sockaddr*)&amp;client_addr, &amp;len);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(0 &gt; n) <a class="code" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;accept()&quot;</span>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="server_8c_html_a18bd5b46e04e0010b0163f03741a2521"><div class="ttname"><a href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a></div><div class="ttdeci">#define err(msg)</div><div class="ttdef"><b>Definition:</b> server.c:11</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_8c_acc414ff242b33f2b06ce38596e387696_icgraph.png" border="0" usemap="#server_8c_acc414ff242b33f2b06ce38596e387696_icgraph" alt=""/></div>
+<map name="server_8c_acc414ff242b33f2b06ce38596e387696_icgraph" id="server_8c_acc414ff242b33f2b06ce38596e387696_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="157,5,208,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="accb20b510d7e0de1e191ec039faefe3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* server_handler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = *((<span class="keywordtype">int</span>*)arg);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> i = (n == <a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[0])? 0 : 1;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> j = (i+1) % 2;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">char</span> dir = <span class="charliteral">&#39;\0&#39;</span>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">while</span>(read(<a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[i], &amp;dir, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)))</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        write(<a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[j], &amp;dir, 1);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    close(<a class="code" href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a>[i]);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    pthread_exit(0);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="server_8c_html_a6b3389b5ab3e0759c218482f79fef158"><div class="ttname"><a href="server_8c.html#a6b3389b5ab3e0759c218482f79fef158">clients</a></div><div class="ttdeci">static int clients[2]</div><div class="ttdef"><b>Definition:</b> server.c:16</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_8c_accb20b510d7e0de1e191ec039faefe3f_icgraph.png" border="0" usemap="#server_8c_accb20b510d7e0de1e191ec039faefe3f_icgraph" alt=""/></div>
+<map name="server_8c_accb20b510d7e0de1e191ec039faefe3f_icgraph" id="server_8c_accb20b510d7e0de1e191ec039faefe3f_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="160,5,211,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a38df5ddef8f9bd2822d20cfb442ed31d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int server_socket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = socket(AF_INET, SOCK_STREAM, 0);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span>(0 &gt; n) <a class="code" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;socket()&quot;</span>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">struct </span>sockaddr_in server_addr;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    bzero(&amp;server_addr,<span class="keyword">sizeof</span>(server_addr));</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    server_addr.sin_family = AF_INET;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    server_addr.sin_port = htons(<a class="code" href="server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    server_addr.sin_addr.s_addr = htonl(<a class="code" href="server_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a>);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(0 &gt; bind(n, (<span class="keyword">struct</span> sockaddr*)&amp;server_addr, <span class="keyword">sizeof</span>(server_addr))) <a class="code" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;bind()&quot;</span>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(0 &gt; listen(n, <a class="code" href="server_8c.html#aeefbbafa97642defe3ee6c3080b7d66f">BACKLOG</a>)) <a class="code" href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;listen()&quot;</span>);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div><div class="ttc" id="server_8c_html_a18bd5b46e04e0010b0163f03741a2521"><div class="ttname"><a href="server_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a></div><div class="ttdeci">#define err(msg)</div><div class="ttdef"><b>Definition:</b> server.c:11</div></div>
+<div class="ttc" id="server_8c_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="server_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdef"><b>Definition:</b> server.c:12</div></div>
+<div class="ttc" id="server_8c_html_aeefbbafa97642defe3ee6c3080b7d66f"><div class="ttname"><a href="server_8c.html#aeefbbafa97642defe3ee6c3080b7d66f">BACKLOG</a></div><div class="ttdeci">#define BACKLOG</div><div class="ttdef"><b>Definition:</b> server.c:14</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+<div class="ttc" id="server_8c_html_ac9f31f726d2933782e2efda7136a25fd"><div class="ttname"><a href="server_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a></div><div class="ttdeci">#define ADDR</div><div class="ttdef"><b>Definition:</b> server.c:13</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_8c_a38df5ddef8f9bd2822d20cfb442ed31d_icgraph.png" border="0" usemap="#server_8c_a38df5ddef8f9bd2822d20cfb442ed31d_icgraph" alt=""/></div>
+<map name="server_8c_a38df5ddef8f9bd2822d20cfb442ed31d_icgraph" id="server_8c_a38df5ddef8f9bd2822d20cfb442ed31d_icgraph">
+<area shape="rect" id="node2" href="server_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="157,5,208,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a6b3389b5ab3e0759c218482f79fef158"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clients[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a480e6e6f47d688e8e7f8d62f44aece5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t threadpt[2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

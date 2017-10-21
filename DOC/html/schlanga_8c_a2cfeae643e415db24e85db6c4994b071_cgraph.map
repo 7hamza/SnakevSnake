@@ -1,0 +1,6 @@
+<map id="sdl_print" name="sdl_print">
+<area shape="rect" id="node2" href="$snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="124,5,223,32"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="124,56,223,83"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="134,107,213,133"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#a34e4ffa89cbd5062286074398f897bcf" title="pour afficher un plateau " alt="" coords="130,157,217,184"/>
+</map>

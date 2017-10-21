@@ -1,0 +1,455 @@
+\begin{theindex}
+
+  \item {\+\_\+snake}, \hyperpage{5}
+    \subitem {next}, \hyperpage{5}
+    \subitem {snakelib.\+h}, \hyperpage{13}
+    \subitem {x}, \hyperpage{5}
+    \subitem {y}, \hyperpage{5}
+
+  \indexspace
+
+  \item {A}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {A\+D\+DR}
+    \subitem {client.\+c}, \hyperpage{31}
+    \subitem {server.\+c}, \hyperpage{56}
+  \item {apple\+\_\+x}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {apple\+\_\+y}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {array}
+    \subitem {board}, \hyperpage{6}
+
+  \indexspace
+
+  \item {B}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {b}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {B\+A\+C\+K\+L\+OG}
+    \subitem {server.\+c}, \hyperpage{56}
+  \item {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}
+    \subitem {schlanga.\+c}, \hyperpage{39}
+    \subitem {snake.\+c}, \hyperpage{60}
+  \item {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}
+    \subitem {schlanga.\+c}, \hyperpage{39}
+    \subitem {snake.\+c}, \hyperpage{60}
+  \item {board}, \hyperpage{6}
+    \subitem {array}, \hyperpage{6}
+    \subitem {snakelib.\+h}, \hyperpage{13}
+    \subitem {x}, \hyperpage{6}
+    \subitem {y}, \hyperpage{6}
+  \item {board\+\_\+apple}
+    \subitem {snakelib.\+c}, \hyperpage{68}
+    \subitem {snakelib.\+h}, \hyperpage{13}
+  \item {board\+\_\+free}
+    \subitem {snakelib.\+c}, \hyperpage{68}
+    \subitem {snakelib.\+h}, \hyperpage{14}
+  \item {board\+\_\+get}
+    \subitem {snakelib.\+c}, \hyperpage{69}
+    \subitem {snakelib.\+h}, \hyperpage{14}
+  \item {board\+\_\+init}
+    \subitem {snakelib.\+c}, \hyperpage{70}
+    \subitem {snakelib.\+h}, \hyperpage{16}
+  \item {board\+\_\+print}
+    \subitem {snakelib.\+c}, \hyperpage{71}
+    \subitem {snakelib.\+h}, \hyperpage{17}
+  \item {board\+\_\+pxmap}
+    \subitem {snakelib.\+c}, \hyperpage{71}
+    \subitem {snakelib.\+h}, \hyperpage{17}
+  \item {board\+\_\+set}
+    \subitem {snakelib.\+c}, \hyperpage{72}
+    \subitem {snakelib.\+h}, \hyperpage{18}
+  \item {board\+\_\+size\+\_\+x}
+    \subitem {snakelib.\+c}, \hyperpage{73}
+    \subitem {snakelib.\+h}, \hyperpage{19}
+  \item {board\+\_\+size\+\_\+y}
+    \subitem {snakelib.\+c}, \hyperpage{73}
+    \subitem {snakelib.\+h}, \hyperpage{19}
+
+  \indexspace
+
+  \item {C}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {c}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+  \item {C\+O\+D\+E\+\_\+\+B\+OW}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {C\+O\+D\+E\+\_\+\+N\+U\+LL}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {C\+O\+D\+E\+\_\+\+W\+A\+LL}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {choc\+\_\+sc}
+    \subitem {snakelib.\+c}, \hyperpage{74}
+    \subitem {snakelib.\+h}, \hyperpage{20}
+  \item {choc\+\_\+snake}
+    \subitem {snakelib.\+c}, \hyperpage{74}
+    \subitem {snakelib.\+h}, \hyperpage{20}
+  \item {choc\+\_\+wall}
+    \subitem {snakelib.\+c}, \hyperpage{74}
+    \subitem {snakelib.\+h}, \hyperpage{20}
+  \item {client.\+c}
+    \subitem {A}, \hyperpage{37}
+    \subitem {A\+D\+DR}, \hyperpage{31}
+    \subitem {B}, \hyperpage{37}
+    \subitem {b}, \hyperpage{37}
+    \subitem {C}, \hyperpage{37}
+    \subitem {c}, \hyperpage{37}
+    \subitem {client\+\_\+socket}, \hyperpage{31}
+    \subitem {D}, \hyperpage{37}
+    \subitem {E}, \hyperpage{38}
+    \subitem {err}, \hyperpage{31}
+    \subitem {l}, \hyperpage{38}
+    \subitem {m}, \hyperpage{38}
+    \subitem {main}, \hyperpage{32}
+    \subitem {mutex}, \hyperpage{38}
+    \subitem {n}, \hyperpage{38}
+    \subitem {o}, \hyperpage{38}
+    \subitem {P\+O\+RT}, \hyperpage{31}
+    \subitem {r}, \hyperpage{38}
+    \subitem {s}, \hyperpage{38}
+    \subitem {sdl\+\_\+move}, \hyperpage{33}
+    \subitem {sdl\+\_\+print}, \hyperpage{34}
+    \subitem {sdl\+\_\+turn}, \hyperpage{35}
+    \subitem {slen}, \hyperpage{31}
+    \subitem {t}, \hyperpage{38}
+    \subitem {tabX}, \hyperpage{31}
+    \subitem {tabY}, \hyperpage{31}
+    \subitem {threadpt}, \hyperpage{38}
+    \subitem {X}, \hyperpage{38}
+  \item {client\+\_\+socket}
+    \subitem {client.\+c}, \hyperpage{31}
+  \item {clients}
+    \subitem {server.\+c}, \hyperpage{59}
+
+  \indexspace
+
+  \item {D}
+    \subitem {client.\+c}, \hyperpage{37}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+
+  \indexspace
+
+  \item {E}
+    \subitem {client.\+c}, \hyperpage{38}
+    \subitem {schlanga.\+c}, \hyperpage{44}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {err}
+    \subitem {client.\+c}, \hyperpage{31}
+    \subitem {server.\+c}, \hyperpage{56}
+  \item {exist\+\_\+in\+\_\+snake}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+
+  \indexspace
+
+  \item {I\+N\+C\+L\+U\+D\+E/schlangalib.\+h}, \hyperpage{9}
+  \item {I\+N\+C\+L\+U\+D\+E/snakelib.\+h}, \hyperpage{11}
+
+  \indexspace
+
+  \item {l}
+    \subitem {client.\+c}, \hyperpage{38}
+  \item {last\+\_\+x}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {last\+\_\+y}
+    \subitem {snake.\+c}, \hyperpage{66}
+
+  \indexspace
+
+  \item {m}
+    \subitem {client.\+c}, \hyperpage{38}
+  \item {main}
+    \subitem {client.\+c}, \hyperpage{32}
+    \subitem {schlanga.\+c}, \hyperpage{39}
+    \subitem {server.\+c}, \hyperpage{56}
+    \subitem {snake.\+c}, \hyperpage{60}
+    \subitem {unittesting.\+c}, \hyperpage{87}
+  \item {min\+\_\+abs}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {move}
+    \subitem {snakelib.\+c}, \hyperpage{75}
+    \subitem {snakelib.\+h}, \hyperpage{21}
+  \item {mutex}
+    \subitem {client.\+c}, \hyperpage{38}
+    \subitem {schlanga.\+c}, \hyperpage{45}
+    \subitem {snake.\+c}, \hyperpage{66}
+
+  \indexspace
+
+  \item {n}
+    \subitem {client.\+c}, \hyperpage{38}
+  \item {next}
+    \subitem {\+\_\+snake}, \hyperpage{5}
+
+  \indexspace
+
+  \item {o}
+    \subitem {client.\+c}, \hyperpage{38}
+
+  \indexspace
+
+  \item {P\+O\+RT}
+    \subitem {client.\+c}, \hyperpage{31}
+    \subitem {server.\+c}, \hyperpage{56}
+
+  \indexspace
+
+  \item {r}
+    \subitem {client.\+c}, \hyperpage{38}
+  \item {rand\+\_\+a\+\_\+b}
+    \subitem {snakelib.\+c}, \hyperpage{76}
+
+  \indexspace
+
+  \item {s}
+    \subitem {client.\+c}, \hyperpage{38}
+    \subitem {schlanga.\+c}, \hyperpage{45}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {S\+L\+E\+EP}
+    \subitem {schlanga.\+c}, \hyperpage{39}
+    \subitem {snake.\+c}, \hyperpage{60}
+  \item {S\+N\+A\+K\+E\+\_\+\+L\+EN}
+    \subitem {schlanga.\+c}, \hyperpage{39}
+    \subitem {snake.\+c}, \hyperpage{60}
+  \item {S\+O\+U\+R\+C\+E/client.\+c}, \hyperpage{30}
+  \item {S\+O\+U\+R\+C\+E/schlanga.\+c}, \hyperpage{38}
+  \item {S\+O\+U\+R\+C\+E/schlangalib.\+c}, \hyperpage{45}
+  \item {S\+O\+U\+R\+C\+E/server.\+c}, \hyperpage{55}
+  \item {S\+O\+U\+R\+C\+E/snake.\+c}, \hyperpage{59}
+  \item {S\+O\+U\+R\+C\+E/snakelib.\+c}, \hyperpage{67}
+  \item {S\+O\+U\+R\+C\+E/unittesting.\+c}, \hyperpage{86}
+  \item {schlanga.\+c}
+    \subitem {A}, \hyperpage{44}
+    \subitem {B}, \hyperpage{44}
+    \subitem {b}, \hyperpage{44}
+    \subitem {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}, \hyperpage{39}
+    \subitem {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}, \hyperpage{39}
+    \subitem {C}, \hyperpage{44}
+    \subitem {c}, \hyperpage{44}
+    \subitem {D}, \hyperpage{44}
+    \subitem {E}, \hyperpage{44}
+    \subitem {main}, \hyperpage{39}
+    \subitem {mutex}, \hyperpage{45}
+    \subitem {s}, \hyperpage{45}
+    \subitem {S\+L\+E\+EP}, \hyperpage{39}
+    \subitem {S\+N\+A\+K\+E\+\_\+\+L\+EN}, \hyperpage{39}
+    \subitem {sdl\+\_\+move}, \hyperpage{40}
+    \subitem {sdl\+\_\+print}, \hyperpage{41}
+    \subitem {sdl\+\_\+turn}, \hyperpage{42}
+    \subitem {X}, \hyperpage{45}
+  \item {schlanga\+\_\+bow}
+    \subitem {schlangalib.\+c}, \hyperpage{46}
+  \item {schlanga\+\_\+corner}
+    \subitem {schlangalib.\+c}, \hyperpage{49}
+  \item {schlanga\+\_\+ia}
+    \subitem {schlangalib.\+c}, \hyperpage{50}
+    \subitem {schlangalib.\+h}, \hyperpage{9}
+  \item {schlanga\+\_\+next\+\_\+to}
+    \subitem {schlangalib.\+c}, \hyperpage{52}
+  \item {schlanga\+\_\+wall}
+    \subitem {schlangalib.\+c}, \hyperpage{53}
+  \item {schlangalib.\+c}
+    \subitem {C\+O\+D\+E\+\_\+\+B\+OW}, \hyperpage{46}
+    \subitem {C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}, \hyperpage{46}
+    \subitem {C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}, \hyperpage{46}
+    \subitem {C\+O\+D\+E\+\_\+\+N\+U\+LL}, \hyperpage{46}
+    \subitem {C\+O\+D\+E\+\_\+\+W\+A\+LL}, \hyperpage{46}
+    \subitem {exist\+\_\+in\+\_\+snake}, \hyperpage{46}
+    \subitem {min\+\_\+abs}, \hyperpage{46}
+    \subitem {schlanga\+\_\+bow}, \hyperpage{46}
+    \subitem {schlanga\+\_\+corner}, \hyperpage{49}
+    \subitem {schlanga\+\_\+ia}, \hyperpage{50}
+    \subitem {schlanga\+\_\+next\+\_\+to}, \hyperpage{52}
+    \subitem {schlanga\+\_\+wall}, \hyperpage{53}
+  \item {schlangalib.\+h}
+    \subitem {schlanga\+\_\+ia}, \hyperpage{9}
+  \item {sdl\+\_\+move}
+    \subitem {client.\+c}, \hyperpage{33}
+    \subitem {schlanga.\+c}, \hyperpage{40}
+    \subitem {snake.\+c}, \hyperpage{61}
+  \item {sdl\+\_\+print}
+    \subitem {client.\+c}, \hyperpage{34}
+    \subitem {schlanga.\+c}, \hyperpage{41}
+    \subitem {snake.\+c}, \hyperpage{63}
+  \item {sdl\+\_\+turn}
+    \subitem {client.\+c}, \hyperpage{35}
+    \subitem {schlanga.\+c}, \hyperpage{42}
+    \subitem {snake.\+c}, \hyperpage{64}
+  \item {server.\+c}
+    \subitem {A\+D\+DR}, \hyperpage{56}
+    \subitem {B\+A\+C\+K\+L\+OG}, \hyperpage{56}
+    \subitem {clients}, \hyperpage{59}
+    \subitem {err}, \hyperpage{56}
+    \subitem {main}, \hyperpage{56}
+    \subitem {P\+O\+RT}, \hyperpage{56}
+    \subitem {server\+\_\+accept}, \hyperpage{57}
+    \subitem {server\+\_\+handler}, \hyperpage{57}
+    \subitem {server\+\_\+socket}, \hyperpage{58}
+    \subitem {threadpt}, \hyperpage{59}
+  \item {server\+\_\+accept}
+    \subitem {server.\+c}, \hyperpage{57}
+  \item {server\+\_\+handler}
+    \subitem {server.\+c}, \hyperpage{57}
+  \item {server\+\_\+socket}
+    \subitem {server.\+c}, \hyperpage{58}
+  \item {slen}
+    \subitem {client.\+c}, \hyperpage{31}
+  \item {snake}, \hyperpage{7}
+    \subitem {snakelib.\+h}, \hyperpage{13}
+  \item {snake.\+c}
+    \subitem {A}, \hyperpage{66}
+    \subitem {apple\+\_\+x}, \hyperpage{66}
+    \subitem {apple\+\_\+y}, \hyperpage{66}
+    \subitem {B}, \hyperpage{66}
+    \subitem {b}, \hyperpage{66}
+    \subitem {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}, \hyperpage{60}
+    \subitem {B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}, \hyperpage{60}
+    \subitem {C}, \hyperpage{66}
+    \subitem {D}, \hyperpage{66}
+    \subitem {E}, \hyperpage{66}
+    \subitem {last\+\_\+x}, \hyperpage{66}
+    \subitem {last\+\_\+y}, \hyperpage{66}
+    \subitem {main}, \hyperpage{60}
+    \subitem {mutex}, \hyperpage{66}
+    \subitem {s}, \hyperpage{66}
+    \subitem {S\+L\+E\+EP}, \hyperpage{60}
+    \subitem {S\+N\+A\+K\+E\+\_\+\+L\+EN}, \hyperpage{60}
+    \subitem {sdl\+\_\+move}, \hyperpage{61}
+    \subitem {sdl\+\_\+print}, \hyperpage{63}
+    \subitem {sdl\+\_\+turn}, \hyperpage{64}
+    \subitem {X}, \hyperpage{66}
+  \item {snake\+\_\+add}
+    \subitem {snakelib.\+c}, \hyperpage{76}
+    \subitem {snakelib.\+h}, \hyperpage{22}
+  \item {snake\+\_\+addl}
+    \subitem {snakelib.\+c}, \hyperpage{77}
+    \subitem {snakelib.\+h}, \hyperpage{23}
+  \item {snake\+\_\+apple}
+    \subitem {snakelib.\+c}, \hyperpage{78}
+    \subitem {snakelib.\+h}, \hyperpage{23}
+  \item {snake\+\_\+del}
+    \subitem {snakelib.\+c}, \hyperpage{78}
+    \subitem {snakelib.\+h}, \hyperpage{24}
+  \item {snake\+\_\+free}
+    \subitem {snakelib.\+c}, \hyperpage{81}
+    \subitem {snakelib.\+h}, \hyperpage{25}
+  \item {snake\+\_\+getl}
+    \subitem {snakelib.\+c}, \hyperpage{81}
+    \subitem {snakelib.\+h}, \hyperpage{26}
+  \item {snake\+\_\+init}
+    \subitem {snakelib.\+c}, \hyperpage{82}
+    \subitem {snakelib.\+h}, \hyperpage{27}
+  \item {snake\+\_\+next}
+    \subitem {snakelib.\+c}, \hyperpage{83}
+  \item {snake\+\_\+print}
+    \subitem {snakelib.\+c}, \hyperpage{83}
+    \subitem {snakelib.\+h}, \hyperpage{28}
+  \item {snake\+\_\+x}
+    \subitem {snakelib.\+c}, \hyperpage{84}
+  \item {snake\+\_\+y}
+    \subitem {snakelib.\+c}, \hyperpage{84}
+  \item {snakelib.\+c}
+    \subitem {board\+\_\+apple}, \hyperpage{68}
+    \subitem {board\+\_\+free}, \hyperpage{68}
+    \subitem {board\+\_\+get}, \hyperpage{69}
+    \subitem {board\+\_\+init}, \hyperpage{70}
+    \subitem {board\+\_\+print}, \hyperpage{71}
+    \subitem {board\+\_\+pxmap}, \hyperpage{71}
+    \subitem {board\+\_\+set}, \hyperpage{72}
+    \subitem {board\+\_\+size\+\_\+x}, \hyperpage{73}
+    \subitem {board\+\_\+size\+\_\+y}, \hyperpage{73}
+    \subitem {choc\+\_\+sc}, \hyperpage{74}
+    \subitem {choc\+\_\+snake}, \hyperpage{74}
+    \subitem {choc\+\_\+wall}, \hyperpage{74}
+    \subitem {move}, \hyperpage{75}
+    \subitem {rand\+\_\+a\+\_\+b}, \hyperpage{76}
+    \subitem {snake\+\_\+add}, \hyperpage{76}
+    \subitem {snake\+\_\+addl}, \hyperpage{77}
+    \subitem {snake\+\_\+apple}, \hyperpage{78}
+    \subitem {snake\+\_\+del}, \hyperpage{78}
+    \subitem {snake\+\_\+free}, \hyperpage{81}
+    \subitem {snake\+\_\+getl}, \hyperpage{81}
+    \subitem {snake\+\_\+init}, \hyperpage{82}
+    \subitem {snake\+\_\+next}, \hyperpage{83}
+    \subitem {snake\+\_\+print}, \hyperpage{83}
+    \subitem {snake\+\_\+x}, \hyperpage{84}
+    \subitem {snake\+\_\+y}, \hyperpage{84}
+    \subitem {turn}, \hyperpage{85}
+  \item {snakelib.\+h}
+    \subitem {\+\_\+snake}, \hyperpage{13}
+    \subitem {board}, \hyperpage{13}
+    \subitem {board\+\_\+apple}, \hyperpage{13}
+    \subitem {board\+\_\+free}, \hyperpage{14}
+    \subitem {board\+\_\+get}, \hyperpage{14}
+    \subitem {board\+\_\+init}, \hyperpage{16}
+    \subitem {board\+\_\+print}, \hyperpage{17}
+    \subitem {board\+\_\+pxmap}, \hyperpage{17}
+    \subitem {board\+\_\+set}, \hyperpage{18}
+    \subitem {board\+\_\+size\+\_\+x}, \hyperpage{19}
+    \subitem {board\+\_\+size\+\_\+y}, \hyperpage{19}
+    \subitem {choc\+\_\+sc}, \hyperpage{20}
+    \subitem {choc\+\_\+snake}, \hyperpage{20}
+    \subitem {choc\+\_\+wall}, \hyperpage{20}
+    \subitem {move}, \hyperpage{21}
+    \subitem {snake}, \hyperpage{13}
+    \subitem {snake\+\_\+add}, \hyperpage{22}
+    \subitem {snake\+\_\+addl}, \hyperpage{23}
+    \subitem {snake\+\_\+apple}, \hyperpage{23}
+    \subitem {snake\+\_\+del}, \hyperpage{24}
+    \subitem {snake\+\_\+free}, \hyperpage{25}
+    \subitem {snake\+\_\+getl}, \hyperpage{26}
+    \subitem {snake\+\_\+init}, \hyperpage{27}
+    \subitem {snake\+\_\+print}, \hyperpage{28}
+    \subitem {turn}, \hyperpage{28}
+
+  \indexspace
+
+  \item {t}
+    \subitem {client.\+c}, \hyperpage{38}
+  \item {tabX}
+    \subitem {client.\+c}, \hyperpage{31}
+  \item {tabY}
+    \subitem {client.\+c}, \hyperpage{31}
+  \item {threadpt}
+    \subitem {client.\+c}, \hyperpage{38}
+    \subitem {server.\+c}, \hyperpage{59}
+  \item {turn}
+    \subitem {snakelib.\+c}, \hyperpage{85}
+    \subitem {snakelib.\+h}, \hyperpage{28}
+
+  \indexspace
+
+  \item {unittesting.\+c}
+    \subitem {main}, \hyperpage{87}
+
+  \indexspace
+
+  \item {X}
+    \subitem {client.\+c}, \hyperpage{38}
+    \subitem {schlanga.\+c}, \hyperpage{45}
+    \subitem {snake.\+c}, \hyperpage{66}
+  \item {x}
+    \subitem {\+\_\+snake}, \hyperpage{5}
+    \subitem {board}, \hyperpage{6}
+
+  \indexspace
+
+  \item {y}
+    \subitem {\+\_\+snake}, \hyperpage{5}
+    \subitem {board}, \hyperpage{6}
+
+\end{theindex}

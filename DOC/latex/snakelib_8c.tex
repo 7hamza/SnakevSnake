@@ -1,0 +1,1148 @@
+\hypertarget{snakelib_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/snakelib.c}
+\label{snakelib_8c}\index{S\+O\+U\+R\+C\+E/snakelib.\+c@{S\+O\+U\+R\+C\+E/snakelib.\+c}}
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/snakelib.\+h\char`\"{}}\\*
+Graphe des dépendances par inclusion de snakelib.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structboard}{board} \hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\+\_\+init} (int x, int y)
+\item 
+void \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\+\_\+set} (\hyperlink{structboard}{board} $\ast$brdin, int x, int y, char value)
+\item 
+char \hyperlink{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{board\+\_\+get} (\hyperlink{structboard}{board} const $\ast$brdin, int x, int y)
+\begin{DoxyCompactList}\small\item\em return la valeur \end{DoxyCompactList}\item 
+int \hyperlink{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}{board\+\_\+size\+\_\+x} (\hyperlink{structboard}{board} const $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b})
+\begin{DoxyCompactList}\small\item\em taille x du plateau \end{DoxyCompactList}\item 
+int \hyperlink{snakelib_8c_a01be021996158cf01e830b56e41be904}{board\+\_\+size\+\_\+y} (\hyperlink{structboard}{board} const $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b})
+\item 
+void \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\+\_\+free} (\hyperlink{structboard}{board} $\ast$brdin)
+\begin{DoxyCompactList}\small\item\em liberer la memoire occupé par un plateau \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\+\_\+print} (const \hyperlink{structboard}{board} $\ast$brdin)
+\begin{DoxyCompactList}\small\item\em pour afficher un plateau \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_aa228e2d2337022d7cf56c813b9540166}{board\+\_\+pxmap} (const \hyperlink{structboard}{board} $\ast$brdin, char $\ast$foldername, int filename, int zoom)
+\begin{DoxyCompactList}\small\item\em créer une image ppm du tableau pour mieux voir et interpreter nos fonctions de teste \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\+\_\+add} (\hyperlink{structsnake}{snake} $\ast$snkin, int x, int y)
+\begin{DoxyCompactList}\small\item\em un snake est équivalent à une file d\textquotesingle{}attente (F\+I\+FO « first in, first out »), cette fonction permet d\textquotesingle{}ajouter à l\textquotesingle{}entête de la liste \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_aa723bfe337f8108975b8d36292b422d1}{snake\+\_\+del} (\hyperlink{structsnake}{snake} $\ast$snkin, int $\ast$x, int $\ast$y)
+\begin{DoxyCompactList}\small\item\em un snake est équivalent à une file d\textquotesingle{}attente (F\+I\+FO « first in, first out »), cette fonction permet de supprimer au queue de la liste \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}{snake\+\_\+addl} (\hyperlink{structsnake}{snake} $\ast$snkin, int x, int y)
+\item 
+void \hyperlink{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}{snake\+\_\+getl} (\hyperlink{structsnake}{snake} $\ast$snkin, int $\ast$x, int $\ast$y)
+\item 
+void \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\+\_\+free} (\hyperlink{structsnake}{snake} $\ast$snkin)
+\begin{DoxyCompactList}\small\item\em libérer la mémoire \end{DoxyCompactList}\item 
+void \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\+\_\+print} (const \hyperlink{structsnake}{snake} $\ast$snkin)
+\item 
+int \hyperlink{snakelib_8c_a01c30f2556498b7887cc5ff5a88119ca}{snake\+\_\+x} (\hyperlink{structsnake}{snake} const $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})
+\item 
+int \hyperlink{snakelib_8c_ad0e10e1a230ae236d8b5fe92e2559378}{snake\+\_\+y} (\hyperlink{structsnake}{snake} const $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})
+\item 
+\hyperlink{structsnake}{snake} $\ast$ \hyperlink{snakelib_8c_a332568bbdd587cd7a0d14b1fa22df233}{snake\+\_\+next} (\hyperlink{structsnake}{snake} const $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})
+\item 
+void \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move} (\hyperlink{structboard}{board} $\ast$brdin, \hyperlink{structsnake}{snake} $\ast$snkin, char id)
+\item 
+void \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn} (\hyperlink{structboard}{board} $\ast$brdin, \hyperlink{structsnake}{snake} $\ast$snkin, int drctn, char id)
+\item 
+void \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\+\_\+init} (\hyperlink{structboard}{board} $\ast$brdin, \hyperlink{structsnake}{snake} $\ast$snkin, int len, char id)
+\begin{DoxyCompactList}\small\item\em init a snake \end{DoxyCompactList}\item 
+bool \hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\+\_\+snake} (\hyperlink{structsnake}{snake} const $\ast$s1, \hyperlink{structsnake}{snake} const $\ast$s2)
+\begin{DoxyCompactList}\small\item\em test choc entre deux snake \end{DoxyCompactList}\item 
+bool \hyperlink{snakelib_8c_ab72d8c937b91594a9c27b30c05a08a75}{choc\+\_\+sc} (\hyperlink{structsnake}{snake} const $\ast$s1, \hyperlink{structsnake}{snake} const $\ast$s2)
+\item 
+bool \hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\+\_\+wall} (\hyperlink{structboard}{board} const $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, \hyperlink{structsnake}{snake} const $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})
+\begin{DoxyCompactList}\small\item\em test choc snake contre le mur \end{DoxyCompactList}\item 
+int \hyperlink{snakelib_8c_a31044302280c0ec9eca89286f81127af}{rand\+\_\+a\+\_\+b} (int a, int \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b})
+\item 
+void \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\+\_\+apple} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, int $\ast$x, int $\ast$y)
+\item 
+bool \hyperlink{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}{snake\+\_\+apple} (\hyperlink{structsnake}{snake} const $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, int $\ast$x, int $\ast$y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+apple@{board\+\_\+apple}}
+\index{board\+\_\+apple@{board\+\_\+apple}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+apple(board $\ast$b, int $\ast$x, int $\ast$y)}{board_apple(board *b, int *x, int *y)}}]{\setlength{\rightskip}{0pt plus 5cm}void board\+\_\+apple (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{}\label{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}
+
+\begin{DoxyCode}
+512 \{
+513     \textcolor{keywordtype}{bool} \hyperlink{client_8c_af6f0bd3dc13317f895c91323c25c2b8f}{t} = \textcolor{keyword}{true};
+514     \textcolor{keywordflow}{while}(t)
+515     \{
+516             *x = \hyperlink{snakelib_8c_a31044302280c0ec9eca89286f81127af}{rand\_a\_b}(1, b->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}-2);
+517             *y = \hyperlink{snakelib_8c_a31044302280c0ec9eca89286f81127af}{rand\_a\_b}(1, b->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y}-2);
+518             \textcolor{keywordflow}{if}(\hyperlink{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{board\_get}(b,*x,*y) == \textcolor{charliteral}{' '})
+519             \{
+520                 \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(b,*x,*y,\textcolor{charliteral}{'$'});
+521                 t = \textcolor{keyword}{false};
+522             \}
+523     \}
+524 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+free@{board\+\_\+free}}
+\index{board\+\_\+free@{board\+\_\+free}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+free(board $\ast$brdin)}{board_free(board *brdin)}}]{\setlength{\rightskip}{0pt plus 5cm}void board\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{brdin}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{}\label{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}
+
+
+liberer la memoire occupé par un plateau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em adresse} & du plateau à libérer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+une fonction de type void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+91 \{
+92     \textcolor{keywordtype}{int} i;
+93     
+94     \textcolor{keywordflow}{for}(i = 0; i < brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} ; i++)
+95     \{
+96         free(brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i]);
+97         brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i] = NULL;
+98     \}
+99     
+100     free(brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array});
+101     brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array} = NULL;
+102 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+get@{board\+\_\+get}}
+\index{board\+\_\+get@{board\+\_\+get}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+get(board const $\ast$brdin, int x, int y)}{board_get(board const *brdin, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}char board\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf board} const $\ast$}]{brdin, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{}\label{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}
+
+
+return la valeur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em adresse} & d\textquotesingle{}un plateau pour accéder et modifier simplement ses variables \\
+\hline
+{\em x} & et y la case à visiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+char la valueur du point (x,y) 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{keywordflow}{return} brdin->array[y][x];
+72 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+init@{board\+\_\+init}}
+\index{board\+\_\+init@{board\+\_\+init}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+init(int x, int y)}{board_init(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf board} board\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{}\label{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}
+borders values is \textquotesingle{}\#\textquotesingle{}. 
+\begin{DoxyCode}
+22 \{
+23     \hyperlink{structboard}{board} brdout;
+24     
+25     brdout.\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} = x;
+26     brdout.\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} = y;
+27     
+28     \textcolor{keywordtype}{int} i, j;
+29     
+30     brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}=malloc(y*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*));
+31     \textcolor{keywordflow}{for}(i = 0; i < y; i++)
+32         brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i] = malloc(x*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+33         
+34 
+36     \textcolor{keywordflow}{for}(i = 0; i < x; i++)
+37     \{
+38         brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[0][i] = \textcolor{charliteral}{'#'};
+39         brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[y-1][i] = \textcolor{charliteral}{'#'};
+40     \}
+41     \textcolor{keywordflow}{for}(i = 0;i < y; i++)
+42     \{
+43         brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][0] = \textcolor{charliteral}{'#'};
+44         brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][x-1] = \textcolor{charliteral}{'#'};
+45     \}
+46     
+47     \textcolor{keywordflow}{for}(i = 1; i < y-1; i++)
+48         \textcolor{keywordflow}{for}(j = 1; j < x-1; j++)
+49             brdout.\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][j] = \textcolor{charliteral}{' '};
+50             
+51     \textcolor{keywordflow}{return} brdout;
+52 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+print@{board\+\_\+print}}
+\index{board\+\_\+print@{board\+\_\+print}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+print(const board $\ast$brdin)}{board_print(const board *brdin)}}]{\setlength{\rightskip}{0pt plus 5cm}void board\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{const {\bf board} $\ast$}]{brdin}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{}\label{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}
+
+
+pour afficher un plateau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em une} & adresse d\textquotesingle{}un plateau concéder constant (droit que pour la lecture) pour éviter de copier le plateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+une fonction de type void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+113 \{
+114     \textcolor{keywordtype}{int} i,j;
+115     \textcolor{comment}{/* traversing 2d-array */}
+116     \textcolor{keywordflow}{for}(i=0 ; i < brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y}; i++)
+117     \{
+118         \textcolor{keywordflow}{for}(j=0 ;j < brdin->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}; j++)
+119         \{
+120             printf(\textcolor{stringliteral}{"%c"}, brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][j]);
+121         \}
+122         printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+123     \}
+124 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+pxmap@{board\+\_\+pxmap}}
+\index{board\+\_\+pxmap@{board\+\_\+pxmap}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+pxmap(const board $\ast$brdin, char $\ast$foldername, int filename, int zoom)}{board_pxmap(const board *brdin, char *foldername, int filename, int zoom)}}]{\setlength{\rightskip}{0pt plus 5cm}void board\+\_\+pxmap (
+\begin{DoxyParamCaption}
+\item[{const {\bf board} $\ast$}]{brdin, }
+\item[{char $\ast$}]{foldername, }
+\item[{int}]{filename, }
+\item[{int}]{zoom}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_aa228e2d2337022d7cf56c813b9540166}{}\label{snakelib_8c_aa228e2d2337022d7cf56c813b9540166}
+
+
+créer une image ppm du tableau pour mieux voir et interpreter nos fonctions de teste 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em une} & adresse d\textquotesingle{}un plateau concéder constant (droit que pour la lecture) pour éviter de copier le plateau \\
+\hline
+{\em char$\ast$} & foldername\+: donner un nom au dossier créé \\
+\hline
+{\em int} & filename\+: numero de la map \\
+\hline
+{\em int} & zoom\+: pour definir le zoom appliqué a la map ( taille d\textquotesingle{}une case en px = zoom $\ast$ 1px ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+une fonction de type void 
+\end{DoxyReturn}
+le dossier n\textquotesingle{}existe pas 
+\begin{DoxyCode}
+141 \{
+142     \textcolor{keyword}{struct }stat dir\_stat;
+143     \textcolor{keywordflow}{if}(stat(foldername, &dir\_stat) < 0)
+145         mkdir(foldername, S\_IRWXU);
+146     
+147     
+148     \textcolor{keywordtype}{char} ffilename[strlen(foldername) + 7];
+149     sprintf(ffilename, \textcolor{stringliteral}{"%s/%d.ppm"}, foldername, filename);
+150     FILE* fdout = fopen( ffilename, \textcolor{stringliteral}{"w"});
+151     fprintf(fdout, \textcolor{stringliteral}{"P3\(\backslash\)n%d %d\(\backslash\)n255\(\backslash\)n"}, brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} * zoom,\(\backslash\)
+152             brdin->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} * zoom);
+153             
+154     
+155     \textcolor{keywordtype}{int} i,j,\hyperlink{client_8c_a70893b9fd599f8c9ed3ed00c52eba44a}{l},k;
+156     \textcolor{comment}{/* traversing 2d-array */}
+157     \textcolor{keywordflow}{for}(i = 0; i < brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y}; i++)
+158     \{
+159      \textcolor{keywordflow}{for}(l = 0; l < zoom; l++)
+160      \{
+161       \textcolor{keywordflow}{for}(j = 0; j < brdin->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}; j++)
+162       \{
+163        \textcolor{keywordflow}{for}(k = 0; k < zoom; k++)
+164        \{
+165          \textcolor{keywordflow}{if}(brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][j] == \textcolor{charliteral}{' '})
+166           fprintf(fdout,\textcolor{stringliteral}{"175 175 175 "});
+167          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][j] == \textcolor{charliteral}{'#'})
+168           fprintf(fdout,\textcolor{stringliteral}{"48 48 48 "});
+169          \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[i][j] == \textcolor{charliteral}{'@'})
+170           fprintf(fdout,\textcolor{stringliteral}{"110 11 20 "});
+171        \}
+172       \}
+173       fprintf(fdout, \textcolor{stringliteral}{"\(\backslash\)n"});
+174      \}
+175      fprintf(fdout, \textcolor{stringliteral}{"\(\backslash\)n"});
+176     \}
+177     fclose(fdout);
+178     
+179     
+180 \}
+\end{DoxyCode}
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+set@{board\+\_\+set}}
+\index{board\+\_\+set@{board\+\_\+set}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+set(board $\ast$brdin, int x, int y, char value)}{board_set(board *brdin, int x, int y, char value)}}]{\setlength{\rightskip}{0pt plus 5cm}void board\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{brdin, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{}\label{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}
+
+\begin{DoxyCode}
+65 \{
+66     brdin->\hyperlink{structboard_a1d1e3a5155ec051a1e5a5e2d9de30e86}{array}[y][x] = value;
+67 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+size\+\_\+x@{board\+\_\+size\+\_\+x}}
+\index{board\+\_\+size\+\_\+x@{board\+\_\+size\+\_\+x}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+size\+\_\+x(board const $\ast$b)}{board_size_x(board const *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int board\+\_\+size\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{{\bf board} const $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}{}\label{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}
+
+
+taille x du plateau 
+
+taille y du plateau
+
+
+\begin{DoxyParams}{Paramètres}
+{\em adresse} & du plateau \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+75 \{
+76     \textcolor{keywordflow}{return} \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x};
+77 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!board\+\_\+size\+\_\+y@{board\+\_\+size\+\_\+y}}
+\index{board\+\_\+size\+\_\+y@{board\+\_\+size\+\_\+y}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{board\+\_\+size\+\_\+y(board const $\ast$b)}{board_size_y(board const *b)}}]{\setlength{\rightskip}{0pt plus 5cm}int board\+\_\+size\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{{\bf board} const $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a01be021996158cf01e830b56e41be904}{}\label{snakelib_8c_a01be021996158cf01e830b56e41be904}
+
+\begin{DoxyCode}
+80 \{
+81     \textcolor{keywordflow}{return} \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y};
+82 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a01be021996158cf01e830b56e41be904_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!choc\+\_\+sc@{choc\+\_\+sc}}
+\index{choc\+\_\+sc@{choc\+\_\+sc}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{choc\+\_\+sc(snake const $\ast$s1, snake const $\ast$s2)}{choc_sc(snake const *s1, snake const *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool choc\+\_\+sc (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s1, }
+\item[{{\bf snake} const $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ab72d8c937b91594a9c27b30c05a08a75}{}\label{snakelib_8c_ab72d8c937b91594a9c27b30c05a08a75}
+
+\begin{DoxyCode}
+490 \{
+491     \textcolor{keywordflow}{if} ((*s1)->x == (*s2)->x && (*s1)->y == (*s2)->y)
+492         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+493     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+494 \}
+\end{DoxyCode}
+\index{snakelib.\+c@{snakelib.\+c}!choc\+\_\+snake@{choc\+\_\+snake}}
+\index{choc\+\_\+snake@{choc\+\_\+snake}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{choc\+\_\+snake(snake const $\ast$s1, snake const $\ast$s2)}{choc_snake(snake const *s1, snake const *s2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool choc\+\_\+snake (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s1, }
+\item[{{\bf snake} const $\ast$}]{s2}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ab96735ae82693727289ffe22fc940235}{}\label{snakelib_8c_ab96735ae82693727289ffe22fc940235}
+
+
+test choc entre deux snake 
+
+
+\begin{DoxyCode}
+478 \{
+479     \hyperlink{structsnake}{snake} tmp = (*s2)->next;
+480     \textcolor{keywordflow}{while}(tmp)
+481     \{
+482         \textcolor{keywordflow}{if}((*s1)->x == tmp->x && (*s1)->y == tmp->y)
+483             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+484         tmp = tmp->next;
+485     \}
+486     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+487 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{snakelib_8c_ab96735ae82693727289ffe22fc940235_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!choc\+\_\+wall@{choc\+\_\+wall}}
+\index{choc\+\_\+wall@{choc\+\_\+wall}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{choc\+\_\+wall(board const $\ast$b, snake const $\ast$s)}{choc_wall(board const *b, snake const *s)}}]{\setlength{\rightskip}{0pt plus 5cm}bool choc\+\_\+wall (
+\begin{DoxyParamCaption}
+\item[{{\bf board} const $\ast$}]{b, }
+\item[{{\bf snake} const $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{}\label{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}
+
+
+test choc snake contre le mur 
+
+
+\begin{DoxyCode}
+497 \{
+498     \textcolor{keywordflow}{if}((*s)->x == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+499     \textcolor{keywordflow}{if}((*s)->x == \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}-1) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+500     \textcolor{keywordflow}{if}((*s)->y == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+501     \textcolor{keywordflow}{if}((*s)->y == \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y}-1) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+502     
+503     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+504 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!move@{move}}
+\index{move@{move}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{move(board $\ast$brdin, snake $\ast$snkin, char id)}{move(board *brdin, snake *snkin, char id)}}]{\setlength{\rightskip}{0pt plus 5cm}void move (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{brdin, }
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{char}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{}\label{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}
+
+\begin{DoxyCode}
+371 \{
+372     \textcolor{keywordtype}{int} x,y,dx,dy;
+373     \hyperlink{snakelib_8c_aa723bfe337f8108975b8d36292b422d1}{snake\_del}(snkin, &x, &y);
+374     \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin, x, y, \textcolor{charliteral}{' '});
+375     dx = ((*snkin)->x) - ((*snkin)->next->x);
+376     dy = ((*snkin)->y) - ((*snkin)->next->y);
+377     \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}(snkin, (*snkin)->x+dx , (*snkin)->y+dy);
+378     \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} ,(*snkin)->y , \textcolor{keywordtype}{id});
+379 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!rand\+\_\+a\+\_\+b@{rand\+\_\+a\+\_\+b}}
+\index{rand\+\_\+a\+\_\+b@{rand\+\_\+a\+\_\+b}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{rand\+\_\+a\+\_\+b(int a, int b)}{rand_a_b(int a, int b)}}]{\setlength{\rightskip}{0pt plus 5cm}int rand\+\_\+a\+\_\+b (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a31044302280c0ec9eca89286f81127af}{}\label{snakelib_8c_a31044302280c0ec9eca89286f81127af}
+
+\begin{DoxyCode}
+507 \{
+508     \textcolor{keywordflow}{return} (rand()%(\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}-a) + a);
+509 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a31044302280c0ec9eca89286f81127af_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+add@{snake\+\_\+add}}
+\index{snake\+\_\+add@{snake\+\_\+add}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+add(snake $\ast$snkin, int x, int y)}{snake_add(snake *snkin, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{}\label{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}
+
+
+un snake est équivalent à une file d\textquotesingle{}attente (F\+I\+FO « first in, first out »), cette fonction permet d\textquotesingle{}ajouter à l\textquotesingle{}entête de la liste 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em snake} & $\ast$snkin\+: adresse d\textquotesingle{}un snake \\
+\hline
+{\em int} & x, int y\+: coordonnée du nouvel élément \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+fonction de type void 
+\end{DoxyReturn}
+define list output with coord x,y
+
+the next element is list input
+
+edit list input( $\ast$input=output) 
+\begin{DoxyCode}
+192 \{
+194     \hyperlink{structsnake}{snake} snkout=malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct__snake}{\_snake}));
+195     snkout->x = x;
+196     snkout->y = y;
+198     snkout->next = *snkin;
+200     *snkin = snkout;
+201 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+addl@{snake\+\_\+addl}}
+\index{snake\+\_\+addl@{snake\+\_\+addl}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+addl(snake $\ast$snkin, int x, int y)}{snake_addl(snake *snkin, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+addl (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}{}\label{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}
+
+\begin{DoxyCode}
+262 \{
+263     \hyperlink{structsnake}{snake} \textcolor{keyword}{new} = malloc(\textcolor{keyword}{sizeof}(\hyperlink{struct__snake}{\_snake}));
+264     *\textcolor{keyword}{new} = (\hyperlink{snakelib_8h_a37a403a92b4650960d024935a50e67e9}{\_snake})
+265     \{
+266         .x = x,
+267         .y = y,
+268         .next = NULL,
+269     \};
+270     \hyperlink{structsnake}{snake} tmp = *snkin;
+271     \textcolor{keywordflow}{while}(tmp->next != NULL)
+272     \{
+273         tmp = tmp->next;
+274     \}
+275     tmp->next = \textcolor{keyword}{new};
+276 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+apple@{snake\+\_\+apple}}
+\index{snake\+\_\+apple@{snake\+\_\+apple}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+apple(snake const $\ast$s, int $\ast$x, int $\ast$y)}{snake_apple(snake const *s, int *x, int *y)}}]{\setlength{\rightskip}{0pt plus 5cm}bool snake\+\_\+apple (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}{}\label{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}
+
+\begin{DoxyCode}
+527 \{
+528     \textcolor{keywordflow}{if}(\hyperlink{snakelib_8c_a01c30f2556498b7887cc5ff5a88119ca}{snake\_x}(\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}) == *x && \hyperlink{snakelib_8c_ad0e10e1a230ae236d8b5fe92e2559378}{snake\_y}(\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s}) == *y) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+529     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+530 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+del@{snake\+\_\+del}}
+\index{snake\+\_\+del@{snake\+\_\+del}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+del(snake $\ast$snkin, int $\ast$x, int $\ast$y)}{snake_del(snake *snkin, int *x, int *y)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+del (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_aa723bfe337f8108975b8d36292b422d1}{}\label{snakelib_8c_aa723bfe337f8108975b8d36292b422d1}
+
+
+un snake est équivalent à une file d\textquotesingle{}attente (F\+I\+FO « first in, first out »), cette fonction permet de supprimer au queue de la liste 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em snake} & $\ast$snkin\+: adresse d\textquotesingle{}un snake \\
+\hline
+{\em snake} & int $\ast$x, int $\ast$y\+: adresses de deux entiers pour pouvoir récupérer les coordonnées d\textquotesingle{}élément supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+fonction de type void 
+\end{DoxyReturn}
+if the list is empty
+
+default value x=-\/1 y=-\/1
+
+if the list contains only one item
+
+we move along the linked list keeping the last two consecutive element
+\begin{DoxyCode}
+215 \{
+216     \textcolor{keywordflow}{if}(*snkin == NULL)
+217     \{
+219         \textcolor{keywordflow}{if}((x != NULL) && (y != NULL))
+220         \{
+222             *x = -1;
+223             *y = -1;
+224         \}
+225     \}
+226     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((*snkin)->next == NULL)
+227     \{
+228 
+230         \textcolor{keywordflow}{if}((x != NULL) && (y != NULL))
+231         \{
+232             *x = (*snkin)->x;
+233             *y = (*snkin)->y;
+234         \}
+235         free((*snkin));
+236         *snkin = NULL;
+237     \}
+238     \textcolor{keywordflow}{else}
+239     \{
+244         \hyperlink{structsnake}{snake} tmp1 = *snkin;
+245         \hyperlink{structsnake}{snake} tmp2 = *snkin;
+246         \textcolor{keywordflow}{while}(tmp1->next != NULL)
+247         \{
+248             tmp2 = tmp1;
+249             tmp1 = tmp1->next;
+250         \}
+251         \textcolor{keywordflow}{if}((x != NULL) && (y != NULL))
+252         \{
+253             *x = tmp1->x;
+254             *y = tmp1->y;
+255         \}
+256         tmp2->next = NULL;
+257         free(tmp1);
+258     \}
+259 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_aa723bfe337f8108975b8d36292b422d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+free@{snake\+\_\+free}}
+\index{snake\+\_\+free@{snake\+\_\+free}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+free(snake $\ast$snkin)}{snake_free(snake *snkin)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} $\ast$}]{snkin}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{}\label{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}
+
+
+libérer la mémoire 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em adresse} & du snake \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+fonction de type void 
+\end{DoxyReturn}
+
+\begin{DoxyCode}
+309 \{
+310     \hyperlink{structsnake}{snake} tmp = *snkin;
+311     \hyperlink{structsnake}{snake} tmpnext;
+312     
+313     \textcolor{keywordflow}{while}(tmp != NULL)
+314     \{
+315         tmpnext = tmp->next;
+316         free(tmp);
+317         tmp = tmpnext;
+318     \}
+319     
+320     *snkin = NULL;
+321 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+getl@{snake\+\_\+getl}}
+\index{snake\+\_\+getl@{snake\+\_\+getl}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+getl(snake $\ast$snkin, int $\ast$x, int $\ast$y)}{snake_getl(snake *snkin, int *x, int *y)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+getl (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}{}\label{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}
+
+\begin{DoxyCode}
+279 \{
+280     \textcolor{keywordflow}{if}(*snkin == NULL)
+281     \{
+282         *x = -1;
+283         *y = -1;
+284     \}
+285     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((*snkin)->next == NULL)
+286     \{
+287         *x = (*snkin)->x;
+288         *y = (*snkin)->y;
+289     \}
+290     \textcolor{keywordflow}{else}
+291     \{
+292         \hyperlink{structsnake}{snake} tmp = *snkin;
+293         \textcolor{keywordflow}{while}(tmp->next != NULL)
+294         \{
+295             tmp = tmp->next;
+296         \}
+297         *x = tmp->x;
+298         *y = tmp->y;
+299     \}
+300 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+init@{snake\+\_\+init}}
+\index{snake\+\_\+init@{snake\+\_\+init}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+init(board $\ast$brdin, snake $\ast$snkin, int len, char id)}{snake_init(board *brdin, snake *snkin, int len, char id)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{brdin, }
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int}]{len, }
+\item[{char}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{}\label{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}
+
+
+init a snake 
+
+
+\begin{DoxyCode}
+429 \{
+430     \textcolor{keywordflow}{if}(\textcolor{keywordtype}{id} == \textcolor{charliteral}{'@'})
+431     \{
+432         
+433         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, brdin->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} / 2, brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} - 2 );
+434         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id} );
+435         
+436         \textcolor{keywordtype}{int} i;
+437         \textcolor{keywordflow}{for}(i = 0; i < len - 1; i++)
+438         \{
+439             \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, (*snkin)->x, (*snkin)->y -1 );
+440             \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id} );
+441         \}
+442         
+443     \}
+444     
+445     \textcolor{keywordflow}{if}(\textcolor{keywordtype}{id} == \textcolor{charliteral}{'&'})
+446     \{
+447         
+448         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, brdin->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} / 2, 1 );
+449         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id} );
+450         
+451         \textcolor{keywordtype}{int} i;
+452         \textcolor{keywordflow}{for}(i = 0; i < len - 1; i++)
+453         \{
+454             \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, (*snkin)->x, (*snkin)->y +1 );
+455             \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id} );
+456         \}
+457         
+458     \}
+459 
+460     \textcolor{keywordflow}{if}(\textcolor{keywordtype}{id} == \textcolor{charliteral}{'+'})
+461     \{
+462         
+463         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, 1, brdin->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} / 2 );
+464         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id} );
+465         
+466         \textcolor{keywordtype}{int} i;
+467         \textcolor{keywordflow}{for}(i = 0; i < len - 1; i++)
+468         \{
+469             \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}( snkin, (*snkin)->x + 1, (*snkin)->y);
+470             \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}( brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, 1 );
+471         \}
+472         
+473     \}
+474     
+475 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+next@{snake\+\_\+next}}
+\index{snake\+\_\+next@{snake\+\_\+next}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+next(snake const $\ast$s)}{snake_next(snake const *s)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf snake}$\ast$ snake\+\_\+next (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a332568bbdd587cd7a0d14b1fa22df233}{}\label{snakelib_8c_a332568bbdd587cd7a0d14b1fa22df233}
+
+\begin{DoxyCode}
+355 \{
+356     \textcolor{keywordflow}{return} &((*s)->next);
+357 \}
+\end{DoxyCode}
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+print@{snake\+\_\+print}}
+\index{snake\+\_\+print@{snake\+\_\+print}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+print(const snake $\ast$snkin)}{snake_print(const snake *snkin)}}]{\setlength{\rightskip}{0pt plus 5cm}void snake\+\_\+print (
+\begin{DoxyParamCaption}
+\item[{const {\bf snake} $\ast$}]{snkin}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{}\label{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}
+
+\begin{DoxyCode}
+332 \{
+333     \hyperlink{structsnake}{snake} tmp = *snkin;
+334     \textcolor{keywordflow}{while}(tmp != NULL)
+335     \{
+336         printf(\textcolor{stringliteral}{"[%d:%d]"}, tmp->x, tmp->y);
+337         tmp = tmp->next;
+338     \}
+339     printf(\textcolor{stringliteral}{"\(\backslash\)n"});
+340 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+x@{snake\+\_\+x}}
+\index{snake\+\_\+x@{snake\+\_\+x}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+x(snake const $\ast$s)}{snake_x(snake const *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int snake\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_a01c30f2556498b7887cc5ff5a88119ca}{}\label{snakelib_8c_a01c30f2556498b7887cc5ff5a88119ca}
+
+\begin{DoxyCode}
+345 \{
+346     \textcolor{keywordflow}{return} (*s)->x;
+347 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_a01c30f2556498b7887cc5ff5a88119ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!snake\+\_\+y@{snake\+\_\+y}}
+\index{snake\+\_\+y@{snake\+\_\+y}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{snake\+\_\+y(snake const $\ast$s)}{snake_y(snake const *s)}}]{\setlength{\rightskip}{0pt plus 5cm}int snake\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{{\bf snake} const $\ast$}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_ad0e10e1a230ae236d8b5fe92e2559378}{}\label{snakelib_8c_ad0e10e1a230ae236d8b5fe92e2559378}
+
+\begin{DoxyCode}
+350 \{
+351     \textcolor{keywordflow}{return} (*s)->y;
+352 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_ad0e10e1a230ae236d8b5fe92e2559378_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snakelib.\+c@{snakelib.\+c}!turn@{turn}}
+\index{turn@{turn}!snakelib.\+c@{snakelib.\+c}}
+\subsubsection[{\texorpdfstring{turn(board $\ast$brdin, snake $\ast$snkin, int drctn, char id)}{turn(board *brdin, snake *snkin, int drctn, char id)}}]{\setlength{\rightskip}{0pt plus 5cm}void turn (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{brdin, }
+\item[{{\bf snake} $\ast$}]{snkin, }
+\item[{int}]{drctn, }
+\item[{char}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{}\label{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}
+
+\begin{DoxyCode}
+394 \{
+395     \textcolor{keywordtype}{int} x,y,dx,dy;
+396     
+397     \hyperlink{snakelib_8c_aa723bfe337f8108975b8d36292b422d1}{snake\_del}(snkin,&x,&y);
+398     \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin,x,y, \textcolor{charliteral}{' '});
+399     
+400     dx=((*snkin)->x) - ((*snkin)->next->x);
+401     dy=((*snkin)->y) - ((*snkin)->next->y);
+402     
+403     \textcolor{keywordflow}{if}(dx == 1)
+404     \{
+405         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}(snkin, (*snkin)->x, (*snkin)->y + drctn);
+406         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id});
+407     \}
+408     
+409     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(dx == -1)
+410     \{
+411         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}(snkin, (*snkin)->x, (*snkin)->y - drctn);
+412         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin, (*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x}, (*snkin)->y, \textcolor{keywordtype}{id});
+413     \}
+414     
+415     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(dy == 1)
+416     \{
+417         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}(snkin,(*snkin)->x-drctn,(*snkin)->y);
+418         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin,(*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x},(*snkin)->y,\textcolor{keywordtype}{id});
+419     \}
+420     
+421     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(dy == -1)
+422     \{
+423         \hyperlink{snakelib_8c_a17492ac4841b98e25c682f9ff358ea2c}{snake\_add}(snkin,(*snkin)->x+drctn,(*snkin)->y);
+424         \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(brdin,(*snkin)->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x},(*snkin)->y,\textcolor{keywordtype}{id});
+425     \}
+426 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{snakelib_8c_afa428ecb4385e08a82520bec11bafe36_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snakelib_8c_afa428ecb4385e08a82520bec11bafe36_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,626 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Snake: Référence du fichier SOURCE/snake.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08351310ddebaca638dbb30498c8cafd.html">SOURCE</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier snake.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="snakelib_8h_source.html">../INCLUDE/snakelib.h</a>&quot;</code><br />
+<code>#include &lt;SDL/SDL.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de snake.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c__incl.png" border="0" usemap="#SOURCE_2snake_8c" alt=""/></div>
+<map name="SOURCE_2snake_8c" id="SOURCE_2snake_8c">
+<area shape="rect" id="node2" href="snakelib_8h.html" title="../INCLUDE/snakelib.h" alt="" coords="165,80,323,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa9e0582fb2da4f96cb13bf68a6a9f073"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#aa9e0582fb2da4f96cb13bf68a6a9f073">BOARD_SIZE_X</a>&#160;&#160;&#160;51</td></tr>
+<tr class="separator:aa9e0582fb2da4f96cb13bf68a6a9f073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfabc043baaf3c01ee67a77c2ae6b078"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#acfabc043baaf3c01ee67a77c2ae6b078">BOARD_SIZE_Y</a>&#160;&#160;&#160;31</td></tr>
+<tr class="separator:acfabc043baaf3c01ee67a77c2ae6b078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a78e9845fe459f5a2be9fe6ce52d24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a37a78e9845fe459f5a2be9fe6ce52d24">SNAKE_LEN</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a37a78e9845fe459f5a2be9fe6ce52d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e89d523436fcbbf2c56e4fb335d509"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a44e89d523436fcbbf2c56e4fb335d509">SLEEP</a>&#160;&#160;&#160;100000</td></tr>
+<tr class="separator:a44e89d523436fcbbf2c56e4fb335d509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab6f22cbb52dc4a7603d7c42a3521a7c6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6">sdl_turn</a> ()</td></tr>
+<tr class="separator:ab6f22cbb52dc4a7603d7c42a3521a7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4bd8217532482639db456d8d6a59598"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#aa4bd8217532482639db456d8d6a59598">sdl_move</a> ()</td></tr>
+<tr class="separator:aa4bd8217532482639db456d8d6a59598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfeae643e415db24e85db6c4994b071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a> ()</td></tr>
+<tr class="separator:a2cfeae643e415db24e85db6c4994b071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4acff8232e4aec9cd5c6dc200ac55ef3"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a> = PTHREAD_MUTEX_INITIALIZER</td></tr>
+<tr class="separator:a4acff8232e4aec9cd5c6dc200ac55ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8dfea36e66ed4b47c61a7ea5212e164"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></td></tr>
+<tr class="separator:ae8dfea36e66ed4b47c61a7ea5212e164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a54bef7bf02b18264c38fc90549a04"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></td></tr>
+<tr class="separator:a79a54bef7bf02b18264c38fc90549a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54b5255531a4799123d0f8dca96a7cc"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></td></tr>
+<tr class="separator:ac54b5255531a4799123d0f8dca96a7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d76262118cf1d4da44315136e542ca"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></td></tr>
+<tr class="separator:ab7d76262118cf1d4da44315136e542ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9bd8b56defc5a6ec9c20b503b59a3a"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></td></tr>
+<tr class="separator:aae9bd8b56defc5a6ec9c20b503b59a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fdbd342281b7b5b77945c79d176b9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboard.html">board</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></td></tr>
+<tr class="separator:a20fdbd342281b7b5b77945c79d176b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e92e96b65208605aca57598cc827f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsnake.html">snake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></td></tr>
+<tr class="separator:a71e92e96b65208605aca57598cc827f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e41fbc7bc65ce59a521b44f5630f0e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a></td></tr>
+<tr class="separator:a2e41fbc7bc65ce59a521b44f5630f0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c92491dc640484daae606ed7ae9cfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a></td></tr>
+<tr class="separator:a86c92491dc640484daae606ed7ae9cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbf254766520cad4d7fe189eb184194c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a></td></tr>
+<tr class="separator:abbf254766520cad4d7fe189eb184194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31e24c11fe7b55913887a78bff6ed30e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a></td></tr>
+<tr class="separator:a31e24c11fe7b55913887a78bff6ed30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1bde286e010d81472b269b419806d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a></td></tr>
+<tr class="separator:aab1bde286e010d81472b269b419806d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="aa9e0582fb2da4f96cb13bf68a6a9f073"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOARD_SIZE_X&#160;&#160;&#160;51</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acfabc043baaf3c01ee67a77c2ae6b078"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BOARD_SIZE_Y&#160;&#160;&#160;31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44e89d523436fcbbf2c56e4fb335d509"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SLEEP&#160;&#160;&#160;100000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a37a78e9845fe459f5a2be9fe6ce52d24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SNAKE_LEN&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/* la variable globale du jeu */</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/* rand init */</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    srand(time(0));</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">/* init board + snake */</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a> = <a class="code" href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7">board_init</a>(<a class="code" href="snake_8c.html#aa9e0582fb2da4f96cb13bf68a6a9f073">BOARD_SIZE_X</a>,<a class="code" href="snake_8c.html#acfabc043baaf3c01ee67a77c2ae6b078">BOARD_SIZE_Y</a>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93">snake_init</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,<a class="code" href="snake_8c.html#a37a78e9845fe459f5a2be9fe6ce52d24">SNAKE_LEN</a>,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/* init sdl en mode video */</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    SDL_Init(SDL_INIT_VIDEO);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">/* init surface E avec une taille 20*BOARD_SIZE_X et 20*BOARD_SIZE_Y */</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a> = SDL_SetVideoMode(20*<a class="code" href="snake_8c.html#aa9e0582fb2da4f96cb13bf68a6a9f073">BOARD_SIZE_X</a>, 20*<a class="code" href="snake_8c.html#acfabc043baaf3c01ee67a77c2ae6b078">BOARD_SIZE_Y</a>, 32, SDL_HWSURFACE);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">/* creer le reste des surfaces avec une taille de 20*20 px */</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">/* init avec couleur rgb */</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    SDL_FillRect(<a class="code" href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>, 0, SDL_MapRGB(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 95, 0, 0));</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    SDL_FillRect(<a class="code" href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>, 0, SDL_MapRGB(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 137, 137, 137));</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    SDL_FillRect(<a class="code" href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>, 0, SDL_MapRGB(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 47, 47, 47));</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    SDL_FillRect(<a class="code" href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a>, 0, SDL_MapRGB(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 157, 62, 12));</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* init barre de fenetre */</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SDL_WM_SetCaption(<span class="stringliteral">&quot;Snack&quot;</span>, 0);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">/* nos variabe de thread */</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    pthread_t thread_turn;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    pthread_t thread_move;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">/* creer les thread */</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    pthread_create (&amp;thread_turn, 0, &amp;<a class="code" href="snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6">sdl_turn</a>, 0);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    pthread_create (&amp;thread_move, 0, &amp;<a class="code" href="snake_8c.html#aa4bd8217532482639db456d8d6a59598">sdl_move</a>,0);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">/* attendre leurs fin */</span></div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    pthread_join(thread_turn, 0);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    pthread_join(thread_move, 0);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/* libere surface */</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    SDL_FreeSurface(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    SDL_FreeSurface(<a class="code" href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    SDL_FreeSurface(<a class="code" href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    SDL_FreeSurface(<a class="code" href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">/* libere board + snake */</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9">board_free</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9">snake_free</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    SDL_Quit();</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="ttc" id="snake_8c_html_a79a54bef7bf02b18264c38fc90549a04"><div class="ttname"><a href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></div><div class="ttdeci">SDL_Surface * A</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snakelib_8c_html_a9625331c000178d2cf90ef40d2a8fbf7"><div class="ttname"><a href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7">board_init</a></div><div class="ttdeci">board board_init(int x, int y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:21</div></div>
+<div class="ttc" id="snakelib_8c_html_ae2b728ff11f9b12d88715ddef95639c9"><div class="ttname"><a href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9">snake_free</a></div><div class="ttdeci">void snake_free(snake *snkin)</div><div class="ttdoc">libérer la mémoire </div><div class="ttdef"><b>Definition:</b> snakelib.c:308</div></div>
+<div class="ttc" id="snake_8c_html_acfabc043baaf3c01ee67a77c2ae6b078"><div class="ttname"><a href="snake_8c.html#acfabc043baaf3c01ee67a77c2ae6b078">BOARD_SIZE_Y</a></div><div class="ttdeci">#define BOARD_SIZE_Y</div><div class="ttdef"><b>Definition:</b> snake.c:9</div></div>
+<div class="ttc" id="snake_8c_html_aa9e0582fb2da4f96cb13bf68a6a9f073"><div class="ttname"><a href="snake_8c.html#aa9e0582fb2da4f96cb13bf68a6a9f073">BOARD_SIZE_X</a></div><div class="ttdeci">#define BOARD_SIZE_X</div><div class="ttdef"><b>Definition:</b> snake.c:8</div></div>
+<div class="ttc" id="snakelib_8c_html_a223ea5e585467eee652b6b3b7a59e0c9"><div class="ttname"><a href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9">board_free</a></div><div class="ttdeci">void board_free(board *brdin)</div><div class="ttdoc">liberer la memoire occupé par un plateau </div><div class="ttdef"><b>Definition:</b> snakelib.c:90</div></div>
+<div class="ttc" id="snake_8c_html_ae8dfea36e66ed4b47c61a7ea5212e164"><div class="ttname"><a href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></div><div class="ttdeci">SDL_Surface * E</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snake_8c_html_ab6f22cbb52dc4a7603d7c42a3521a7c6"><div class="ttname"><a href="snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6">sdl_turn</a></div><div class="ttdeci">void * sdl_turn()</div><div class="ttdef"><b>Definition:</b> snake.c:73</div></div>
+<div class="ttc" id="snakelib_8c_html_ac696fcc76930ea0badb2f263dd479c93"><div class="ttname"><a href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93">snake_init</a></div><div class="ttdeci">void snake_init(board *brdin, snake *snkin, int len, char id)</div><div class="ttdoc">init a snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:428</div></div>
+<div class="ttc" id="snake_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> snake.c:15</div></div>
+<div class="ttc" id="snake_8c_html_ab7d76262118cf1d4da44315136e542ca"><div class="ttname"><a href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></div><div class="ttdeci">SDL_Surface * C</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snake_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> snake.c:19</div></div>
+<div class="ttc" id="snake_8c_html_aae9bd8b56defc5a6ec9c20b503b59a3a"><div class="ttname"><a href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></div><div class="ttdeci">SDL_Surface * D</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snake_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> snake.c:16</div></div>
+<div class="ttc" id="snake_8c_html_a37a78e9845fe459f5a2be9fe6ce52d24"><div class="ttname"><a href="snake_8c.html#a37a78e9845fe459f5a2be9fe6ce52d24">SNAKE_LEN</a></div><div class="ttdeci">#define SNAKE_LEN</div><div class="ttdef"><b>Definition:</b> snake.c:10</div></div>
+<div class="ttc" id="snake_8c_html_aa4bd8217532482639db456d8d6a59598"><div class="ttname"><a href="snake_8c.html#aa4bd8217532482639db456d8d6a59598">sdl_move</a></div><div class="ttdeci">void * sdl_move()</div><div class="ttdef"><b>Definition:</b> snake.c:147</div></div>
+<div class="ttc" id="snake_8c_html_ac54b5255531a4799123d0f8dca96a7cc"><div class="ttname"><a href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></div><div class="ttdeci">SDL_Surface * B</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7" title="board_init" alt="" coords="108,157,187,184"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93" title="init a snake " alt="" coords="245,5,327,32"/>
+<area shape="rect" id="node6" href="snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="113,259,181,285"/>
+<area shape="rect" id="node22" href="snake_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="108,309,187,336"/>
+<area shape="rect" id="node24" href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9" title="liberer la memoire occupé par un plateau " alt="" coords="106,360,189,387"/>
+<area shape="rect" id="node25" href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9" title="libérer la mémoire " alt="" coords="104,411,191,437"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="388,56,473,83"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="391,309,470,336"/>
+<area shape="rect" id="node7" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9" title="snake_getl" alt="" coords="243,259,329,285"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="264,56,308,83"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f" title="snake_apple" alt="" coords="239,588,333,615"/>
+<area shape="rect" id="node13" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce" title="snake_addl" alt="" coords="242,309,330,336"/>
+<area shape="rect" id="node14" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="240,461,332,488"/>
+<area shape="rect" id="node17" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="240,157,332,184"/>
+<area shape="rect" id="node18" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="246,208,326,235"/>
+<area shape="rect" id="node19" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="251,512,321,539"/>
+<area shape="rect" id="node9" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="390,157,471,184"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#a01c30f2556498b7887cc5ff5a88119ca" title="snake_x" alt="" coords="395,664,466,691"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#ad0e10e1a230ae236d8b5fe92e2559378" title="snake_y" alt="" coords="395,613,466,640"/>
+<area shape="rect" id="node15" href="snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="393,411,468,437"/>
+<area shape="rect" id="node16" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="391,461,470,488"/>
+<area shape="rect" id="node20" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="381,563,480,589"/>
+<area shape="rect" id="node21" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="381,512,480,539"/>
+<area shape="rect" id="node23" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="259,360,313,387"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4bd8217532482639db456d8d6a59598"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* sdl_move </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>, &amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>, &amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>);</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a>) </div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            pthread_mutex_lock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="comment">/* on cherche le dernier de notre liste */</span></div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9">snake_getl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,&amp;<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">/* move snake */</span></div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment">/* teste snake/pomme */</span></div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f">snake_apple</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>,&amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>))</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            {</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="comment">/* si oui on ajoute le dernier avant de tourner */</span></div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <a class="code" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce">snake_addl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>, <a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>, <a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="comment">/* on l&#39;ajoute aussi pour le plateau */</span></div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <a class="code" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3">board_set</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <span class="comment">/* genere nouvelle pomme */</span></div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <a class="code" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>, &amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>, &amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>);</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            }</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="comment">/* affiche SDL */</span></div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> ((<a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <a class="code" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="comment">/* libere le mutex pour les autres thread */</span></div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            pthread_mutex_unlock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            usleep (<a class="code" href="snake_8c.html#a44e89d523436fcbbf2c56e4fb335d509">SLEEP</a>);</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        }</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        pthread_exit(0);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div><div class="ttc" id="snake_8c_html_abbf254766520cad4d7fe189eb184194c"><div class="ttname"><a href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a></div><div class="ttdeci">int last_x</div><div class="ttdef"><b>Definition:</b> snake.c:18</div></div>
+<div class="ttc" id="snakelib_8c_html_aa7c9d4fed2b3edb453a4501ba019dc00"><div class="ttname"><a href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a></div><div class="ttdeci">void move(board *brdin, snake *snkin, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:370</div></div>
+<div class="ttc" id="snakelib_8c_html_ab96735ae82693727289ffe22fc940235"><div class="ttname"><a href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a></div><div class="ttdeci">bool choc_snake(snake const *s1, snake const *s2)</div><div class="ttdoc">test choc entre deux snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:477</div></div>
+<div class="ttc" id="snake_8c_html_a44e89d523436fcbbf2c56e4fb335d509"><div class="ttname"><a href="snake_8c.html#a44e89d523436fcbbf2c56e4fb335d509">SLEEP</a></div><div class="ttdeci">#define SLEEP</div><div class="ttdef"><b>Definition:</b> snake.c:11</div></div>
+<div class="ttc" id="snakelib_8c_html_a6b2f097d4deefee8b8f8d809691f44ce"><div class="ttname"><a href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce">snake_addl</a></div><div class="ttdeci">void snake_addl(snake *snkin, int x, int y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:261</div></div>
+<div class="ttc" id="snake_8c_html_a31e24c11fe7b55913887a78bff6ed30e"><div class="ttname"><a href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a></div><div class="ttdeci">int last_y</div><div class="ttdef"><b>Definition:</b> snake.c:18</div></div>
+<div class="ttc" id="snake_8c_html_a2cfeae643e415db24e85db6c4994b071"><div class="ttname"><a href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a></div><div class="ttdeci">void sdl_print()</div><div class="ttdef"><b>Definition:</b> snake.c:180</div></div>
+<div class="ttc" id="snake_8c_html_a2e41fbc7bc65ce59a521b44f5630f0e1"><div class="ttname"><a href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a></div><div class="ttdeci">int apple_x</div><div class="ttdef"><b>Definition:</b> snake.c:17</div></div>
+<div class="ttc" id="snake_8c_html_a4acff8232e4aec9cd5c6dc200ac55ef3"><div class="ttname"><a href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdef"><b>Definition:</b> snake.c:13</div></div>
+<div class="ttc" id="snakelib_8c_html_a9f15dca26b0f46aae4e1e5cf30db9ab9"><div class="ttname"><a href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9">snake_getl</a></div><div class="ttdeci">void snake_getl(snake *snkin, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:278</div></div>
+<div class="ttc" id="snakelib_8c_html_a50fa8a047abfa006a3371a94809e72c4"><div class="ttname"><a href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a></div><div class="ttdeci">bool choc_wall(board const *b, snake const *s)</div><div class="ttdoc">test choc snake contre le mur </div><div class="ttdef"><b>Definition:</b> snakelib.c:496</div></div>
+<div class="ttc" id="snake_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> snake.c:15</div></div>
+<div class="ttc" id="snake_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> snake.c:19</div></div>
+<div class="ttc" id="snakelib_8c_html_a12954721537f652c82e9cf23c1bfb0c3"><div class="ttname"><a href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3">board_set</a></div><div class="ttdeci">void board_set(board *brdin, int x, int y, char value)</div><div class="ttdef"><b>Definition:</b> snakelib.c:64</div></div>
+<div class="ttc" id="snake_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> snake.c:16</div></div>
+<div class="ttc" id="snake_8c_html_a86c92491dc640484daae606ed7ae9cfe"><div class="ttname"><a href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a></div><div class="ttdeci">int apple_y</div><div class="ttdef"><b>Definition:</b> snake.c:17</div></div>
+<div class="ttc" id="snakelib_8c_html_ab4819fcf1df66683feca8ad73abd89dd"><div class="ttname"><a href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a></div><div class="ttdeci">void board_apple(board *b, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:511</div></div>
+<div class="ttc" id="snakelib_8c_html_a9c77869dc19e2c9bc443ab997aad1f4f"><div class="ttname"><a href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f">snake_apple</a></div><div class="ttdeci">bool snake_apple(snake const *s, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:526</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_aa4bd8217532482639db456d8d6a59598_cgraph.png" border="0" usemap="#snake_8c_aa4bd8217532482639db456d8d6a59598_cgraph" alt=""/></div>
+<map name="snake_8c_aa4bd8217532482639db456d8d6a59598_cgraph" id="snake_8c_aa4bd8217532482639db456d8d6a59598_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="133,68,225,95"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="285,208,363,235"/>
+<area shape="rect" id="node6" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9" title="snake_getl" alt="" coords="137,309,222,336"/>
+<area shape="rect" id="node7" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="152,259,207,285"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f" title="snake_apple" alt="" coords="132,360,227,387"/>
+<area shape="rect" id="node13" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce" title="snake_addl" alt="" coords="135,411,223,437"/>
+<area shape="rect" id="node14" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="133,461,225,488"/>
+<area shape="rect" id="node15" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="139,512,219,539"/>
+<area shape="rect" id="node16" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="144,132,215,159"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="287,5,361,32"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="285,56,363,83"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="283,309,365,336"/>
+<area shape="rect" id="node9" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="281,259,367,285"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#a01c30f2556498b7887cc5ff5a88119ca" title="snake_x" alt="" coords="289,411,359,437"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#ad0e10e1a230ae236d8b5fe92e2559378" title="snake_y" alt="" coords="289,360,359,387"/>
+<area shape="rect" id="node17" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="275,157,373,184"/>
+<area shape="rect" id="node18" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="275,107,373,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_aa4bd8217532482639db456d8d6a59598_icgraph.png" border="0" usemap="#snake_8c_aa4bd8217532482639db456d8d6a59598_icgraph" alt=""/></div>
+<map name="snake_8c_aa4bd8217532482639db456d8d6a59598_icgraph" id="snake_8c_aa4bd8217532482639db456d8d6a59598_icgraph">
+<area shape="rect" id="node2" href="snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="132,5,183,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cfeae643e415db24e85db6c4994b071"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sdl_print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordtype">int</span> x,y, dx = <a class="code" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad">board_size_x</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>), dy = <a class="code" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904">board_size_y</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>);</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="comment">/* def une position */</span></div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    SDL_Rect p;</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">for</span> (x = 0; x &lt; dx; x++) </div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">for</span> (y = 0; y &lt; dy; y++) </div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            p.x = x * 20 ; p.y = y * 20 ;</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">/* lire dans le plateau et dessiner la surface */</span></div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">switch</span> (<a class="code" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447">board_get</a> (&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,x,y)) </div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            {</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;@&#39;</span>:</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    SDL_BlitSurface(<a class="code" href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>, 0, <a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    SDL_BlitSurface(<a class="code" href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>, 0, <a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    SDL_BlitSurface(<a class="code" href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>, 0, <a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    SDL_BlitSurface(<a class="code" href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a>, 0, <a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                }</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">/* reafficher un nouvelle ecran */</span></div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    SDL_Flip(<a class="code" href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>);</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;}<div class="ttc" id="snake_8c_html_a79a54bef7bf02b18264c38fc90549a04"><div class="ttname"><a href="snake_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></div><div class="ttdeci">SDL_Surface * A</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snakelib_8c_html_a01be021996158cf01e830b56e41be904"><div class="ttname"><a href="snakelib_8c.html#a01be021996158cf01e830b56e41be904">board_size_y</a></div><div class="ttdeci">int board_size_y(board const *b)</div><div class="ttdef"><b>Definition:</b> snakelib.c:79</div></div>
+<div class="ttc" id="snake_8c_html_ae8dfea36e66ed4b47c61a7ea5212e164"><div class="ttname"><a href="snake_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></div><div class="ttdeci">SDL_Surface * E</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snake_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> snake.c:15</div></div>
+<div class="ttc" id="snake_8c_html_ab7d76262118cf1d4da44315136e542ca"><div class="ttname"><a href="snake_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></div><div class="ttdeci">SDL_Surface * C</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snakelib_8c_html_ae49b60c78ec9b92e770c8eace9520447"><div class="ttname"><a href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447">board_get</a></div><div class="ttdeci">char board_get(board const *brdin, int x, int y)</div><div class="ttdoc">return la valeur </div><div class="ttdef"><b>Definition:</b> snakelib.c:69</div></div>
+<div class="ttc" id="snake_8c_html_aae9bd8b56defc5a6ec9c20b503b59a3a"><div class="ttname"><a href="snake_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></div><div class="ttdeci">SDL_Surface * D</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snake_8c_html_ac54b5255531a4799123d0f8dca96a7cc"><div class="ttname"><a href="snake_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></div><div class="ttdeci">SDL_Surface * B</div><div class="ttdef"><b>Definition:</b> snake.c:14</div></div>
+<div class="ttc" id="snakelib_8c_html_ab6926a5a512798dea6aa52f5f15ab8ad"><div class="ttname"><a href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad">board_size_x</a></div><div class="ttdeci">int board_size_x(board const *b)</div><div class="ttdoc">taille x du plateau </div><div class="ttdef"><b>Definition:</b> snakelib.c:74</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_a2cfeae643e415db24e85db6c4994b071_cgraph.png" border="0" usemap="#snake_8c_a2cfeae643e415db24e85db6c4994b071_cgraph" alt=""/></div>
+<map name="snake_8c_a2cfeae643e415db24e85db6c4994b071_cgraph" id="snake_8c_a2cfeae643e415db24e85db6c4994b071_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="124,5,223,32"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="124,56,223,83"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="134,107,213,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_a2cfeae643e415db24e85db6c4994b071_icgraph.png" border="0" usemap="#snake_8c_a2cfeae643e415db24e85db6c4994b071_icgraph" alt=""/></div>
+<map name="snake_8c_a2cfeae643e415db24e85db6c4994b071_icgraph" id="snake_8c_a2cfeae643e415db24e85db6c4994b071_icgraph">
+<area shape="rect" id="node2" href="snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="129,5,197,32"/>
+<area shape="rect" id="node4" href="snake_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="124,56,203,83"/>
+<area shape="rect" id="node3" href="snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="251,31,301,57"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6f22cbb52dc4a7603d7c42a3521a7c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* sdl_turn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    SDL_Event event;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a>) </div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    SDL_WaitEvent(&amp;event);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">switch</span> (event.type) </div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> SDL_QUIT:</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> SDL_KEYDOWN:</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">switch</span> (event.key.keysym.sym) </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordflow">case</span> SDLK_ESCAPE:</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        <a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keywordflow">case</span> SDLK_RIGHT:<span class="comment">/* key right */</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP3:<span class="comment">/* keypad 3 */</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP9:<span class="comment">/* keypad 3 */</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>:<span class="comment">/* code ascii */</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        pthread_mutex_lock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        <span class="comment">/* on cherche le dernier de notre liste */</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <a class="code" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9">snake_getl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,&amp;<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        <span class="comment">/* turn snake */</span></div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                        <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,1,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <span class="comment">/* teste snake/pomme */</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        <span class="keywordflow">if</span>(<a class="code" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f">snake_apple</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>,&amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>))</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        {</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                            <span class="comment">/* si oui on ajoute le dernier avant de tourner */</span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                            <a class="code" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce">snake_addl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>, <a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>, <a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                            <span class="comment">/* on l&#39;ajoute aussi pour le plateau */</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                            <a class="code" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3">board_set</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                            <span class="comment">/* genere nouvelle pomme */</span></div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                            <a class="code" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>, &amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>, &amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                        }</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                            <a class="code" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        pthread_mutex_unlock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">case</span> SDLK_LEFT:<span class="comment">/* key left */</span></div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP1:<span class="comment">/* keypad 1*/</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP7:<span class="comment">/* keypad 7*/</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>:<span class="comment">/* code ascii */</span></div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                        <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        pthread_mutex_lock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                        <span class="comment">/* on cherche le dernier de notre liste */</span></div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                        <a class="code" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9">snake_getl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,&amp;<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        <span class="comment">/* turn snake */</span></div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,-1,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        <span class="comment">/* teste snake/pomme */</span></div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        <span class="keywordflow">if</span>(<a class="code" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f">snake_apple</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>,&amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>))</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        {</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                            <span class="comment">/* si oui on ajoute le dernier avant de tourner */</span></div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                            <a class="code" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce">snake_addl</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>, <a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>, <a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                            <span class="comment">/* on l&#39;ajoute aussi pour le plateau */</span></div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                            <a class="code" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3">board_set</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,<a class="code" href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a>,<a class="code" href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a>,<span class="charliteral">&#39;@&#39;</span>);</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                            <span class="comment">/* genere nouvelle pomme */</span></div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                            <a class="code" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>, &amp;<a class="code" href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a>, &amp;<a class="code" href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a>);</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                        }</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                        <span class="comment">/* affiche SDL */</span></div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <a class="code" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <span class="comment">/* libere le mutex pour les autres thread */</span></div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        pthread_mutex_unlock(&amp;<a class="code" href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    <span class="keywordflow">default</span>:<span class="comment">/* ne fait rien */</span><span class="keywordflow">break</span>;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                }   </div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="keywordflow">default</span>:<span class="comment">/* ne fait rien */</span><span class="keywordflow">break</span>;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    pthread_exit(0);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div><div class="ttc" id="snake_8c_html_abbf254766520cad4d7fe189eb184194c"><div class="ttname"><a href="snake_8c.html#abbf254766520cad4d7fe189eb184194c">last_x</a></div><div class="ttdeci">int last_x</div><div class="ttdef"><b>Definition:</b> snake.c:18</div></div>
+<div class="ttc" id="snakelib_8c_html_ab96735ae82693727289ffe22fc940235"><div class="ttname"><a href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a></div><div class="ttdeci">bool choc_snake(snake const *s1, snake const *s2)</div><div class="ttdoc">test choc entre deux snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:477</div></div>
+<div class="ttc" id="snakelib_8c_html_a6b2f097d4deefee8b8f8d809691f44ce"><div class="ttname"><a href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce">snake_addl</a></div><div class="ttdeci">void snake_addl(snake *snkin, int x, int y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:261</div></div>
+<div class="ttc" id="snake_8c_html_a31e24c11fe7b55913887a78bff6ed30e"><div class="ttname"><a href="snake_8c.html#a31e24c11fe7b55913887a78bff6ed30e">last_y</a></div><div class="ttdeci">int last_y</div><div class="ttdef"><b>Definition:</b> snake.c:18</div></div>
+<div class="ttc" id="snake_8c_html_a2cfeae643e415db24e85db6c4994b071"><div class="ttname"><a href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a></div><div class="ttdeci">void sdl_print()</div><div class="ttdef"><b>Definition:</b> snake.c:180</div></div>
+<div class="ttc" id="snake_8c_html_a2e41fbc7bc65ce59a521b44f5630f0e1"><div class="ttname"><a href="snake_8c.html#a2e41fbc7bc65ce59a521b44f5630f0e1">apple_x</a></div><div class="ttdeci">int apple_x</div><div class="ttdef"><b>Definition:</b> snake.c:17</div></div>
+<div class="ttc" id="snake_8c_html_a4acff8232e4aec9cd5c6dc200ac55ef3"><div class="ttname"><a href="snake_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdef"><b>Definition:</b> snake.c:13</div></div>
+<div class="ttc" id="snakelib_8c_html_a9f15dca26b0f46aae4e1e5cf30db9ab9"><div class="ttname"><a href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9">snake_getl</a></div><div class="ttdeci">void snake_getl(snake *snkin, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:278</div></div>
+<div class="ttc" id="snakelib_8c_html_a50fa8a047abfa006a3371a94809e72c4"><div class="ttname"><a href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a></div><div class="ttdeci">bool choc_wall(board const *b, snake const *s)</div><div class="ttdoc">test choc snake contre le mur </div><div class="ttdef"><b>Definition:</b> snakelib.c:496</div></div>
+<div class="ttc" id="snake_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="snake_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> snake.c:15</div></div>
+<div class="ttc" id="snake_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="snake_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> snake.c:19</div></div>
+<div class="ttc" id="snakelib_8c_html_a12954721537f652c82e9cf23c1bfb0c3"><div class="ttname"><a href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3">board_set</a></div><div class="ttdeci">void board_set(board *brdin, int x, int y, char value)</div><div class="ttdef"><b>Definition:</b> snakelib.c:64</div></div>
+<div class="ttc" id="snake_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="snake_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> snake.c:16</div></div>
+<div class="ttc" id="snake_8c_html_a86c92491dc640484daae606ed7ae9cfe"><div class="ttname"><a href="snake_8c.html#a86c92491dc640484daae606ed7ae9cfe">apple_y</a></div><div class="ttdeci">int apple_y</div><div class="ttdef"><b>Definition:</b> snake.c:17</div></div>
+<div class="ttc" id="snakelib_8c_html_ab4819fcf1df66683feca8ad73abd89dd"><div class="ttname"><a href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd">board_apple</a></div><div class="ttdeci">void board_apple(board *b, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:511</div></div>
+<div class="ttc" id="snakelib_8c_html_afa428ecb4385e08a82520bec11bafe36"><div class="ttname"><a href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a></div><div class="ttdeci">void turn(board *brdin, snake *snkin, int drctn, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:393</div></div>
+<div class="ttc" id="snakelib_8c_html_a9c77869dc19e2c9bc443ab997aad1f4f"><div class="ttname"><a href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f">snake_apple</a></div><div class="ttdeci">bool snake_apple(snake const *s, int *x, int *y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:526</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_cgraph.png" border="0" usemap="#snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_cgraph" alt=""/></div>
+<map name="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_cgraph" id="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9" title="snake_getl" alt="" coords="126,31,211,57"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="147,81,191,108"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="274,107,353,133"/>
+<area shape="rect" id="node7" href="snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f" title="snake_apple" alt="" coords="121,284,216,311"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce" title="snake_addl" alt="" coords="125,335,213,361"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="123,183,215,209"/>
+<area shape="rect" id="node14" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="123,385,215,412"/>
+<area shape="rect" id="node15" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="129,436,209,463"/>
+<area shape="rect" id="node16" href="snake_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="133,233,204,260"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="273,5,354,32"/>
+<area shape="rect" id="node6" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="271,56,356,83"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#a01c30f2556498b7887cc5ff5a88119ca" title="snake_x" alt="" coords="278,360,349,387"/>
+<area shape="rect" id="node9" href="snakelib_8c.html#ad0e10e1a230ae236d8b5fe92e2559378" title="snake_y" alt="" coords="278,411,349,437"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="276,157,351,184"/>
+<area shape="rect" id="node13" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="274,208,353,235"/>
+<area shape="rect" id="node17" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="264,259,363,285"/>
+<area shape="rect" id="node18" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="264,309,363,336"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_icgraph.png" border="0" usemap="#snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_icgraph" alt=""/></div>
+<map name="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_icgraph" id="snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_icgraph">
+<area shape="rect" id="node2" href="snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="121,5,172,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a79a54bef7bf02b18264c38fc90549a04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2e41fbc7bc65ce59a521b44f5630f0e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int apple_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a86c92491dc640484daae606ed7ae9cfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int apple_y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac54b5255531a4799123d0f8dca96a7cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a20fdbd342281b7b5b77945c79d176b9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboard.html">board</a> b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab7d76262118cf1d4da44315136e542ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aae9bd8b56defc5a6ec9c20b503b59a3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8dfea36e66ed4b47c61a7ea5212e164"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface* E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abbf254766520cad4d7fe189eb184194c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int last_x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a31e24c11fe7b55913887a78bff6ed30e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int last_y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4acff8232e4aec9cd5c6dc200ac55ef3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a71e92e96b65208605aca57598cc827f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsnake.html">snake</a> s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab1bde286e010d81472b269b419806d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

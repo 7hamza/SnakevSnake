@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d" title="server_socket" alt="" coords="105,5,209,32"/>
+<area shape="rect" id="node3" href="$server_8c.html#acc414ff242b33f2b06ce38596e387696" title="server_accept" alt="" coords="105,56,209,83"/>
+<area shape="rect" id="node4" href="$server_8c.html#accb20b510d7e0de1e191ec039faefe3f" title="server_handler" alt="" coords="104,107,211,133"/>
+</map>

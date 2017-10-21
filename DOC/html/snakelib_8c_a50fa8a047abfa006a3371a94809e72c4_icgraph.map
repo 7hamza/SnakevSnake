@@ -1,0 +1,6 @@
+<map id="choc_wall" name="choc_wall">
+<area shape="rect" id="node2" href="$client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="133,5,212,32"/>
+<area shape="rect" id="node4" href="$client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="139,56,207,83"/>
+<area shape="rect" id="node5" href="$unittesting_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="147,107,198,133"/>
+<area shape="rect" id="node3" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="260,31,311,57"/>
+</map>

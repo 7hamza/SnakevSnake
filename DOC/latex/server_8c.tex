@@ -1,0 +1,220 @@
+\hypertarget{server_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/server.c}
+\label{server_8c}\index{S\+O\+U\+R\+C\+E/server.\+c@{S\+O\+U\+R\+C\+E/server.\+c}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\+h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$strings.\+h$>$}\\*
+Graphe des dépendances par inclusion de server.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{server_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(msg)~\{fprintf(stderr, \char`\"{}\%s\textbackslash{}n\char`\"{}, msg);exit(1);\}
+\item 
+\#define \hyperlink{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}{P\+O\+RT}~1234
+\item 
+\#define \hyperlink{server_8c_ac9f31f726d2933782e2efda7136a25fd}{A\+D\+DR}~I\+N\+A\+D\+D\+R\+\_\+\+A\+NY
+\item 
+\#define \hyperlink{server_8c_aeefbbafa97642defe3ee6c3080b7d66f}{B\+A\+C\+K\+L\+OG}~10
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{server_8c_a38df5ddef8f9bd2822d20cfb442ed31d}{server\+\_\+socket} ()
+\item 
+static int \hyperlink{server_8c_acc414ff242b33f2b06ce38596e387696}{server\+\_\+accept} (int p)
+\item 
+static void $\ast$ \hyperlink{server_8c_accb20b510d7e0de1e191ec039faefe3f}{server\+\_\+handler} (void $\ast$arg)
+\item 
+int \hyperlink{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients} \mbox{[}2\mbox{]}
+\item 
+static pthread\+\_\+t \hyperlink{server_8c_a480e6e6f47d688e8e7f8d62f44aece5e}{threadpt} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\index{server.\+c@{server.\+c}!A\+D\+DR@{A\+D\+DR}}
+\index{A\+D\+DR@{A\+D\+DR}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{A\+D\+DR}{ADDR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+D\+DR~I\+N\+A\+D\+D\+R\+\_\+\+A\+NY}\hypertarget{server_8c_ac9f31f726d2933782e2efda7136a25fd}{}\label{server_8c_ac9f31f726d2933782e2efda7136a25fd}
+\index{server.\+c@{server.\+c}!B\+A\+C\+K\+L\+OG@{B\+A\+C\+K\+L\+OG}}
+\index{B\+A\+C\+K\+L\+OG@{B\+A\+C\+K\+L\+OG}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{B\+A\+C\+K\+L\+OG}{BACKLOG}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+A\+C\+K\+L\+OG~10}\hypertarget{server_8c_aeefbbafa97642defe3ee6c3080b7d66f}{}\label{server_8c_aeefbbafa97642defe3ee6c3080b7d66f}
+\index{server.\+c@{server.\+c}!err@{err}}
+\index{err@{err}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{err}{err}}]{\setlength{\rightskip}{0pt plus 5cm}\#define err(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~\{fprintf(stderr, \char`\"{}\%s\textbackslash{}n\char`\"{}, msg);exit(1);\}}\hypertarget{server_8c_a18bd5b46e04e0010b0163f03741a2521}{}\label{server_8c_a18bd5b46e04e0010b0163f03741a2521}
+\index{server.\+c@{server.\+c}!P\+O\+RT@{P\+O\+RT}}
+\index{P\+O\+RT@{P\+O\+RT}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{P\+O\+RT}{PORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+RT~1234}\hypertarget{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}{}\label{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}
+
+
+\subsection{Documentation des fonctions}
+\index{server.\+c@{server.\+c}!main@{main}}
+\index{main@{main}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordtype}{short} count = 0;
+60     \textcolor{keywordtype}{int} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = \hyperlink{server_8c_a38df5ddef8f9bd2822d20cfb442ed31d}{server\_socket}();
+61     \textcolor{keywordflow}{while}(2 != count)
+62     \{
+63         \hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[count] = \hyperlink{server_8c_acc414ff242b33f2b06ce38596e387696}{server\_accept}(n);
+64         ++count;
+65     \}
+66     \textcolor{keywordflow}{for}(count = 0; count != 2; count++)
+67     \{
+68         \textcolor{keywordtype}{int} pth = pthread\_create(&\hyperlink{server_8c_a480e6e6f47d688e8e7f8d62f44aece5e}{threadpt}[count], NULL, &\hyperlink{server_8c_accb20b510d7e0de1e191ec039faefe3f}{server\_handler}, &
+      \hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[count]);
+69         \textcolor{keywordflow}{if}(0 > pth) \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"pthread\_create()"});
+70     \}
+71     \textcolor{keywordtype}{char} buf[2] = \{\textcolor{charliteral}{'@'},\textcolor{charliteral}{'&'}\};
+72     \textcolor{keywordflow}{for}(count = 0; count != 2; count++)
+73     \{
+74         write(\hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[count], &buf[count], 1);
+75     \}
+76     \textcolor{keywordflow}{for}(count = 0; count != 2; count++)
+77     \{
+78         pthread\_join(\hyperlink{server_8c_a480e6e6f47d688e8e7f8d62f44aece5e}{threadpt}[count],NULL);
+79     \}
+80     \textcolor{keywordflow}{return} 0;
+81 \}\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{server_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{server.\+c@{server.\+c}!server\+\_\+accept@{server\+\_\+accept}}
+\index{server\+\_\+accept@{server\+\_\+accept}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{server\+\_\+accept(int p)}{server_accept(int p)}}]{\setlength{\rightskip}{0pt plus 5cm}static int server\+\_\+accept (
+\begin{DoxyParamCaption}
+\item[{int}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{server_8c_acc414ff242b33f2b06ce38596e387696}{}\label{server_8c_acc414ff242b33f2b06ce38596e387696}
+
+\begin{DoxyCode}
+36 \{
+37     \textcolor{keyword}{struct }sockaddr\_in client\_addr;
+38     \textcolor{keywordtype}{unsigned} len = \textcolor{keyword}{sizeof}(client\_addr);
+39 
+40     \textcolor{keywordtype}{int} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = accept(p, (\textcolor{keyword}{struct} sockaddr*)&client\_addr, &len);
+41     \textcolor{keywordflow}{if}(0 > n) \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"accept()"});
+42     \textcolor{keywordflow}{return} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n};
+43 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{server_8c_acc414ff242b33f2b06ce38596e387696_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{server.\+c@{server.\+c}!server\+\_\+handler@{server\+\_\+handler}}
+\index{server\+\_\+handler@{server\+\_\+handler}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{server\+\_\+handler(void $\ast$arg)}{server_handler(void *arg)}}]{\setlength{\rightskip}{0pt plus 5cm}static void$\ast$ server\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{server_8c_accb20b510d7e0de1e191ec039faefe3f}{}\label{server_8c_accb20b510d7e0de1e191ec039faefe3f}
+
+\begin{DoxyCode}
+45 \{
+46     \textcolor{keywordtype}{int} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = *((\textcolor{keywordtype}{int}*)arg);
+47     \textcolor{keywordtype}{int} i = (n == \hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[0])? 0 : 1;
+48     \textcolor{keywordtype}{int} j = (i+1) % 2;
+49     \textcolor{keywordtype}{char} dir = \textcolor{charliteral}{'\(\backslash\)0'};
+50     \textcolor{keywordflow}{while}(read(\hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[i], &dir, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}*)))
+51     \{
+52         write(\hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[j], &dir, 1);
+53     \}
+54     close(\hyperlink{server_8c_a6b3389b5ab3e0759c218482f79fef158}{clients}[i]);
+55     pthread\_exit(0);
+56 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{server_8c_accb20b510d7e0de1e191ec039faefe3f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{server.\+c@{server.\+c}!server\+\_\+socket@{server\+\_\+socket}}
+\index{server\+\_\+socket@{server\+\_\+socket}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{server\+\_\+socket()}{server_socket()}}]{\setlength{\rightskip}{0pt plus 5cm}static int server\+\_\+socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{server_8c_a38df5ddef8f9bd2822d20cfb442ed31d}{}\label{server_8c_a38df5ddef8f9bd2822d20cfb442ed31d}
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keywordtype}{int} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n} = socket(AF\_INET, SOCK\_STREAM, 0);
+22     \textcolor{keywordflow}{if}(0 > n) \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"socket()"});
+23 
+24     \textcolor{keyword}{struct }sockaddr\_in server\_addr;
+25     bzero(&server\_addr,\textcolor{keyword}{sizeof}(server\_addr));
+26     server\_addr.sin\_family = AF\_INET;
+27     server\_addr.sin\_port = htons(\hyperlink{server_8c_a614217d263be1fb1a5f76e2ff7be19a2}{PORT});
+28     server\_addr.sin\_addr.s\_addr = htonl(\hyperlink{server_8c_ac9f31f726d2933782e2efda7136a25fd}{ADDR});
+29 
+30     \textcolor{keywordflow}{if}(0 > bind(n, (\textcolor{keyword}{struct} sockaddr*)&server\_addr, \textcolor{keyword}{sizeof}(server\_addr))) \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"bind()"});
+31     \textcolor{keywordflow}{if}(0 > listen(n, \hyperlink{server_8c_aeefbbafa97642defe3ee6c3080b7d66f}{BACKLOG})) \hyperlink{server_8c_a18bd5b46e04e0010b0163f03741a2521}{err}(\textcolor{stringliteral}{"listen()"});
+32 
+33     \textcolor{keywordflow}{return} \hyperlink{client_8c_a76f11d9a0a47b94f72c2d0e77fb32240}{n};
+34 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{server_8c_a38df5ddef8f9bd2822d20cfb442ed31d_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\index{server.\+c@{server.\+c}!clients@{clients}}
+\index{clients@{clients}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{clients}{clients}}]{\setlength{\rightskip}{0pt plus 5cm}int clients\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{server_8c_a6b3389b5ab3e0759c218482f79fef158}{}\label{server_8c_a6b3389b5ab3e0759c218482f79fef158}
+\index{server.\+c@{server.\+c}!threadpt@{threadpt}}
+\index{threadpt@{threadpt}!server.\+c@{server.\+c}}
+\subsubsection[{\texorpdfstring{threadpt}{threadpt}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+t threadpt\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{server_8c_a480e6e6f47d688e8e7f8d62f44aece5e}{}\label{server_8c_a480e6e6f47d688e8e7f8d62f44aece5e}

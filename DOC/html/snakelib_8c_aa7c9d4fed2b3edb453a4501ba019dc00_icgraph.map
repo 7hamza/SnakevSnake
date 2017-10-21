@@ -1,0 +1,11 @@
+<map id="move" name="move">
+<area shape="rect" id="node2" href="$client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="131,5,209,32"/>
+<area shape="rect" id="node4" href="$client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="136,56,204,83"/>
+<area shape="rect" id="node5" href="$schlangalib_8c.html#a2655a50383ab9680d1a3a72ea9de562d" title="schlanga_next_to" alt="" coords="108,107,232,133"/>
+<area shape="rect" id="node6" href="$schlangalib_8h.html#a28adbac02fbdf8816543c25878bfd81d" title="schlanga_ia" alt="" coords="280,120,371,147"/>
+<area shape="rect" id="node10" href="$unittesting_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="145,208,195,235"/>
+<area shape="rect" id="node3" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="300,44,351,71"/>
+<area shape="rect" id="node7" href="$schlanga_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="424,95,492,121"/>
+<area shape="rect" id="node9" href="$schlanga_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="419,145,497,172"/>
+<area shape="rect" id="node8" href="$schlanga_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="545,120,596,147"/>
+</map>

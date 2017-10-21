@@ -1,0 +1,743 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Snake: Référence du fichier SOURCE/client.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Snake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_08351310ddebaca638dbb30498c8cafd.html">SOURCE</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier client.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;strings.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="snakelib_8h_source.html">../INCLUDE/snakelib.h</a>&quot;</code><br />
+<code>#include &lt;SDL/SDL.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de client.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c__incl.png" border="0" usemap="#SOURCE_2client_8c" alt=""/></div>
+<map name="SOURCE_2client_8c" id="SOURCE_2client_8c">
+<area shape="rect" id="node12" href="snakelib_8h.html" title="../INCLUDE/snakelib.h" alt="" coords="736,80,893,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a18bd5b46e04e0010b0163f03741a2521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(msg)&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg);exit(1);}</td></tr>
+<tr class="separator:a18bd5b46e04e0010b0163f03741a2521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>&#160;&#160;&#160;1234</td></tr>
+<tr class="separator:a614217d263be1fb1a5f76e2ff7be19a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f31f726d2933782e2efda7136a25fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a>&#160;&#160;&#160;&quot;localhost&quot;</td></tr>
+<tr class="separator:ac9f31f726d2933782e2efda7136a25fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9d90aaed8d1c89d7431024da9feb39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a9e9d90aaed8d1c89d7431024da9feb39">tabX</a>&#160;&#160;&#160;51</td></tr>
+<tr class="separator:a9e9d90aaed8d1c89d7431024da9feb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c281530fd59455d29f70006bc720f6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a8c281530fd59455d29f70006bc720f6d">tabY</a>&#160;&#160;&#160;31</td></tr>
+<tr class="separator:a8c281530fd59455d29f70006bc720f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8373df012cb4cb326153306f7ebf43f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a8373df012cb4cb326153306f7ebf43f8">slen</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a8373df012cb4cb326153306f7ebf43f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7b1f2521e5756d5157688c8517538a14"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a7b1f2521e5756d5157688c8517538a14">client_socket</a> ()</td></tr>
+<tr class="separator:a7b1f2521e5756d5157688c8517538a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfeae643e415db24e85db6c4994b071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a> ()</td></tr>
+<tr class="separator:a2cfeae643e415db24e85db6c4994b071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af424c7fd4c84203cddfb7230bbe15401"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#af424c7fd4c84203cddfb7230bbe15401">sdl_move</a> ()</td></tr>
+<tr class="separator:af424c7fd4c84203cddfb7230bbe15401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace514d3ea0e685be64430b930ef23b46"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ace514d3ea0e685be64430b930ef23b46">sdl_turn</a> ()</td></tr>
+<tr class="separator:ace514d3ea0e685be64430b930ef23b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:acdb501237bbfd1adad2d00fc7052a767"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#acdb501237bbfd1adad2d00fc7052a767">threadpt</a></td></tr>
+<tr class="separator:acdb501237bbfd1adad2d00fc7052a767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acff8232e4aec9cd5c6dc200ac55ef3"><td class="memItemLeft" align="right" valign="top">pthread_mutex_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a> = PTHREAD_MUTEX_INITIALIZER</td></tr>
+<tr class="separator:a4acff8232e4aec9cd5c6dc200ac55ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8dfea36e66ed4b47c61a7ea5212e164"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></td></tr>
+<tr class="separator:ae8dfea36e66ed4b47c61a7ea5212e164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a54bef7bf02b18264c38fc90549a04"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></td></tr>
+<tr class="separator:a79a54bef7bf02b18264c38fc90549a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54b5255531a4799123d0f8dca96a7cc"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></td></tr>
+<tr class="separator:ac54b5255531a4799123d0f8dca96a7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d76262118cf1d4da44315136e542ca"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></td></tr>
+<tr class="separator:ab7d76262118cf1d4da44315136e542ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae9bd8b56defc5a6ec9c20b503b59a3a"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></td></tr>
+<tr class="separator:aae9bd8b56defc5a6ec9c20b503b59a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fdbd342281b7b5b77945c79d176b9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboard.html">board</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></td></tr>
+<tr class="separator:a20fdbd342281b7b5b77945c79d176b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e92e96b65208605aca57598cc827f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsnake.html">snake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></td></tr>
+<tr class="separator:a71e92e96b65208605aca57598cc827f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fd7c53c9b79f5a6ccb6f73b383263c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsnake.html">snake</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a></td></tr>
+<tr class="separator:aa6fd7c53c9b79f5a6ccb6f73b383263c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab1bde286e010d81472b269b419806d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a></td></tr>
+<tr class="separator:aab1bde286e010d81472b269b419806d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f0bd3dc13317f895c91323c25c2b8f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a></td></tr>
+<tr class="separator:af6f0bd3dc13317f895c91323c25c2b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0318530b7ab3cba31a8e7213e34351cc"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a></td></tr>
+<tr class="separator:a0318530b7ab3cba31a8e7213e34351cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edfa8f60e57212495b55b6b96c92cc5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a6edfa8f60e57212495b55b6b96c92cc5">r</a></td></tr>
+<tr class="separator:a6edfa8f60e57212495b55b6b96c92cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70893b9fd599f8c9ed3ed00c52eba44a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a70893b9fd599f8c9ed3ed00c52eba44a">l</a></td></tr>
+<tr class="separator:a70893b9fd599f8c9ed3ed00c52eba44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67668278838ab1eb0065ef9218c8de00"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a67668278838ab1eb0065ef9218c8de00">m</a></td></tr>
+<tr class="separator:a67668278838ab1eb0065ef9218c8de00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f11d9a0a47b94f72c2d0e77fb32240"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></td></tr>
+<tr class="separator:a76f11d9a0a47b94f72c2d0e77fb32240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a class="anchor" id="ac9f31f726d2933782e2efda7136a25fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADDR&#160;&#160;&#160;&quot;localhost&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a18bd5b46e04e0010b0163f03741a2521"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define err</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg</td><td>)</td>
+          <td>&#160;&#160;&#160;{fprintf(stderr, &quot;%s\n&quot;, msg);exit(1);}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a614217d263be1fb1a5f76e2ff7be19a2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT&#160;&#160;&#160;1234</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8373df012cb4cb326153306f7ebf43f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define slen&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9e9d90aaed8d1c89d7431024da9feb39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define tabX&#160;&#160;&#160;51</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8c281530fd59455d29f70006bc720f6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define tabY&#160;&#160;&#160;31</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a7b1f2521e5756d5157688c8517538a14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int client_socket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = socket(AF_INET, SOCK_STREAM, 0);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span>(0 &gt; n) <a class="code" href="client_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;socket()&quot;</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">struct </span>hostent* server_host = gethostbyname(<a class="code" href="client_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">if</span>(NULL == server_host) <a class="code" href="client_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;gethostbyname()&quot;</span>);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">struct </span>sockaddr_in server_addr;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    bzero(&amp;server_addr,<span class="keyword">sizeof</span>(server_addr));</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    server_addr.sin_family = AF_INET;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    server_addr.sin_port = htons(<a class="code" href="client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    bcopy((<span class="keywordtype">char</span> *)server_host-&gt;h_addr_list[0], (<span class="keywordtype">char</span> *)&amp;server_addr.sin_addr.s_addr, server_host-&gt;h_length);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span>(0 &gt; connect(n, (<span class="keyword">struct</span> sockaddr*)&amp;server_addr, <span class="keyword">sizeof</span>(server_addr))) <a class="code" href="client_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a>(<span class="stringliteral">&quot;connect()&quot;</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div><div class="ttc" id="client_8c_html_a614217d263be1fb1a5f76e2ff7be19a2"><div class="ttname"><a href="client_8c.html#a614217d263be1fb1a5f76e2ff7be19a2">PORT</a></div><div class="ttdeci">#define PORT</div><div class="ttdef"><b>Definition:</b> client.c:18</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+<div class="ttc" id="client_8c_html_ac9f31f726d2933782e2efda7136a25fd"><div class="ttname"><a href="client_8c.html#ac9f31f726d2933782e2efda7136a25fd">ADDR</a></div><div class="ttdeci">#define ADDR</div><div class="ttdef"><b>Definition:</b> client.c:19</div></div>
+<div class="ttc" id="client_8c_html_a18bd5b46e04e0010b0163f03741a2521"><div class="ttname"><a href="client_8c.html#a18bd5b46e04e0010b0163f03741a2521">err</a></div><div class="ttdeci">#define err(msg)</div><div class="ttdef"><b>Definition:</b> client.c:17</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_a7b1f2521e5756d5157688c8517538a14_icgraph.png" border="0" usemap="#client_8c_a7b1f2521e5756d5157688c8517538a14_icgraph" alt=""/></div>
+<map name="client_8c_a7b1f2521e5756d5157688c8517538a14_icgraph" id="client_8c_a7b1f2521e5756d5157688c8517538a14_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="152,5,203,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a> = <a class="code" href="client_8c.html#a7b1f2521e5756d5157688c8517538a14">client_socket</a>();</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    read(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a>,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a> = (<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a> == <span class="charliteral">&#39;@&#39;</span>)? <span class="charliteral">&#39;&amp;&#39;</span> : <span class="charliteral">&#39;@&#39;</span>;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <a class="code" href="client_8c.html#a67668278838ab1eb0065ef9218c8de00">m</a> = <span class="charliteral">&#39;m&#39;</span>;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="client_8c.html#a6edfa8f60e57212495b55b6b96c92cc5">r</a> = <span class="charliteral">&#39;r&#39;</span>;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="client_8c.html#a70893b9fd599f8c9ed3ed00c52eba44a">l</a> = <span class="charliteral">&#39;l&#39;</span>;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">/* la variable globale du jeu */</span></div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">/* rand init */</span></div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    srand(time(0));</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="comment">/* init board + snake */</span></div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a> = <a class="code" href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7">board_init</a>(<a class="code" href="client_8c.html#a9e9d90aaed8d1c89d7431024da9feb39">tabX</a>,<a class="code" href="client_8c.html#a8c281530fd59455d29f70006bc720f6d">tabY</a>);</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <a class="code" href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93">snake_init</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,<a class="code" href="client_8c.html#a8373df012cb4cb326153306f7ebf43f8">slen</a>,<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a>);</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93">snake_init</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a8373df012cb4cb326153306f7ebf43f8">slen</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>);</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">/* init sdl en mode video */</span></div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    SDL_Init(SDL_INIT_VIDEO);</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">/* init surface E avec une taille 20*tabX et 20*tabY */</span></div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a> = SDL_SetVideoMode(20*<a class="code" href="client_8c.html#a9e9d90aaed8d1c89d7431024da9feb39">tabX</a>, 20*<a class="code" href="client_8c.html#a8c281530fd59455d29f70006bc720f6d">tabY</a>, 32, SDL_HWSURFACE);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">/* creer le reste des surfaces avec une taille de 20*20 px */</span></div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a> = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">/* init avec couleur rgb */</span></div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    SDL_FillRect(<a class="code" href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>, 0, SDL_MapRGB(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 95, 0, 0));</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    SDL_FillRect(<a class="code" href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>, 0, SDL_MapRGB(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 137, 137, 137));</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    SDL_FillRect(<a class="code" href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>, 0, SDL_MapRGB(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 47, 47, 47));</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    SDL_FillRect(<a class="code" href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a>, 0, SDL_MapRGB(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>-&gt;format, 157, 62, 12));</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">/* init barre de fenetre */</span></div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    SDL_WM_SetCaption(<span class="stringliteral">&quot;Snack&quot;</span>, 0);</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="comment">/* nos variabe de thread */</span></div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    pthread_t thread_turn;</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    pthread_t thread_move;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">/* creer les thread */</span></div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    pthread_create (&amp;thread_turn, 0, &amp;<a class="code" href="client_8c.html#ace514d3ea0e685be64430b930ef23b46">sdl_turn</a>, 0);</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    pthread_create (&amp;thread_move, 0, &amp;<a class="code" href="client_8c.html#af424c7fd4c84203cddfb7230bbe15401">sdl_move</a>,0);</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">/* attendre leurs fin */</span></div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    pthread_join(thread_turn, 0);</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    pthread_join(thread_move, 0);</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">/* libere surface */</span></div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    SDL_FreeSurface(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>);</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    SDL_FreeSurface(<a class="code" href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>);</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    SDL_FreeSurface(<a class="code" href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>);</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    SDL_FreeSurface(<a class="code" href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>);</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="comment">/* libere board + snake */</span></div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9">board_free</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>);</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9">snake_free</a>(&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>);</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9">snake_free</a>(&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>);</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    SDL_Quit();</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}<div class="ttc" id="client_8c_html_a8373df012cb4cb326153306f7ebf43f8"><div class="ttname"><a href="client_8c.html#a8373df012cb4cb326153306f7ebf43f8">slen</a></div><div class="ttdeci">#define slen</div><div class="ttdef"><b>Definition:</b> client.c:23</div></div>
+<div class="ttc" id="snakelib_8c_html_a9625331c000178d2cf90ef40d2a8fbf7"><div class="ttname"><a href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7">board_init</a></div><div class="ttdeci">board board_init(int x, int y)</div><div class="ttdef"><b>Definition:</b> snakelib.c:21</div></div>
+<div class="ttc" id="client_8c_html_a79a54bef7bf02b18264c38fc90549a04"><div class="ttname"><a href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></div><div class="ttdeci">SDL_Surface * A</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> client.c:33</div></div>
+<div class="ttc" id="snakelib_8c_html_ae2b728ff11f9b12d88715ddef95639c9"><div class="ttname"><a href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9">snake_free</a></div><div class="ttdeci">void snake_free(snake *snkin)</div><div class="ttdoc">libérer la mémoire </div><div class="ttdef"><b>Definition:</b> snakelib.c:308</div></div>
+<div class="ttc" id="snakelib_8c_html_a223ea5e585467eee652b6b3b7a59e0c9"><div class="ttname"><a href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9">board_free</a></div><div class="ttdeci">void board_free(board *brdin)</div><div class="ttdoc">liberer la memoire occupé par un plateau </div><div class="ttdef"><b>Definition:</b> snakelib.c:90</div></div>
+<div class="ttc" id="client_8c_html_a6edfa8f60e57212495b55b6b96c92cc5"><div class="ttname"><a href="client_8c.html#a6edfa8f60e57212495b55b6b96c92cc5">r</a></div><div class="ttdeci">char r</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_af424c7fd4c84203cddfb7230bbe15401"><div class="ttname"><a href="client_8c.html#af424c7fd4c84203cddfb7230bbe15401">sdl_move</a></div><div class="ttdeci">void * sdl_move()</div><div class="ttdef"><b>Definition:</b> client.c:89</div></div>
+<div class="ttc" id="snakelib_8c_html_ac696fcc76930ea0badb2f263dd479c93"><div class="ttname"><a href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93">snake_init</a></div><div class="ttdeci">void snake_init(board *brdin, snake *snkin, int len, char id)</div><div class="ttdoc">init a snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:428</div></div>
+<div class="ttc" id="client_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> client.c:30</div></div>
+<div class="ttc" id="client_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+<div class="ttc" id="client_8c_html_ab7d76262118cf1d4da44315136e542ca"><div class="ttname"><a href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></div><div class="ttdeci">SDL_Surface * C</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_a0318530b7ab3cba31a8e7213e34351cc"><div class="ttname"><a href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a></div><div class="ttdeci">char o</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_a67668278838ab1eb0065ef9218c8de00"><div class="ttname"><a href="client_8c.html#a67668278838ab1eb0065ef9218c8de00">m</a></div><div class="ttdeci">char m</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_a9e9d90aaed8d1c89d7431024da9feb39"><div class="ttname"><a href="client_8c.html#a9e9d90aaed8d1c89d7431024da9feb39">tabX</a></div><div class="ttdeci">#define tabX</div><div class="ttdef"><b>Definition:</b> client.c:21</div></div>
+<div class="ttc" id="client_8c_html_ace514d3ea0e685be64430b930ef23b46"><div class="ttname"><a href="client_8c.html#ace514d3ea0e685be64430b930ef23b46">sdl_turn</a></div><div class="ttdeci">void * sdl_turn()</div><div class="ttdef"><b>Definition:</b> client.c:122</div></div>
+<div class="ttc" id="client_8c_html_aae9bd8b56defc5a6ec9c20b503b59a3a"><div class="ttname"><a href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></div><div class="ttdeci">SDL_Surface * D</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_af6f0bd3dc13317f895c91323c25c2b8f"><div class="ttname"><a href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a></div><div class="ttdeci">char t</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_ac54b5255531a4799123d0f8dca96a7cc"><div class="ttname"><a href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></div><div class="ttdeci">SDL_Surface * B</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_a8c281530fd59455d29f70006bc720f6d"><div class="ttname"><a href="client_8c.html#a8c281530fd59455d29f70006bc720f6d">tabY</a></div><div class="ttdeci">#define tabY</div><div class="ttdef"><b>Definition:</b> client.c:22</div></div>
+<div class="ttc" id="client_8c_html_a7b1f2521e5756d5157688c8517538a14"><div class="ttname"><a href="client_8c.html#a7b1f2521e5756d5157688c8517538a14">client_socket</a></div><div class="ttdeci">static int client_socket()</div><div class="ttdef"><b>Definition:</b> client.c:37</div></div>
+<div class="ttc" id="client_8c_html_a70893b9fd599f8c9ed3ed00c52eba44a"><div class="ttname"><a href="client_8c.html#a70893b9fd599f8c9ed3ed00c52eba44a">l</a></div><div class="ttdeci">char l</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_aa6fd7c53c9b79f5a6ccb6f73b383263c"><div class="ttname"><a href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a></div><div class="ttdeci">snake c</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+<div class="ttc" id="client_8c_html_ae8dfea36e66ed4b47c61a7ea5212e164"><div class="ttname"><a href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></div><div class="ttdeci">SDL_Surface * E</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="client_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect" id="node2" href="client_8c.html#a7b1f2521e5756d5157688c8517538a14" title="client_socket" alt="" coords="104,5,203,32"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7" title="board_init" alt="" coords="114,56,193,83"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93" title="init a snake " alt="" coords="256,56,337,83"/>
+<area shape="rect" id="node7" href="client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="119,157,187,184"/>
+<area shape="rect" id="node17" href="client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="114,208,193,235"/>
+<area shape="rect" id="node18" href="snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9" title="liberer la memoire occupé par un plateau " alt="" coords="112,259,195,285"/>
+<area shape="rect" id="node19" href="snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9" title="libérer la mémoire " alt="" coords="110,309,197,336"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="397,56,483,83"/>
+<area shape="rect" id="node6" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="401,107,479,133"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="275,107,319,133"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="269,157,324,184"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="251,208,343,235"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="257,259,337,285"/>
+<area shape="rect" id="node13" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="261,309,332,336"/>
+<area shape="rect" id="node9" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="399,157,481,184"/>
+<area shape="rect" id="node14" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="391,259,489,285"/>
+<area shape="rect" id="node15" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="391,309,489,336"/>
+<area shape="rect" id="node16" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="401,360,479,387"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af424c7fd4c84203cddfb7230bbe15401"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * sdl_move </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">char</span> buff;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a>)</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        pthread_mutex_lock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">/* move snake */</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        write(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;<a class="code" href="client_8c.html#a67668278838ab1eb0065ef9218c8de00">m</a>,1);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        read(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;buff,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">switch</span>(buff)</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;m&#39;</span>:</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <a class="code" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;l&#39;</span>:</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,-1);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,1);</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">/* affiche SDL */</span></div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> ((<a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">/* libere le mutex pour les autres thread */</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        pthread_mutex_unlock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="comment">/*u*/</span>sleep (1<span class="comment">/*00000*/</span>);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    pthread_exit(0);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div><div class="ttc" id="snakelib_8c_html_aa7c9d4fed2b3edb453a4501ba019dc00"><div class="ttname"><a href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a></div><div class="ttdeci">void move(board *brdin, snake *snkin, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:370</div></div>
+<div class="ttc" id="snakelib_8c_html_ab96735ae82693727289ffe22fc940235"><div class="ttname"><a href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a></div><div class="ttdeci">bool choc_snake(snake const *s1, snake const *s2)</div><div class="ttdoc">test choc entre deux snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:477</div></div>
+<div class="ttc" id="client_8c_html_a2cfeae643e415db24e85db6c4994b071"><div class="ttname"><a href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a></div><div class="ttdeci">void sdl_print()</div><div class="ttdef"><b>Definition:</b> client.c:56</div></div>
+<div class="ttc" id="client_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> client.c:33</div></div>
+<div class="ttc" id="snakelib_8c_html_a50fa8a047abfa006a3371a94809e72c4"><div class="ttname"><a href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a></div><div class="ttdeci">bool choc_wall(board const *b, snake const *s)</div><div class="ttdoc">test choc snake contre le mur </div><div class="ttdef"><b>Definition:</b> snakelib.c:496</div></div>
+<div class="ttc" id="client_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> client.c:30</div></div>
+<div class="ttc" id="client_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+<div class="ttc" id="client_8c_html_a0318530b7ab3cba31a8e7213e34351cc"><div class="ttname"><a href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a></div><div class="ttdeci">char o</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_a67668278838ab1eb0065ef9218c8de00"><div class="ttname"><a href="client_8c.html#a67668278838ab1eb0065ef9218c8de00">m</a></div><div class="ttdeci">char m</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_af6f0bd3dc13317f895c91323c25c2b8f"><div class="ttname"><a href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a></div><div class="ttdeci">char t</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_a4acff8232e4aec9cd5c6dc200ac55ef3"><div class="ttname"><a href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdef"><b>Definition:</b> client.c:26</div></div>
+<div class="ttc" id="snakelib_8c_html_afa428ecb4385e08a82520bec11bafe36"><div class="ttname"><a href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a></div><div class="ttdeci">void turn(board *brdin, snake *snkin, int drctn, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:393</div></div>
+<div class="ttc" id="client_8c_html_aa6fd7c53c9b79f5a6ccb6f73b383263c"><div class="ttname"><a href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a></div><div class="ttdeci">snake c</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_af424c7fd4c84203cddfb7230bbe15401_cgraph.png" border="0" usemap="#client_8c_af424c7fd4c84203cddfb7230bbe15401_cgraph" alt=""/></div>
+<map name="client_8c_af424c7fd4c84203cddfb7230bbe15401_cgraph" id="client_8c_af424c7fd4c84203cddfb7230bbe15401_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="151,81,205,108"/>
+<area shape="rect" id="node6" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="156,31,200,57"/>
+<area shape="rect" id="node7" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="132,132,224,159"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="138,183,218,209"/>
+<area shape="rect" id="node9" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="143,233,213,260"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="281,5,362,32"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="282,56,361,83"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="279,107,364,133"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="272,183,371,209"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="272,233,371,260"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="282,284,361,311"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_af424c7fd4c84203cddfb7230bbe15401_icgraph.png" border="0" usemap="#client_8c_af424c7fd4c84203cddfb7230bbe15401_icgraph" alt=""/></div>
+<map name="client_8c_af424c7fd4c84203cddfb7230bbe15401_icgraph" id="client_8c_af424c7fd4c84203cddfb7230bbe15401_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="132,5,183,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cfeae643e415db24e85db6c4994b071"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sdl_print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                 {</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> x,y, dx = <a class="code" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad">board_size_x</a> (&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>), dy = <a class="code" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904">board_size_y</a> (&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">/* def une position */</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    SDL_Rect p;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (x = 0; x &lt; dx; x++)</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (y = 0; y &lt; dy; y++)</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            p.x = x * 20 ; p.y = y * 20 ;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">/* lire dans le plateau et dessiner la surface */</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">switch</span> (<a class="code" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447">board_get</a> (&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,x,y))</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            {</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;@&#39;</span>:</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    SDL_BlitSurface(<a class="code" href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a>, 0, <a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39; &#39;</span>:</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    SDL_BlitSurface(<a class="code" href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a>, 0, <a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    SDL_BlitSurface(<a class="code" href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a>, 0, <a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;&amp;&#39;</span>:</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    SDL_BlitSurface(<a class="code" href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a>, 0, <a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>, &amp;p);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">/* reafficher un nouvelle ecran */</span></div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    SDL_Flip(<a class="code" href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a>);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div><div class="ttc" id="client_8c_html_a79a54bef7bf02b18264c38fc90549a04"><div class="ttname"><a href="client_8c.html#a79a54bef7bf02b18264c38fc90549a04">A</a></div><div class="ttdeci">SDL_Surface * A</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="snakelib_8c_html_a01be021996158cf01e830b56e41be904"><div class="ttname"><a href="snakelib_8c.html#a01be021996158cf01e830b56e41be904">board_size_y</a></div><div class="ttdeci">int board_size_y(board const *b)</div><div class="ttdef"><b>Definition:</b> snakelib.c:79</div></div>
+<div class="ttc" id="client_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> client.c:30</div></div>
+<div class="ttc" id="client_8c_html_ab7d76262118cf1d4da44315136e542ca"><div class="ttname"><a href="client_8c.html#ab7d76262118cf1d4da44315136e542ca">C</a></div><div class="ttdeci">SDL_Surface * C</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="snakelib_8c_html_ae49b60c78ec9b92e770c8eace9520447"><div class="ttname"><a href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447">board_get</a></div><div class="ttdeci">char board_get(board const *brdin, int x, int y)</div><div class="ttdoc">return la valeur </div><div class="ttdef"><b>Definition:</b> snakelib.c:69</div></div>
+<div class="ttc" id="client_8c_html_aae9bd8b56defc5a6ec9c20b503b59a3a"><div class="ttname"><a href="client_8c.html#aae9bd8b56defc5a6ec9c20b503b59a3a">D</a></div><div class="ttdeci">SDL_Surface * D</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_ac54b5255531a4799123d0f8dca96a7cc"><div class="ttname"><a href="client_8c.html#ac54b5255531a4799123d0f8dca96a7cc">B</a></div><div class="ttdeci">SDL_Surface * B</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="client_8c_html_ae8dfea36e66ed4b47c61a7ea5212e164"><div class="ttname"><a href="client_8c.html#ae8dfea36e66ed4b47c61a7ea5212e164">E</a></div><div class="ttdeci">SDL_Surface * E</div><div class="ttdef"><b>Definition:</b> client.c:28</div></div>
+<div class="ttc" id="snakelib_8c_html_ab6926a5a512798dea6aa52f5f15ab8ad"><div class="ttname"><a href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad">board_size_x</a></div><div class="ttdeci">int board_size_x(board const *b)</div><div class="ttdoc">taille x du plateau </div><div class="ttdef"><b>Definition:</b> snakelib.c:74</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_a2cfeae643e415db24e85db6c4994b071_cgraph.png" border="0" usemap="#client_8c_a2cfeae643e415db24e85db6c4994b071_cgraph" alt=""/></div>
+<map name="client_8c_a2cfeae643e415db24e85db6c4994b071_cgraph" id="client_8c_a2cfeae643e415db24e85db6c4994b071_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="124,5,223,32"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="124,56,223,83"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="134,107,213,133"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_a2cfeae643e415db24e85db6c4994b071_icgraph.png" border="0" usemap="#client_8c_a2cfeae643e415db24e85db6c4994b071_icgraph" alt=""/></div>
+<map name="client_8c_a2cfeae643e415db24e85db6c4994b071_icgraph" id="client_8c_a2cfeae643e415db24e85db6c4994b071_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="124,5,203,32"/>
+<area shape="rect" id="node4" href="client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="129,56,197,83"/>
+<area shape="rect" id="node3" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="251,31,301,57"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ace514d3ea0e685be64430b930ef23b46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * sdl_turn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    SDL_Event event;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">char</span> buff;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a>)</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    SDL_WaitEvent(&amp;event);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">switch</span> (event.type)</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">case</span> SDL_QUIT:</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">case</span> SDL_KEYDOWN:</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">switch</span> (event.key.keysym.sym)</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                {</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    <span class="keywordflow">case</span> SDLK_ESCAPE:</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        <a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    <span class="keywordflow">case</span> SDLK_RIGHT:<span class="comment">/* key right */</span></div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP3:<span class="comment">/* keypad 3 */</span></div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP9:<span class="comment">/* keypad 3 */</span></div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>:<span class="comment">/* code ascii */</span></div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                        <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                        pthread_mutex_lock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                        <span class="comment">/* turn snake */</span></div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                        <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,1,<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a>);</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                        write(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;<a class="code" href="client_8c.html#a6edfa8f60e57212495b55b6b96c92cc5">r</a>,1);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                        read(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;buff,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                        <span class="keywordflow">switch</span>(buff)</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                        {</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;m&#39;</span>:</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                <a class="code" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;l&#39;</span>:</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,-1);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,1);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                        }</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                        <span class="comment">/* affiche SDL */</span></div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                            <a class="code" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                        pthread_mutex_unlock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    <span class="keywordflow">case</span> SDLK_LEFT:<span class="comment">/* key left */</span></div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP1:<span class="comment">/* keypad 1*/</span></div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    <span class="keywordflow">case</span> SDLK_KP7:<span class="comment">/* keypad 7*/</span></div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>:<span class="comment">/* code ascii */</span></div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        <span class="comment">/* on ferme la variable mutex */</span></div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        pthread_mutex_lock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        <span class="comment">/* turn snake */</span></div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,-1,<a class="code" href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a>);</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        write(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;<a class="code" href="client_8c.html#a70893b9fd599f8c9ed3ed00c52eba44a">l</a>,1);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        read(<a class="code" href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a>,&amp;buff,<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*));</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        <span class="keywordflow">switch</span>(buff)</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        {</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;m&#39;</span>:</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                                <a class="code" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>);</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;l&#39;</span>:</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,-1);</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                            <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                <a class="code" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a>,<a class="code" href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a>,1);</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                <span class="keywordflow">break</span>;</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        }</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        <span class="comment">/* affiche SDL */</span></div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        <span class="keywordflow">if</span> ((<a class="code" href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a> = !(<a class="code" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a>(&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>)) &amp;&amp; !(<a class="code" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a>(&amp;<a class="code" href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a>,&amp;<a class="code" href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a>))))</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                            <a class="code" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a>();</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        <span class="comment">/* libere le mutex pour les autres thread */</span></div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                        pthread_mutex_unlock(&amp;<a class="code" href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a>);</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    <span class="keywordflow">default</span>:<span class="comment">/* ne fait rien */</span><span class="keywordflow">break</span>;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                }   </div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">default</span>:<span class="comment">/* ne fait rien */</span><span class="keywordflow">break</span>;</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    pthread_exit(0);</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div><div class="ttc" id="snakelib_8c_html_aa7c9d4fed2b3edb453a4501ba019dc00"><div class="ttname"><a href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00">move</a></div><div class="ttdeci">void move(board *brdin, snake *snkin, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:370</div></div>
+<div class="ttc" id="snakelib_8c_html_ab96735ae82693727289ffe22fc940235"><div class="ttname"><a href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235">choc_snake</a></div><div class="ttdeci">bool choc_snake(snake const *s1, snake const *s2)</div><div class="ttdoc">test choc entre deux snake </div><div class="ttdef"><b>Definition:</b> snakelib.c:477</div></div>
+<div class="ttc" id="client_8c_html_a2cfeae643e415db24e85db6c4994b071"><div class="ttname"><a href="client_8c.html#a2cfeae643e415db24e85db6c4994b071">sdl_print</a></div><div class="ttdeci">void sdl_print()</div><div class="ttdef"><b>Definition:</b> client.c:56</div></div>
+<div class="ttc" id="client_8c_html_aab1bde286e010d81472b269b419806d6"><div class="ttname"><a href="client_8c.html#aab1bde286e010d81472b269b419806d6">X</a></div><div class="ttdeci">bool X</div><div class="ttdef"><b>Definition:</b> client.c:33</div></div>
+<div class="ttc" id="client_8c_html_a6edfa8f60e57212495b55b6b96c92cc5"><div class="ttname"><a href="client_8c.html#a6edfa8f60e57212495b55b6b96c92cc5">r</a></div><div class="ttdeci">char r</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="snakelib_8c_html_a50fa8a047abfa006a3371a94809e72c4"><div class="ttname"><a href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4">choc_wall</a></div><div class="ttdeci">bool choc_wall(board const *b, snake const *s)</div><div class="ttdoc">test choc snake contre le mur </div><div class="ttdef"><b>Definition:</b> snakelib.c:496</div></div>
+<div class="ttc" id="client_8c_html_a20fdbd342281b7b5b77945c79d176b9f"><div class="ttname"><a href="client_8c.html#a20fdbd342281b7b5b77945c79d176b9f">b</a></div><div class="ttdeci">board b</div><div class="ttdef"><b>Definition:</b> client.c:30</div></div>
+<div class="ttc" id="client_8c_html_a71e92e96b65208605aca57598cc827f1"><div class="ttname"><a href="client_8c.html#a71e92e96b65208605aca57598cc827f1">s</a></div><div class="ttdeci">snake s</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+<div class="ttc" id="client_8c_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="client_8c.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition:</b> client.c:36</div></div>
+<div class="ttc" id="client_8c_html_a0318530b7ab3cba31a8e7213e34351cc"><div class="ttname"><a href="client_8c.html#a0318530b7ab3cba31a8e7213e34351cc">o</a></div><div class="ttdeci">char o</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_af6f0bd3dc13317f895c91323c25c2b8f"><div class="ttname"><a href="client_8c.html#af6f0bd3dc13317f895c91323c25c2b8f">t</a></div><div class="ttdeci">char t</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_a4acff8232e4aec9cd5c6dc200ac55ef3"><div class="ttname"><a href="client_8c.html#a4acff8232e4aec9cd5c6dc200ac55ef3">mutex</a></div><div class="ttdeci">pthread_mutex_t mutex</div><div class="ttdef"><b>Definition:</b> client.c:26</div></div>
+<div class="ttc" id="snakelib_8c_html_afa428ecb4385e08a82520bec11bafe36"><div class="ttname"><a href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36">turn</a></div><div class="ttdeci">void turn(board *brdin, snake *snkin, int drctn, char id)</div><div class="ttdef"><b>Definition:</b> snakelib.c:393</div></div>
+<div class="ttc" id="client_8c_html_a70893b9fd599f8c9ed3ed00c52eba44a"><div class="ttname"><a href="client_8c.html#a70893b9fd599f8c9ed3ed00c52eba44a">l</a></div><div class="ttdeci">char l</div><div class="ttdef"><b>Definition:</b> client.c:35</div></div>
+<div class="ttc" id="client_8c_html_aa6fd7c53c9b79f5a6ccb6f73b383263c"><div class="ttname"><a href="client_8c.html#aa6fd7c53c9b79f5a6ccb6f73b383263c">c</a></div><div class="ttdeci">snake c</div><div class="ttdef"><b>Definition:</b> client.c:31</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_ace514d3ea0e685be64430b930ef23b46_cgraph.png" border="0" usemap="#client_8c_ace514d3ea0e685be64430b930ef23b46_cgraph" alt=""/></div>
+<map name="client_8c_ace514d3ea0e685be64430b930ef23b46_cgraph" id="client_8c_ace514d3ea0e685be64430b930ef23b46_cgraph">
+<area shape="rect" id="node2" href="snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="145,81,189,108"/>
+<area shape="rect" id="node6" href="snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="140,31,195,57"/>
+<area shape="rect" id="node7" href="snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="121,132,213,159"/>
+<area shape="rect" id="node8" href="snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="127,183,207,209"/>
+<area shape="rect" id="node9" href="client_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="132,233,203,260"/>
+<area shape="rect" id="node3" href="snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="270,5,351,32"/>
+<area shape="rect" id="node4" href="snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="271,56,350,83"/>
+<area shape="rect" id="node5" href="snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="268,107,353,133"/>
+<area shape="rect" id="node10" href="snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="261,183,360,209"/>
+<area shape="rect" id="node11" href="snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="261,233,360,260"/>
+<area shape="rect" id="node12" href="snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="271,284,350,311"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_8c_ace514d3ea0e685be64430b930ef23b46_icgraph.png" border="0" usemap="#client_8c_ace514d3ea0e685be64430b930ef23b46_icgraph" alt=""/></div>
+<map name="client_8c_ace514d3ea0e685be64430b930ef23b46_icgraph" id="client_8c_ace514d3ea0e685be64430b930ef23b46_icgraph">
+<area shape="rect" id="node2" href="client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="121,5,172,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a79a54bef7bf02b18264c38fc90549a04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac54b5255531a4799123d0f8dca96a7cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a20fdbd342281b7b5b77945c79d176b9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structboard.html">board</a> b</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab7d76262118cf1d4da44315136e542ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6fd7c53c9b79f5a6ccb6f73b383263c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsnake.html">snake</a> c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aae9bd8b56defc5a6ec9c20b503b59a3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae8dfea36e66ed4b47c61a7ea5212e164"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface* E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70893b9fd599f8c9ed3ed00c52eba44a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char l</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a67668278838ab1eb0065ef9218c8de00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char m</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4acff8232e4aec9cd5c6dc200ac55ef3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a76f11d9a0a47b94f72c2d0e77fb32240"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0318530b7ab3cba31a8e7213e34351cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char o</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6edfa8f60e57212495b55b6b96c92cc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char r</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a71e92e96b65208605aca57598cc827f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structsnake.html">snake</a> s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6f0bd3dc13317f895c91323c25c2b8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acdb501237bbfd1adad2d00fc7052a767"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t threadpt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab1bde286e010d81472b269b419806d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool X</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="schlanga_corner" name="schlanga_corner">
+<area shape="rect" id="node2" href="$snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="171,56,215,83"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="265,5,346,32"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="266,56,345,83"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="263,107,348,133"/>
+</map>

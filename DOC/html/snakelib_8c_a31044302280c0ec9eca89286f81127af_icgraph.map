@@ -1,0 +1,7 @@
+<map id="rand_a_b" name="rand_a_b">
+<area shape="rect" id="node2" href="$snakelib_8h.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="128,56,220,83"/>
+<area shape="rect" id="node3" href="$snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="273,5,341,32"/>
+<area shape="rect" id="node5" href="$snake_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="268,56,347,83"/>
+<area shape="rect" id="node6" href="$unittesting_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="282,107,333,133"/>
+<area shape="rect" id="node4" href="$snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="395,31,445,57"/>
+</map>

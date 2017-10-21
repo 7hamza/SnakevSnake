@@ -1,0 +1,7 @@
+<map id="board_size_x" name="board_size_x">
+<area shape="rect" id="node2" href="$client_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="152,31,223,57"/>
+<area shape="rect" id="node6" href="$unittesting_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="162,81,213,108"/>
+<area shape="rect" id="node3" href="$client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="271,5,349,32"/>
+<area shape="rect" id="node5" href="$client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="276,56,344,83"/>
+<area shape="rect" id="node4" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="397,31,448,57"/>
+</map>

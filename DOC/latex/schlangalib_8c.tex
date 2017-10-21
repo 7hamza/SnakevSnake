@@ -1,0 +1,735 @@
+\hypertarget{schlangalib_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/schlangalib.c}
+\label{schlangalib_8c}\index{S\+O\+U\+R\+C\+E/schlangalib.\+c@{S\+O\+U\+R\+C\+E/schlangalib.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/snakelib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/schlangalib.\+h\char`\"{}}\\*
+Graphe des dépendances par inclusion de schlangalib.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{schlangalib_8c_a012777a0d47b27fcae56ae35614459dd}{C\+O\+D\+E\+\_\+\+N\+U\+LL}~0
+\item 
+\#define \hyperlink{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}{C\+O\+D\+E\+\_\+\+B\+OW}~1
+\item 
+\#define \hyperlink{schlangalib_8c_acee163547d72d28d7cbb45de2c1cc1b9}{C\+O\+D\+E\+\_\+\+W\+A\+LL}~2
+\item 
+\#define \hyperlink{schlangalib_8c_a91640b78c7bda96c44c256a09f02e700}{C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}~3
+\item 
+\#define \hyperlink{schlangalib_8c_a4baca3e22ae44aafc8a52b0768491cd3}{C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}~4
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{exist\+\_\+in\+\_\+snake} (const \hyperlink{structsnake}{snake} $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, int x, int y)
+\item 
+bool \hyperlink{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}{schlanga\+\_\+bow} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, const \hyperlink{structsnake}{snake} $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{structsnake}{snake} $\ast$\hyperlink{schlanga_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c})
+\item 
+bool \hyperlink{schlangalib_8c_a5b8413626002409e9465985272966386}{schlanga\+\_\+wall} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, \hyperlink{structsnake}{snake} $\ast$\hyperlink{schlanga_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c})
+\item 
+bool \hyperlink{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240}{schlanga\+\_\+corner} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, \hyperlink{structsnake}{snake} $\ast$\hyperlink{schlanga_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c})
+\item 
+bool \hyperlink{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d}{schlanga\+\_\+next\+\_\+to} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, const \hyperlink{structsnake}{snake} $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{structsnake}{snake} $\ast$\hyperlink{schlanga_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c})
+\item 
+int \hyperlink{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4}{min\+\_\+abs} (int a, int \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b})
+\item 
+void \hyperlink{schlangalib_8c_a28adbac02fbdf8816543c25878bfd81d}{schlanga\+\_\+ia} (\hyperlink{structboard}{board} $\ast$\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, const \hyperlink{structsnake}{snake} $\ast$\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{structsnake}{snake} $\ast$\hyperlink{schlanga_8c_aa6fd7c53c9b79f5a6ccb6f73b383263c}{c}, int len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\index{schlangalib.\+c@{schlangalib.\+c}!C\+O\+D\+E\+\_\+\+B\+OW@{C\+O\+D\+E\+\_\+\+B\+OW}}
+\index{C\+O\+D\+E\+\_\+\+B\+OW@{C\+O\+D\+E\+\_\+\+B\+OW}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{C\+O\+D\+E\+\_\+\+B\+OW}{CODE_BOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+D\+E\+\_\+\+B\+OW~1}\hypertarget{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}{}\label{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}
+\index{schlangalib.\+c@{schlangalib.\+c}!C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER@{C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}}
+\index{C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER@{C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER}{CODE_CORNER}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+D\+E\+\_\+\+C\+O\+R\+N\+ER~3}\hypertarget{schlangalib_8c_a91640b78c7bda96c44c256a09f02e700}{}\label{schlangalib_8c_a91640b78c7bda96c44c256a09f02e700}
+\index{schlangalib.\+c@{schlangalib.\+c}!C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO@{C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}}
+\index{C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO@{C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO}{CODE_NEXT_TO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+D\+E\+\_\+\+N\+E\+X\+T\+\_\+\+TO~4}\hypertarget{schlangalib_8c_a4baca3e22ae44aafc8a52b0768491cd3}{}\label{schlangalib_8c_a4baca3e22ae44aafc8a52b0768491cd3}
+\index{schlangalib.\+c@{schlangalib.\+c}!C\+O\+D\+E\+\_\+\+N\+U\+LL@{C\+O\+D\+E\+\_\+\+N\+U\+LL}}
+\index{C\+O\+D\+E\+\_\+\+N\+U\+LL@{C\+O\+D\+E\+\_\+\+N\+U\+LL}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{C\+O\+D\+E\+\_\+\+N\+U\+LL}{CODE_NULL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+D\+E\+\_\+\+N\+U\+LL~0}\hypertarget{schlangalib_8c_a012777a0d47b27fcae56ae35614459dd}{}\label{schlangalib_8c_a012777a0d47b27fcae56ae35614459dd}
+\index{schlangalib.\+c@{schlangalib.\+c}!C\+O\+D\+E\+\_\+\+W\+A\+LL@{C\+O\+D\+E\+\_\+\+W\+A\+LL}}
+\index{C\+O\+D\+E\+\_\+\+W\+A\+LL@{C\+O\+D\+E\+\_\+\+W\+A\+LL}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{C\+O\+D\+E\+\_\+\+W\+A\+LL}{CODE_WALL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+D\+E\+\_\+\+W\+A\+LL~2}\hypertarget{schlangalib_8c_acee163547d72d28d7cbb45de2c1cc1b9}{}\label{schlangalib_8c_acee163547d72d28d7cbb45de2c1cc1b9}
+
+
+\subsection{Documentation des fonctions}
+\index{schlangalib.\+c@{schlangalib.\+c}!exist\+\_\+in\+\_\+snake@{exist\+\_\+in\+\_\+snake}}
+\index{exist\+\_\+in\+\_\+snake@{exist\+\_\+in\+\_\+snake}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{exist\+\_\+in\+\_\+snake(const snake $\ast$s, int x, int y)}{exist_in_snake(const snake *s, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}bool exist\+\_\+in\+\_\+snake (
+\begin{DoxyParamCaption}
+\item[{const {\bf snake} $\ast$}]{s, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{}\label{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}
+
+\begin{DoxyCode}
+21 \{
+22     \hyperlink{structsnake}{snake} curr = *\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s};
+23     \textcolor{keywordflow}{while}(curr != 0)
+24     \{
+25         \textcolor{keywordflow}{if}(curr->x == x && curr->y == y)
+26         \{
+27             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+28         \}
+29         curr = curr->next;
+30     \}
+31     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+32 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!min\+\_\+abs@{min\+\_\+abs}}
+\index{min\+\_\+abs@{min\+\_\+abs}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{min\+\_\+abs(int a, int b)}{min_abs(int a, int b)}}]{\setlength{\rightskip}{0pt plus 5cm}int min\+\_\+abs (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4}{}\label{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4}
+
+\begin{DoxyCode}
+421 \{
+422     \textcolor{keywordflow}{if}(a < 0)
+423         a = -a;
+424     \textcolor{keywordflow}{if}(\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b} < 0)
+425         \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b} = -\hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b};
+426     \textcolor{keywordflow}{return} (a < \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b})? a : \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b};
+427 \}
+\end{DoxyCode}
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!schlanga\+\_\+bow@{schlanga\+\_\+bow}}
+\index{schlanga\+\_\+bow@{schlanga\+\_\+bow}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{schlanga\+\_\+bow(board $\ast$b, const snake $\ast$s, snake $\ast$c)}{schlanga_bow(board *b, const snake *s, snake *c)}}]{\setlength{\rightskip}{0pt plus 5cm}bool schlanga\+\_\+bow (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{const {\bf snake} $\ast$}]{s, }
+\item[{{\bf snake} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}{}\label{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}
+
+\begin{DoxyCode}
+43 \{
+44     \hyperlink{structsnake}{snake} curr = *\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s};
+45     \hyperlink{structsnake}{snake} head = *\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s};
+46     \textcolor{keywordtype}{bool} danger = \textcolor{keyword}{false};
+47     \textcolor{keywordtype}{int} schla\_dir\_x = (*c)->x - (*c)->next->x;
+48     \textcolor{keywordtype}{int} schla\_dir\_y = (*c)->y - (*c)->next->y;
+49     \textcolor{keywordflow}{while}(curr != 0)
+50     \{
+51         \textcolor{keywordflow}{if}(\(\backslash\)
+52             ((*c)->x + schla\_dir\_x == curr->x) && ((*c)->y == curr->y)\(\backslash\)
+53         )
+54         \{
+55             danger = \textcolor{keyword}{true};
+56             \textcolor{keywordflow}{break};
+57         \}
+58         \textcolor{keywordflow}{if}(\(\backslash\)
+59             ((*c)->x + 2*schla\_dir\_x == curr->x) && ((*c)->y == curr->y)\(\backslash\)
+60         )
+61         \{
+62             danger = \textcolor{keyword}{true};
+63             \textcolor{keywordflow}{break};
+64         \}
+65         \textcolor{keywordflow}{if}(\(\backslash\)
+66             ((*c)->x + 3*schla\_dir\_x == curr->x) && ((*c)->y == curr->y)\(\backslash\)
+67         )
+68         \{
+69             danger = \textcolor{keyword}{true};
+70             \textcolor{keywordflow}{break};
+71         \}
+72 
+73 
+74         \textcolor{keywordflow}{if}(\(\backslash\)
+75             ((*c)->y + schla\_dir\_y == curr->y) && ((*c)->x == curr->x)\(\backslash\)
+76         )
+77         \{
+78             danger = \textcolor{keyword}{true};
+79             \textcolor{keywordflow}{break};
+80         \}
+81         \textcolor{keywordflow}{if}(\(\backslash\)
+82             ((*c)->y + 2*schla\_dir\_y == curr->y) && ((*c)->x == curr->x)\(\backslash\)
+83         )
+84         \{
+85             danger = \textcolor{keyword}{true};
+86             \textcolor{keywordflow}{break};
+87         \}
+88         \textcolor{keywordflow}{if}(\(\backslash\)
+89             ((*c)->y + 3*schla\_dir\_y == curr->y) && ((*c)->x == curr->x)\(\backslash\)
+90         )
+91         \{
+92             danger = \textcolor{keyword}{true};
+93             \textcolor{keywordflow}{break};
+94         \}
+95         curr = curr->next;
+96     \}
+97     \textcolor{keywordflow}{if}(danger)
+98     \{
+99         \textcolor{keywordtype}{int} snake\_dir\_x = head->x - head->next->x;
+100         \textcolor{keywordtype}{int} snake\_dir\_y = head->y - head->next->y;
+101         \textcolor{keywordtype}{int} snake\_bow\_x = 0, snake\_bow\_y = 0;
+102         \textcolor{keywordtype}{int} dx = 0, dy = 0;
+103         curr = *\hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s};
+104         \textcolor{keywordflow}{while}(snake\_bow\_x == 0\(\backslash\)
+105             && snake\_bow\_y == 0\(\backslash\)
+106             && curr->next->next != 0)
+107         \{
+108             dx = curr->x - curr->next->next->x;
+109             dy = curr->y - curr->next->next->y;
+110             \textcolor{keywordflow}{if}(dx != 0 && dy != 0)
+111             \{
+112                 snake\_bow\_x = dx;
+113                 snake\_bow\_y = dy;
+114                 \textcolor{keywordflow}{break};
+115             \}
+116             curr = curr->next;
+117         \}
+118         \textcolor{keywordflow}{if}(snake\_bow\_x == 1\(\backslash\)
+119             && snake\_bow\_y == 1)
+120         \{
+121             \textcolor{keywordflow}{if}(snake\_dir\_x == 1)
+122             \{
+123                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+124                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+125             \}
+126             \textcolor{keywordflow}{if}(snake\_dir\_y == 1)
+127             \{
+128                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+129                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+130             \}
+131         \}
+132         \textcolor{keywordflow}{if}(snake\_bow\_x == 1\(\backslash\)
+133             && snake\_bow\_y == -1)
+134         \{
+135             \textcolor{keywordflow}{if}(snake\_dir\_x == 1)
+136             \{
+137                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+138                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+139             \}
+140             \textcolor{keywordflow}{if}(snake\_dir\_y == -1)
+141             \{
+142                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+143                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+144             \}   
+145         \}
+146         \textcolor{keywordflow}{if}(snake\_bow\_x == -1\(\backslash\)
+147             && snake\_bow\_y == 1)
+148         \{
+149             \textcolor{keywordflow}{if}(snake\_dir\_x == -1)
+150             \{
+151                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+152                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+153             \}
+154             \textcolor{keywordflow}{if}(snake\_dir\_y == 1)
+155             \{
+156                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+157                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+158             \}
+159         \}
+160         \textcolor{keywordflow}{if}(snake\_bow\_x == -1\(\backslash\)
+161             && snake\_bow\_y == -1)
+162         \{
+163             \textcolor{keywordflow}{if}(snake\_dir\_x == -1)
+164             \{
+165                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+166                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+167             \}
+168             \textcolor{keywordflow}{if}(snake\_dir\_y == -1)
+169             \{
+170                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+171                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+172             \}   
+173         \}
+174         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,(rand() % 2) * 2 - 1,\textcolor{charliteral}{'&'});
+175         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+176     \}
+177     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+178 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!schlanga\+\_\+corner@{schlanga\+\_\+corner}}
+\index{schlanga\+\_\+corner@{schlanga\+\_\+corner}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{schlanga\+\_\+corner(board $\ast$b, snake $\ast$c)}{schlanga_corner(board *b, snake *c)}}]{\setlength{\rightskip}{0pt plus 5cm}bool schlanga\+\_\+corner (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{{\bf snake} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240}{}\label{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240}
+
+\begin{DoxyCode}
+288 \{
+289     \textcolor{keywordtype}{int} x\_board = 1;
+290     \textcolor{keywordtype}{int} y\_board = 1;
+291 
+292     \textcolor{keywordtype}{int} dx\_board = b->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} - 2;
+293     \textcolor{keywordtype}{int} dy\_board = b->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} - 2;
+294 
+295     \hyperlink{structsnake}{snake} head = (*c);
+296 
+297     \textcolor{keywordtype}{int} schlanga\_dir\_x = head->x - head->next->x;
+298     \textcolor{keywordtype}{int} schlanga\_dir\_y = head->y - head->next->y;
+299 
+300     \textcolor{keywordflow}{if}(x\_board == head->x && y\_board == head->y)
+301     \{
+302         \textcolor{keywordflow}{if}(schlanga\_dir\_x)
+303         \{
+304             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+305         \}
+306         \textcolor{keywordflow}{if}(schlanga\_dir\_y)
+307         \{
+308             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+309         \}
+310         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+311     \}
+312     \textcolor{keywordflow}{if}(x\_board == head->x && dy\_board == head->y)
+313     \{
+314         \textcolor{keywordflow}{if}(schlanga\_dir\_x)
+315         \{
+316             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+317         \}
+318         \textcolor{keywordflow}{if}(schlanga\_dir\_y)
+319         \{
+320             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});   
+321         \}
+322         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+323     \}
+324     \textcolor{keywordflow}{if}(dx\_board == head->x && y\_board == head->y)
+325     \{
+326         \textcolor{keywordflow}{if}(schlanga\_dir\_x)
+327         \{
+328             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+329         \}
+330         \textcolor{keywordflow}{if}(schlanga\_dir\_y)
+331         \{
+332             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+333         \}
+334         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+335     \}
+336     \textcolor{keywordflow}{if}(dx\_board == head->x && dy\_board == head->y)
+337     \{
+338         \textcolor{keywordflow}{if}(schlanga\_dir\_x)
+339         \{
+340             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+341         \}
+342         \textcolor{keywordflow}{if}(schlanga\_dir\_y)
+343         \{
+344             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+345         \}
+346         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+347     \}
+348     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+349 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!schlanga\+\_\+ia@{schlanga\+\_\+ia}}
+\index{schlanga\+\_\+ia@{schlanga\+\_\+ia}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{schlanga\+\_\+ia(board $\ast$b, const snake $\ast$s, snake $\ast$c, int len)}{schlanga_ia(board *b, const snake *s, snake *c, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}void schlanga\+\_\+ia (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{const {\bf snake} $\ast$}]{s, }
+\item[{{\bf snake} $\ast$}]{c, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a28adbac02fbdf8816543c25878bfd81d}{}\label{schlangalib_8c_a28adbac02fbdf8816543c25878bfd81d}
+
+\begin{DoxyCode}
+437 \{
+438     \textcolor{keyword}{static} \textcolor{keywordtype}{int} code = \hyperlink{schlangalib_8c_a012777a0d47b27fcae56ae35614459dd}{CODE\_NULL};
+439     \textcolor{keyword}{static} \textcolor{keywordtype}{int} count = 0;
+440     \textcolor{keyword}{static} \textcolor{keywordtype}{int} corner = 0;
+441     \textcolor{keywordtype}{int} x\_board = 1;
+442     \textcolor{keywordtype}{int} y\_board = 1;
+443 
+444     \textcolor{keywordtype}{int} dx\_board = b->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} - 2;
+445     \textcolor{keywordtype}{int} dy\_board = b->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} - 2;
+446 
+447     \textcolor{keywordtype}{int} schlanga\_x = (*c)->x;
+448     \textcolor{keywordtype}{int} schlanga\_y = (*c)->y;
+449 
+450     \textcolor{keywordtype}{int} schlanga\_dir\_x = (*c)->x - (*c)->next->x;
+451     \textcolor{keywordtype}{int} schlanga\_dir\_y = (*c)->y - (*c)->next->y;
+452 
+453     \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d}{schlanga\_next\_to}(b,s,c))
+454     \{
+455         code = \hyperlink{schlangalib_8c_a4baca3e22ae44aafc8a52b0768491cd3}{CODE\_NEXT\_TO};
+456         \textcolor{keywordflow}{return};
+457     \}
+458     \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a08f1c27d2a4dd425ca550057e8856240}{schlanga\_corner}(b,c))
+459     \{
+460         code = \hyperlink{schlangalib_8c_a91640b78c7bda96c44c256a09f02e700}{CODE\_CORNER};
+461         corner = len/2-2;
+462         \textcolor{keywordflow}{return};
+463     \}
+464     \textcolor{keywordflow}{if}(corner)
+465     \{
+466         \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}{schlanga\_bow}(b,s,c))
+467         \{
+468             corner = 0;
+469             code = \hyperlink{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}{CODE\_BOW};
+470         \}
+471         \textcolor{keywordflow}{else}
+472         \{
+473             \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+474             --corner;
+475         \}
+476         \textcolor{keywordflow}{return};
+477     \}
+478     \textcolor{keywordflow}{if}(code != \hyperlink{schlangalib_8c_acee163547d72d28d7cbb45de2c1cc1b9}{CODE\_WALL})
+479     \{
+480         \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a5b8413626002409e9465985272966386}{schlanga\_wall}(b,c))
+481         \{
+482             code = \hyperlink{schlangalib_8c_acee163547d72d28d7cbb45de2c1cc1b9}{CODE\_WALL};
+483             \textcolor{keywordtype}{unsigned} \hyperlink{client_8c_a67668278838ab1eb0065ef9218c8de00}{m} = 0;
+484             \textcolor{keywordflow}{if}(schlanga\_dir\_x == 0)
+485             \{
+486                 m = \hyperlink{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4}{min\_abs}(schlanga\_x - x\_board, schlanga\_x - dx\_board);
+487             \}
+488             \textcolor{keywordflow}{if}(schlanga\_dir\_y == 0)
+489             \{
+490                 m = \hyperlink{schlangalib_8c_af3fdd05c8d6e18536c1f89f1814969d4}{min\_abs}(schlanga\_y - y\_board, schlanga\_y - dy\_board);
+491             \}
+492             \textcolor{keywordflow}{if}(m != 0)
+493             \{
+494                 count = rand() % \hyperlink{client_8c_a67668278838ab1eb0065ef9218c8de00}{m};
+495             \}
+496             \textcolor{keywordflow}{return};
+497         \}
+498     \}
+499     \textcolor{keywordflow}{else}
+500     \{
+501         \textcolor{keywordflow}{if}(count == 0)
+502         \{
+503             code = \hyperlink{schlangalib_8c_a012777a0d47b27fcae56ae35614459dd}{CODE\_NULL};
+504         \}
+505         \textcolor{keywordflow}{else}
+506         \{
+507             \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}{schlanga\_bow}(b,s,c))
+508             \{
+509                 code = \hyperlink{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}{CODE\_BOW};
+510                 \textcolor{keywordflow}{return};
+511             \}
+512             \textcolor{keywordflow}{else}
+513             \{
+514                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+515                 --count;
+516                 \textcolor{keywordflow}{return};
+517             \}
+518         \}
+519     \}
+520     \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a4cb830baa18247d13d465075c869d1d7}{schlanga\_bow}(b,s,c))
+521     \{
+522         code = \hyperlink{schlangalib_8c_aea2ff5b1ef8a3b2b9a385927575c9396}{CODE\_BOW};
+523         \textcolor{keywordflow}{return};
+524     \}
+525     \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+526 \}\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a28adbac02fbdf8816543c25878bfd81d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{schlangalib_8c_a28adbac02fbdf8816543c25878bfd81d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!schlanga\+\_\+next\+\_\+to@{schlanga\+\_\+next\+\_\+to}}
+\index{schlanga\+\_\+next\+\_\+to@{schlanga\+\_\+next\+\_\+to}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{schlanga\+\_\+next\+\_\+to(board $\ast$b, const snake $\ast$s, snake $\ast$c)}{schlanga_next_to(board *b, const snake *s, snake *c)}}]{\setlength{\rightskip}{0pt plus 5cm}bool schlanga\+\_\+next\+\_\+to (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{const {\bf snake} $\ast$}]{s, }
+\item[{{\bf snake} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d}{}\label{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d}
+
+\begin{DoxyCode}
+360 \{
+361 
+362     \textcolor{keywordtype}{int} x\_board = 1;
+363     \textcolor{keywordtype}{int} y\_board = 1;
+364 
+365     \textcolor{keywordtype}{int} dx\_board = b->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} - 2;
+366     \textcolor{keywordtype}{int} dy\_board = b->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} - 2;
+367 
+368     \textcolor{keywordtype}{int} schlanga\_x = (*c)->x;
+369     \textcolor{keywordtype}{int} schlanga\_y = (*c)->y;
+370 
+371     \textcolor{keywordtype}{int} schlanga\_dir\_x = (*c)->x - (*c)->next->x;
+372     \textcolor{keywordtype}{int} schlanga\_dir\_y = (*c)->y - (*c)->next->y;
+373 
+374     \textcolor{keywordflow}{if}(schlanga\_x == x\_board)
+375     \{
+376         \textcolor{keywordflow}{if}(schlanga\_dir\_x == 0)
+377         \{
+378             \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{exist\_in\_snake}(s,schlanga\_x+1,schlanga\_y))
+379             \{
+380                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+381                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+382             \}
+383         \}
+384     \}
+385     \textcolor{keywordflow}{if}(schlanga\_x == dx\_board)
+386     \{
+387         \textcolor{keywordflow}{if}(schlanga\_dir\_x == 0)
+388         \{
+389             \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{exist\_in\_snake}(s,schlanga\_x-1,schlanga\_y))
+390             \{
+391                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+392                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+393             \}
+394         \}
+395     \}
+396     \textcolor{keywordflow}{if}(schlanga\_y == y\_board)
+397     \{
+398         \textcolor{keywordflow}{if}(schlanga\_dir\_y == 0)
+399         \{
+400             \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{exist\_in\_snake}(s,schlanga\_x,schlanga\_y+1))
+401             \{
+402                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+403                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+404             \}
+405         \}
+406     \}
+407     \textcolor{keywordflow}{if}(schlanga\_y == dy\_board)
+408     \{
+409         \textcolor{keywordflow}{if}(schlanga\_dir\_y == 0)
+410         \{
+411             \textcolor{keywordflow}{if}(\hyperlink{schlangalib_8c_a6c97e3271fe6b65bd31bdbaf03bf6b9c}{exist\_in\_snake}(s,schlanga\_x,schlanga\_y-1))
+412             \{
+413                 \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(b,c,\textcolor{charliteral}{'&'});
+414                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+415             \}
+416         \}
+417     \}
+418     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+419 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a2655a50383ab9680d1a3a72ea9de562d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{schlangalib.\+c@{schlangalib.\+c}!schlanga\+\_\+wall@{schlanga\+\_\+wall}}
+\index{schlanga\+\_\+wall@{schlanga\+\_\+wall}!schlangalib.\+c@{schlangalib.\+c}}
+\subsubsection[{\texorpdfstring{schlanga\+\_\+wall(board $\ast$b, snake $\ast$c)}{schlanga_wall(board *b, snake *c)}}]{\setlength{\rightskip}{0pt plus 5cm}bool schlanga\+\_\+wall (
+\begin{DoxyParamCaption}
+\item[{{\bf board} $\ast$}]{b, }
+\item[{{\bf snake} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{schlangalib_8c_a5b8413626002409e9465985272966386}{}\label{schlangalib_8c_a5b8413626002409e9465985272966386}
+
+\begin{DoxyCode}
+188 \{
+189     \textcolor{keywordtype}{int} x\_board = 1;
+190     \textcolor{keywordtype}{int} y\_board = 1;
+191     \textcolor{keywordtype}{int} dx\_board = b->\hyperlink{structboard_a45ad83890aed4b92ef175f0eb13cd1f3}{x} - 2;
+192     \textcolor{keywordtype}{int} dy\_board = b->\hyperlink{structboard_a0a1685edc20c5b97527ccd4027d5f8eb}{y} - 2;
+193     \textcolor{keywordtype}{int} x\_schla = (*c)->x;
+194     \textcolor{keywordtype}{int} y\_schla = (*c)->y;
+195     \textcolor{keywordtype}{int} dx\_schla = (*c)->x - (*c)->next->x;
+196     \textcolor{keywordtype}{int} dy\_schla = (*c)->y - (*c)->next->y;
+197     \textcolor{keywordflow}{if}(y\_schla == y\_board)
+198     \{
+199         \textcolor{keywordflow}{if}(dx\_schla == 0)
+200         \{
+201             \textcolor{keywordflow}{if}(x\_schla == x\_board)
+202             \{
+203                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+204                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+205             \}
+206             \textcolor{keywordflow}{if}(x\_schla == dx\_board)
+207             \{
+208                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+209                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+210             \}
+211             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,(rand() % 2) * 2 - 1,\textcolor{charliteral}{'&'});
+212             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+213         \}
+214         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,dx\_schla,\textcolor{charliteral}{'&'});
+215         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+216     \}
+217     \textcolor{keywordflow}{if}(y\_schla == dy\_board)
+218     \{
+219         \textcolor{keywordflow}{if}(dx\_schla == 0)
+220         \{
+221             \textcolor{keywordflow}{if}(x\_schla == x\_board)
+222             \{
+223                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+224                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+225             \}
+226             \textcolor{keywordflow}{if}(x\_schla == dx\_board)
+227             \{   
+228                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+229                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+230             \}
+231             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,(rand() % 2) * 2 - 1,\textcolor{charliteral}{'&'});
+232             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+233         \}
+234         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-dx\_schla,\textcolor{charliteral}{'&'});
+235         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+236     \}
+237     \textcolor{keywordflow}{if}(x\_schla == dx\_board)
+238     \{
+239         \textcolor{keywordflow}{if}(dy\_schla == 0)
+240         \{
+241             \textcolor{keywordflow}{if}(y\_schla == y\_board)
+242             \{
+243                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+244                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+245             \}
+246             \textcolor{keywordflow}{if}(y\_schla == dy\_board)
+247             \{
+248                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+249                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+250             \}
+251             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,(rand() % 2) * 2 - 1,\textcolor{charliteral}{'&'});
+252             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+253         \}
+254         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,dy\_schla,\textcolor{charliteral}{'&'});
+255         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+256     \}
+257     \textcolor{keywordflow}{if}(x\_schla == x\_board)
+258     \{
+259         \textcolor{keywordflow}{if}(dy\_schla == 0)
+260         \{
+261             \textcolor{keywordflow}{if}(y\_schla == y\_board)
+262             \{
+263                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-1,\textcolor{charliteral}{'&'});
+264                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+265             \}
+266             \textcolor{keywordflow}{if}(y\_schla == dy\_board)
+267             \{
+268                 \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,1,\textcolor{charliteral}{'&'});
+269                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+270             \}
+271             \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,(rand() % 2) * 2 - 1,\textcolor{charliteral}{'&'});
+272             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+273         \}
+274         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(b,c,-dy\_schla,\textcolor{charliteral}{'&'});
+275         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+276     \}
+277     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+278 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{schlangalib_8c_a5b8413626002409e9465985272966386_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{schlangalib_8c_a5b8413626002409e9465985272966386_icgraph}
+\end{center}
+\end{figure}
+
+

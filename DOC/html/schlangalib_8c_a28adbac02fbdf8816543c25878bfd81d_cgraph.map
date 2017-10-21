@@ -1,0 +1,13 @@
+<map id="schlanga_ia" name="schlanga_ia">
+<area shape="rect" id="node2" href="$schlangalib_8c.html#a2655a50383ab9680d1a3a72ea9de562d" title="schlanga_next_to" alt="" coords="144,157,268,184"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="343,183,398,209"/>
+<area shape="rect" id="node8" href="$schlangalib_8c.html#a08f1c27d2a4dd425ca550057e8856240" title="schlanga_corner" alt="" coords="147,5,265,32"/>
+<area shape="rect" id="node10" href="$schlangalib_8c.html#a4cb830baa18247d13d465075c869d1d7" title="schlanga_bow" alt="" coords="153,56,259,83"/>
+<area shape="rect" id="node11" href="$schlangalib_8c.html#a5b8413626002409e9465985272966386" title="schlanga_wall" alt="" coords="154,107,258,133"/>
+<area shape="rect" id="node12" href="$schlangalib_8c.html#af3fdd05c8d6e18536c1f89f1814969d4" title="min_abs" alt="" coords="171,259,241,285"/>
+<area shape="rect" id="node3" href="$schlangalib_8c.html#a6c97e3271fe6b65bd31bdbaf03bf6b9c" title="exist_in_snake" alt="" coords="316,132,425,159"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="475,81,557,108"/>
+<area shape="rect" id="node6" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="477,132,555,159"/>
+<area shape="rect" id="node7" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="473,183,559,209"/>
+<area shape="rect" id="node9" href="$snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="349,81,393,108"/>
+</map>

@@ -1,0 +1,20 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$snakelib_8c.html#a9625331c000178d2cf90ef40d2a8fbf7" title="board_init" alt="" coords="114,5,193,32"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#a34e4ffa89cbd5062286074398f897bcf" title="pour afficher un plateau " alt="" coords="110,56,197,83"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="104,107,203,133"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="104,157,203,184"/>
+<area shape="rect" id="node6" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="254,360,333,387"/>
+<area shape="rect" id="node7" href="$snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="254,208,333,235"/>
+<area shape="rect" id="node8" href="$snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="107,259,199,285"/>
+<area shape="rect" id="node10" href="$snakelib_8c.html#a223ea5e585467eee652b6b3b7a59e0c9" title="liberer la memoire occupé par un plateau " alt="" coords="112,512,195,539"/>
+<area shape="rect" id="node11" href="$snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93" title="init a snake " alt="" coords="113,360,194,387"/>
+<area shape="rect" id="node13" href="$snakelib_8c.html#a08f653b84e023db977cc57ff5fc8debf" title="snake_print" alt="" coords="109,563,198,589"/>
+<area shape="rect" id="node14" href="$snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="126,461,181,488"/>
+<area shape="rect" id="node16" href="$snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="131,411,175,437"/>
+<area shape="rect" id="node17" href="$snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9" title="libérer la mémoire " alt="" coords="110,613,197,640"/>
+<area shape="rect" id="node18" href="$snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="113,664,193,691"/>
+<area shape="rect" id="node19" href="$snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="107,715,199,741"/>
+<area shape="rect" id="node9" href="$snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="256,259,331,285"/>
+<area shape="rect" id="node12" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="251,411,336,437"/>
+<area shape="rect" id="node15" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="253,461,334,488"/>
+</map>

@@ -1,0 +1,424 @@
+\hypertarget{snake_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/snake.c}
+\label{snake_8c}\index{S\+O\+U\+R\+C\+E/snake.\+c@{S\+O\+U\+R\+C\+E/snake.\+c}}
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/snakelib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$S\+D\+L/\+S\+D\+L.\+h$>$}\\*
+{\ttfamily \#include $<$pthread.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+Graphe des dépendances par inclusion de snake.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{snake_8c_aa9e0582fb2da4f96cb13bf68a6a9f073}{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}~51
+\item 
+\#define \hyperlink{snake_8c_acfabc043baaf3c01ee67a77c2ae6b078}{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}~31
+\item 
+\#define \hyperlink{snake_8c_a37a78e9845fe459f5a2be9fe6ce52d24}{S\+N\+A\+K\+E\+\_\+\+L\+EN}~6
+\item 
+\#define \hyperlink{snake_8c_a44e89d523436fcbbf2c56e4fb335d509}{S\+L\+E\+EP}~100000
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6}{sdl\+\_\+turn} ()
+\item 
+void $\ast$ \hyperlink{snake_8c_aa4bd8217532482639db456d8d6a59598}{sdl\+\_\+move} ()
+\item 
+void \hyperlink{snake_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\+\_\+print} ()
+\item 
+int \hyperlink{snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex} = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{A}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{snake_8c_ab7d76262118cf1d4da44315136e542ca}{C}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \hyperlink{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}
+\item 
+\hyperlink{structboard}{board} \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}
+\item 
+\hyperlink{structsnake}{snake} \hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}
+\item 
+int \hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\+\_\+x}
+\item 
+int \hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\+\_\+y}
+\item 
+int \hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\+\_\+x}
+\item 
+int \hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\+\_\+y}
+\item 
+bool \hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\index{snake.\+c@{snake.\+c}!B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X@{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}}
+\index{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X@{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X}{BOARD_SIZE_X}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+X~51}\hypertarget{snake_8c_aa9e0582fb2da4f96cb13bf68a6a9f073}{}\label{snake_8c_aa9e0582fb2da4f96cb13bf68a6a9f073}
+\index{snake.\+c@{snake.\+c}!B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y@{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}}
+\index{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y@{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y}{BOARD_SIZE_Y}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+O\+A\+R\+D\+\_\+\+S\+I\+Z\+E\+\_\+Y~31}\hypertarget{snake_8c_acfabc043baaf3c01ee67a77c2ae6b078}{}\label{snake_8c_acfabc043baaf3c01ee67a77c2ae6b078}
+\index{snake.\+c@{snake.\+c}!S\+L\+E\+EP@{S\+L\+E\+EP}}
+\index{S\+L\+E\+EP@{S\+L\+E\+EP}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{S\+L\+E\+EP}{SLEEP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+L\+E\+EP~100000}\hypertarget{snake_8c_a44e89d523436fcbbf2c56e4fb335d509}{}\label{snake_8c_a44e89d523436fcbbf2c56e4fb335d509}
+\index{snake.\+c@{snake.\+c}!S\+N\+A\+K\+E\+\_\+\+L\+EN@{S\+N\+A\+K\+E\+\_\+\+L\+EN}}
+\index{S\+N\+A\+K\+E\+\_\+\+L\+EN@{S\+N\+A\+K\+E\+\_\+\+L\+EN}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{S\+N\+A\+K\+E\+\_\+\+L\+EN}{SNAKE_LEN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+N\+A\+K\+E\+\_\+\+L\+EN~6}\hypertarget{snake_8c_a37a78e9845fe459f5a2be9fe6ce52d24}{}\label{snake_8c_a37a78e9845fe459f5a2be9fe6ce52d24}
+
+
+\subsection{Documentation des fonctions}
+\index{snake.\+c@{snake.\+c}!main@{main}}
+\index{main@{main}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{comment}{/* la variable globale du jeu */}
+28     \hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{true};
+29     \textcolor{comment}{/* rand init */}
+30     srand(time(0));
+31     \textcolor{comment}{/* init board + snake */}
+32     \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b} = \hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(\hyperlink{snake_8c_aa9e0582fb2da4f96cb13bf68a6a9f073}{BOARD\_SIZE\_X},\hyperlink{snake_8c_acfabc043baaf3c01ee67a77c2ae6b078}{BOARD\_SIZE\_Y});
+33     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},\hyperlink{snake_8c_a37a78e9845fe459f5a2be9fe6ce52d24}{SNAKE\_LEN},\textcolor{charliteral}{'@'});
+34     \textcolor{comment}{/* init sdl en mode video */}
+35     SDL\_Init(SDL\_INIT\_VIDEO);
+36     \textcolor{comment}{/* init surface E avec une taille 20*BOARD\_SIZE\_X et 20*BOARD\_SIZE\_Y */}
+37     \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E} = SDL\_SetVideoMode(20*\hyperlink{snake_8c_aa9e0582fb2da4f96cb13bf68a6a9f073}{BOARD\_SIZE\_X}, 20*\hyperlink{snake_8c_acfabc043baaf3c01ee67a77c2ae6b078}{BOARD\_SIZE\_Y}, 32, SDL\_HWSURFACE);
+38     \textcolor{comment}{/* creer le reste des surfaces avec une taille de 20*20 px */}
+39     \hyperlink{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{A} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+40     \hyperlink{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{B} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+41     \hyperlink{snake_8c_ab7d76262118cf1d4da44315136e542ca}{C} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+42     \hyperlink{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D} = SDL\_CreateRGBSurface(SDL\_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+43     \textcolor{comment}{/* init avec couleur rgb */}
+44     SDL\_FillRect(\hyperlink{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{A}, 0, SDL\_MapRGB(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 95, 0, 0));
+45     SDL\_FillRect(\hyperlink{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}, 0, SDL\_MapRGB(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 137, 137, 137));
+46     SDL\_FillRect(\hyperlink{snake_8c_ab7d76262118cf1d4da44315136e542ca}{C}, 0, SDL\_MapRGB(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 47, 47, 47));
+47     SDL\_FillRect(\hyperlink{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}, 0, SDL\_MapRGB(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}->format, 157, 62, 12));
+48     \textcolor{comment}{/* init barre de fenetre */}
+49     SDL\_WM\_SetCaption(\textcolor{stringliteral}{"Snack"}, 0);
+50     \textcolor{comment}{/* nos variabe de thread */}
+51     pthread\_t thread\_turn;
+52     pthread\_t thread\_move;
+53     \textcolor{comment}{/* creer les thread */}
+54     pthread\_create (&thread\_turn, 0, &\hyperlink{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6}{sdl\_turn}, 0);
+55     pthread\_create (&thread\_move, 0, &\hyperlink{snake_8c_aa4bd8217532482639db456d8d6a59598}{sdl\_move},0);
+56     \textcolor{comment}{/* attendre leurs fin */}
+57     pthread\_join(thread\_turn, 0);
+58     pthread\_join(thread\_move, 0);
+59     \textcolor{comment}{/* libere surface */}
+60     SDL\_FreeSurface(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E});
+61     SDL\_FreeSurface(\hyperlink{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{A});
+62     SDL\_FreeSurface(\hyperlink{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{B});
+63     SDL\_FreeSurface(\hyperlink{snake_8c_ab7d76262118cf1d4da44315136e542ca}{C});
+64     \textcolor{comment}{/* libere board + snake */}
+65     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b});
+66     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s});
+67     SDL\_Quit();
+68     \textcolor{keywordflow}{return} 0;
+69 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{snake.\+c@{snake.\+c}!sdl\+\_\+move@{sdl\+\_\+move}}
+\index{sdl\+\_\+move@{sdl\+\_\+move}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+move()}{sdl_move()}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ sdl\+\_\+move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{snake_8c_aa4bd8217532482639db456d8d6a59598}{}\label{snake_8c_aa4bd8217532482639db456d8d6a59598}
+
+\begin{DoxyCode}
+148 \{
+149     \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, &\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x}, &\hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y});
+150     \textcolor{keywordflow}{while}(\hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X}) 
+151     \{
+152             \textcolor{comment}{/* on ferme la variable mutex */}
+153             pthread\_mutex\_lock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+154             \textcolor{comment}{/* on cherche le dernier de notre liste */}
+155             \hyperlink{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}{snake\_getl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},&\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+156             \textcolor{comment}{/* move snake */}
+157             \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},\textcolor{charliteral}{'@'});
+158             \textcolor{comment}{/* teste snake/pomme */}
+159             \textcolor{keywordflow}{if}(\hyperlink{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}{snake\_apple}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x},&\hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y}))
+160             \{
+161                 \textcolor{comment}{/* si oui on ajoute le dernier avant de tourner */}
+162                 \hyperlink{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}{snake\_addl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x}, \hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+163                 \textcolor{comment}{/* on l'ajoute aussi pour le plateau */}
+164                 \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y},\textcolor{charliteral}{'@'});
+165                 \textcolor{comment}{/* genere nouvelle pomme */}
+166                 \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, &\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x}, &\hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y});
+167             \}
+168             \textcolor{comment}{/* affiche SDL */}
+169             \textcolor{keywordflow}{if} ((\hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(\hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&
+      \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+170                 \hyperlink{snake_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+171             \textcolor{comment}{/* libere le mutex pour les autres thread */}
+172             pthread\_mutex\_unlock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+173             usleep (\hyperlink{snake_8c_a44e89d523436fcbbf2c56e4fb335d509}{SLEEP});
+174         \}
+175         pthread\_exit(0);
+176 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c_aa4bd8217532482639db456d8d6a59598_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{snake_8c_aa4bd8217532482639db456d8d6a59598_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snake.\+c@{snake.\+c}!sdl\+\_\+print@{sdl\+\_\+print}}
+\index{sdl\+\_\+print@{sdl\+\_\+print}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+print()}{sdl_print()}}]{\setlength{\rightskip}{0pt plus 5cm}void sdl\+\_\+print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{snake_8c_a2cfeae643e415db24e85db6c4994b071}{}\label{snake_8c_a2cfeae643e415db24e85db6c4994b071}
+
+\begin{DoxyCode}
+181 \{
+182     \textcolor{keywordtype}{int} x,y, dx = \hyperlink{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}{board\_size\_x}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}), dy = \hyperlink{snakelib_8c_a01be021996158cf01e830b56e41be904}{board\_size\_y}(&
+      \hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b});
+183     \textcolor{comment}{/* def une position */}
+184     SDL\_Rect p;
+185     \textcolor{keywordflow}{for} (x = 0; x < dx; x++) 
+186     \{
+187         \textcolor{keywordflow}{for} (y = 0; y < dy; y++) 
+188         \{
+189             p.x = x * 20 ; p.y = y * 20 ;
+190             \textcolor{comment}{/* lire dans le plateau et dessiner la surface */}
+191             \textcolor{keywordflow}{switch} (\hyperlink{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{board\_get} (&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},x,y)) 
+192             \{
+193                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'@'}:
+194                     SDL\_BlitSurface(\hyperlink{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{A}, 0, \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+195                     \textcolor{keywordflow}{break};
+196                 \textcolor{keywordflow}{case} \textcolor{charliteral}{' '}:
+197                     SDL\_BlitSurface(\hyperlink{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{B}, 0, \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+198                     \textcolor{keywordflow}{break};
+199                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'#'}:
+200                     SDL\_BlitSurface(\hyperlink{snake_8c_ab7d76262118cf1d4da44315136e542ca}{C}, 0, \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+201                     \textcolor{keywordflow}{break};
+202                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'$'}:
+203                     SDL\_BlitSurface(\hyperlink{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{D}, 0, \hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E}, &p);
+204                     \textcolor{keywordflow}{break};
+205                 \}
+206         \}
+207     \}
+208     \textcolor{comment}{/* reafficher un nouvelle ecran */}
+209     SDL\_Flip(\hyperlink{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{E});
+210 \}\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{snake_8c_a2cfeae643e415db24e85db6c4994b071_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{snake_8c_a2cfeae643e415db24e85db6c4994b071_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{snake.\+c@{snake.\+c}!sdl\+\_\+turn@{sdl\+\_\+turn}}
+\index{sdl\+\_\+turn@{sdl\+\_\+turn}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{sdl\+\_\+turn()}{sdl_turn()}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ sdl\+\_\+turn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6}{}\label{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6}
+
+\begin{DoxyCode}
+74 \{
+75     SDL\_Event event;
+76     \textcolor{keywordflow}{while} (\hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X}) 
+77     \{
+78     SDL\_WaitEvent(&event);
+79         \textcolor{keywordflow}{switch} (event.type) 
+80         \{
+81             \textcolor{keywordflow}{case} SDL\_QUIT:
+82                 \hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{false};
+83                 \textcolor{keywordflow}{break};
+84             \textcolor{keywordflow}{case} SDL\_KEYDOWN:
+85                 \textcolor{keywordflow}{switch} (event.key.keysym.sym) 
+86                 \{
+87                     \textcolor{keywordflow}{case} SDLK\_ESCAPE:
+88                         \hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = \textcolor{keyword}{false};
+89                         \textcolor{keywordflow}{break};
+90                     \textcolor{keywordflow}{case} SDLK\_RIGHT:\textcolor{comment}{/* key right */}
+91                     \textcolor{keywordflow}{case} SDLK\_KP3:\textcolor{comment}{/* keypad 3 */}
+92                     \textcolor{keywordflow}{case} SDLK\_KP9:\textcolor{comment}{/* keypad 3 */}
+93                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:\textcolor{comment}{/* code ascii */}
+94                         \textcolor{comment}{/* on ferme la variable mutex */}
+95                         pthread\_mutex\_lock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+96                         \textcolor{comment}{/* on cherche le dernier de notre liste */}
+97                         \hyperlink{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}{snake\_getl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},&\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+98                         \textcolor{comment}{/* turn snake */}
+99                         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},1,\textcolor{charliteral}{'@'});
+100                         \textcolor{comment}{/* teste snake/pomme */}
+101                         \textcolor{keywordflow}{if}(\hyperlink{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}{snake\_apple}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x},&\hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y}))
+102                         \{
+103                             \textcolor{comment}{/* si oui on ajoute le dernier avant de tourner */}
+104                             \hyperlink{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}{snake\_addl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x}, \hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+105                             \textcolor{comment}{/* on l'ajoute aussi pour le plateau */}
+106                             \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y},\textcolor{charliteral}{'@'});
+107                             \textcolor{comment}{/* genere nouvelle pomme */}
+108                             \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, &\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x}, &
+      \hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y});
+109                         \}
+110                         \textcolor{keywordflow}{if} ((\hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(
+      \hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+111                             \hyperlink{snake_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+112                         pthread\_mutex\_unlock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+113                         \textcolor{keywordflow}{break};
+114                     \textcolor{keywordflow}{case} SDLK\_LEFT:\textcolor{comment}{/* key left */}
+115                     \textcolor{keywordflow}{case} SDLK\_KP1:\textcolor{comment}{/* keypad 1*/}
+116                     \textcolor{keywordflow}{case} SDLK\_KP7:\textcolor{comment}{/* keypad 7*/}
+117                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'a'}:\textcolor{comment}{/* code ascii */}
+118                         \textcolor{comment}{/* on ferme la variable mutex */}
+119                         pthread\_mutex\_lock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+120                         \textcolor{comment}{/* on cherche le dernier de notre liste */}
+121                         \hyperlink{snakelib_8c_a9f15dca26b0f46aae4e1e5cf30db9ab9}{snake\_getl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},&\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+122                         \textcolor{comment}{/* turn snake */}
+123                         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},-1,\textcolor{charliteral}{'@'});
+124                         \textcolor{comment}{/* teste snake/pomme */}
+125                         \textcolor{keywordflow}{if}(\hyperlink{snakelib_8c_a9c77869dc19e2c9bc443ab997aad1f4f}{snake\_apple}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x},&\hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y}))
+126                         \{
+127                             \textcolor{comment}{/* si oui on ajoute le dernier avant de tourner */}
+128                             \hyperlink{snakelib_8c_a6b2f097d4deefee8b8f8d809691f44ce}{snake\_addl}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}, \hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x}, \hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y});
+129                             \textcolor{comment}{/* on l'ajoute aussi pour le plateau */}
+130                             \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},\hyperlink{snake_8c_abbf254766520cad4d7fe189eb184194c}{last\_x},\hyperlink{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{last\_y},\textcolor{charliteral}{'@'});
+131                             \textcolor{comment}{/* genere nouvelle pomme */}
+132                             \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b}, &\hyperlink{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{apple\_x}, &
+      \hyperlink{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{apple\_y});
+133                         \}
+134                         \textcolor{comment}{/* affiche SDL */}
+135                         \textcolor{keywordflow}{if} ((\hyperlink{snake_8c_aab1bde286e010d81472b269b419806d6}{X} = !(\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s})) && !(
+      \hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&\hyperlink{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{b},&\hyperlink{snake_8c_a71e92e96b65208605aca57598cc827f1}{s}))))
+136                         \hyperlink{snake_8c_a2cfeae643e415db24e85db6c4994b071}{sdl\_print}();
+137                         \textcolor{comment}{/* libere le mutex pour les autres thread */}
+138                         pthread\_mutex\_unlock(&\hyperlink{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{mutex});
+139                         \textcolor{keywordflow}{break};
+140                     \textcolor{keywordflow}{default}:\textcolor{comment}{/* ne fait rien */}\textcolor{keywordflow}{break};
+141                 \}   
+142             \textcolor{keywordflow}{default}:\textcolor{comment}{/* ne fait rien */}\textcolor{keywordflow}{break};
+143         \}
+144     \}
+145     pthread\_exit(0);
+146 \}
+\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Voici le graphe des appelants de cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{snake_8c_ab6f22cbb52dc4a7603d7c42a3521a7c6_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des variables}
+\index{snake.\+c@{snake.\+c}!A@{A}}
+\index{A@{A}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{A}{A}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ A}\hypertarget{snake_8c_a79a54bef7bf02b18264c38fc90549a04}{}\label{snake_8c_a79a54bef7bf02b18264c38fc90549a04}
+\index{snake.\+c@{snake.\+c}!apple\+\_\+x@{apple\+\_\+x}}
+\index{apple\+\_\+x@{apple\+\_\+x}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{apple\+\_\+x}{apple_x}}]{\setlength{\rightskip}{0pt plus 5cm}int apple\+\_\+x}\hypertarget{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}{}\label{snake_8c_a2e41fbc7bc65ce59a521b44f5630f0e1}
+\index{snake.\+c@{snake.\+c}!apple\+\_\+y@{apple\+\_\+y}}
+\index{apple\+\_\+y@{apple\+\_\+y}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{apple\+\_\+y}{apple_y}}]{\setlength{\rightskip}{0pt plus 5cm}int apple\+\_\+y}\hypertarget{snake_8c_a86c92491dc640484daae606ed7ae9cfe}{}\label{snake_8c_a86c92491dc640484daae606ed7ae9cfe}
+\index{snake.\+c@{snake.\+c}!B@{B}}
+\index{B@{B}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{B}{B}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ B}\hypertarget{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}{}\label{snake_8c_ac54b5255531a4799123d0f8dca96a7cc}
+\index{snake.\+c@{snake.\+c}!b@{b}}
+\index{b@{b}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{b}{b}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf board} b}\hypertarget{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}{}\label{snake_8c_a20fdbd342281b7b5b77945c79d176b9f}
+\index{snake.\+c@{snake.\+c}!C@{C}}
+\index{C@{C}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{C}{C}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ C}\hypertarget{snake_8c_ab7d76262118cf1d4da44315136e542ca}{}\label{snake_8c_ab7d76262118cf1d4da44315136e542ca}
+\index{snake.\+c@{snake.\+c}!D@{D}}
+\index{D@{D}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{D}{D}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface $\ast$ D}\hypertarget{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}{}\label{snake_8c_aae9bd8b56defc5a6ec9c20b503b59a3a}
+\index{snake.\+c@{snake.\+c}!E@{E}}
+\index{E@{E}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{E}{E}}]{\setlength{\rightskip}{0pt plus 5cm}S\+D\+L\+\_\+\+Surface$\ast$ E}\hypertarget{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}{}\label{snake_8c_ae8dfea36e66ed4b47c61a7ea5212e164}
+\index{snake.\+c@{snake.\+c}!last\+\_\+x@{last\+\_\+x}}
+\index{last\+\_\+x@{last\+\_\+x}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{last\+\_\+x}{last_x}}]{\setlength{\rightskip}{0pt plus 5cm}int last\+\_\+x}\hypertarget{snake_8c_abbf254766520cad4d7fe189eb184194c}{}\label{snake_8c_abbf254766520cad4d7fe189eb184194c}
+\index{snake.\+c@{snake.\+c}!last\+\_\+y@{last\+\_\+y}}
+\index{last\+\_\+y@{last\+\_\+y}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{last\+\_\+y}{last_y}}]{\setlength{\rightskip}{0pt plus 5cm}int last\+\_\+y}\hypertarget{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}{}\label{snake_8c_a31e24c11fe7b55913887a78bff6ed30e}
+\index{snake.\+c@{snake.\+c}!mutex@{mutex}}
+\index{mutex@{mutex}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{mutex}{mutex}}]{\setlength{\rightskip}{0pt plus 5cm}pthread\+\_\+mutex\+\_\+t mutex = P\+T\+H\+R\+E\+A\+D\+\_\+\+M\+U\+T\+E\+X\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+ER}\hypertarget{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}{}\label{snake_8c_a4acff8232e4aec9cd5c6dc200ac55ef3}
+\index{snake.\+c@{snake.\+c}!s@{s}}
+\index{s@{s}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf snake} s}\hypertarget{snake_8c_a71e92e96b65208605aca57598cc827f1}{}\label{snake_8c_a71e92e96b65208605aca57598cc827f1}
+\index{snake.\+c@{snake.\+c}!X@{X}}
+\index{X@{X}!snake.\+c@{snake.\+c}}
+\subsubsection[{\texorpdfstring{X}{X}}]{\setlength{\rightskip}{0pt plus 5cm}bool X}\hypertarget{snake_8c_aab1bde286e010d81472b269b419806d6}{}\label{snake_8c_aab1bde286e010d81472b269b419806d6}

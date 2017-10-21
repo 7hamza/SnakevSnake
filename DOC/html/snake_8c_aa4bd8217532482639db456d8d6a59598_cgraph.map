@@ -1,0 +1,19 @@
+<map id="sdl_move" name="sdl_move">
+<area shape="rect" id="node2" href="$snakelib_8c.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="133,68,225,95"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="285,208,363,235"/>
+<area shape="rect" id="node6" href="$snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9" title="snake_getl" alt="" coords="137,309,222,336"/>
+<area shape="rect" id="node7" href="$snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="152,259,207,285"/>
+<area shape="rect" id="node10" href="$snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f" title="snake_apple" alt="" coords="132,360,227,387"/>
+<area shape="rect" id="node13" href="$snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce" title="snake_addl" alt="" coords="135,411,223,437"/>
+<area shape="rect" id="node14" href="$snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="133,461,225,488"/>
+<area shape="rect" id="node15" href="$snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="139,512,219,539"/>
+<area shape="rect" id="node16" href="$snake_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="144,132,215,159"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#a31044302280c0ec9eca89286f81127af" title="rand_a_b" alt="" coords="287,5,361,32"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="285,56,363,83"/>
+<area shape="rect" id="node8" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="283,309,365,336"/>
+<area shape="rect" id="node9" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="281,259,367,285"/>
+<area shape="rect" id="node11" href="$snakelib_8c.html#a01c30f2556498b7887cc5ff5a88119ca" title="snake_x" alt="" coords="289,411,359,437"/>
+<area shape="rect" id="node12" href="$snakelib_8c.html#ad0e10e1a230ae236d8b5fe92e2559378" title="snake_y" alt="" coords="289,360,359,387"/>
+<area shape="rect" id="node17" href="$snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="275,157,373,184"/>
+<area shape="rect" id="node18" href="$snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="275,107,373,133"/>
+</map>

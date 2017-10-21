@@ -1,0 +1,4 @@
+<map id="snake_init" name="snake_init">
+<area shape="rect" id="node2" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="135,5,220,32"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="138,56,217,83"/>
+</map>

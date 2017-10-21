@@ -1,0 +1,5 @@
+<map id="turn" name="turn">
+<area shape="rect" id="node2" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="99,5,181,32"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="101,56,179,83"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="97,107,183,133"/>
+</map>

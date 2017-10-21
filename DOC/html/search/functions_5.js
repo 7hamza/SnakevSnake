@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['schlanga_5fbow',['schlanga_bow',['../schlangalib_8c.html#a4cb830baa18247d13d465075c869d1d7',1,'schlangalib.c']]],
+  ['schlanga_5fcorner',['schlanga_corner',['../schlangalib_8c.html#a08f1c27d2a4dd425ca550057e8856240',1,'schlangalib.c']]],
+  ['schlanga_5fia',['schlanga_ia',['../schlangalib_8c.html#a28adbac02fbdf8816543c25878bfd81d',1,'schlanga_ia(board *b, const snake *s, snake *c, int len):&#160;schlangalib.c'],['../schlangalib_8h.html#a28adbac02fbdf8816543c25878bfd81d',1,'schlanga_ia(board *b, const snake *s, snake *c, int len):&#160;schlangalib.c']]],
+  ['schlanga_5fnext_5fto',['schlanga_next_to',['../schlangalib_8c.html#a2655a50383ab9680d1a3a72ea9de562d',1,'schlangalib.c']]],
+  ['schlanga_5fwall',['schlanga_wall',['../schlangalib_8c.html#a5b8413626002409e9465985272966386',1,'schlangalib.c']]],
+  ['sdl_5fmove',['sdl_move',['../client_8c.html#af424c7fd4c84203cddfb7230bbe15401',1,'sdl_move():&#160;client.c'],['../schlanga_8c.html#aa4bd8217532482639db456d8d6a59598',1,'sdl_move():&#160;schlanga.c'],['../snake_8c.html#aa4bd8217532482639db456d8d6a59598',1,'sdl_move():&#160;snake.c']]],
+  ['sdl_5fprint',['sdl_print',['../client_8c.html#a2cfeae643e415db24e85db6c4994b071',1,'sdl_print():&#160;client.c'],['../schlanga_8c.html#a2cfeae643e415db24e85db6c4994b071',1,'sdl_print():&#160;schlanga.c'],['../snake_8c.html#a2cfeae643e415db24e85db6c4994b071',1,'sdl_print():&#160;snake.c']]],
+  ['sdl_5fturn',['sdl_turn',['../client_8c.html#ace514d3ea0e685be64430b930ef23b46',1,'sdl_turn():&#160;client.c'],['../schlanga_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6',1,'sdl_turn():&#160;schlanga.c'],['../snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6',1,'sdl_turn():&#160;snake.c']]],
+  ['server_5faccept',['server_accept',['../server_8c.html#acc414ff242b33f2b06ce38596e387696',1,'server.c']]],
+  ['server_5fhandler',['server_handler',['../server_8c.html#accb20b510d7e0de1e191ec039faefe3f',1,'server.c']]],
+  ['server_5fsocket',['server_socket',['../server_8c.html#a38df5ddef8f9bd2822d20cfb442ed31d',1,'server.c']]],
+  ['snake_5fadd',['snake_add',['../snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c',1,'snake_add(snake *snkin, int x, int y):&#160;snakelib.c'],['../snakelib_8h.html#a17492ac4841b98e25c682f9ff358ea2c',1,'snake_add(snake *snkin, int x, int y):&#160;snakelib.c']]],
+  ['snake_5faddl',['snake_addl',['../snakelib_8c.html#a6b2f097d4deefee8b8f8d809691f44ce',1,'snake_addl(snake *snkin, int x, int y):&#160;snakelib.c'],['../snakelib_8h.html#a6b2f097d4deefee8b8f8d809691f44ce',1,'snake_addl(snake *snkin, int x, int y):&#160;snakelib.c']]],
+  ['snake_5fapple',['snake_apple',['../snakelib_8c.html#a9c77869dc19e2c9bc443ab997aad1f4f',1,'snake_apple(snake const *s, int *x, int *y):&#160;snakelib.c'],['../snakelib_8h.html#a9c77869dc19e2c9bc443ab997aad1f4f',1,'snake_apple(snake const *s, int *x, int *y):&#160;snakelib.c']]],
+  ['snake_5fdel',['snake_del',['../snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1',1,'snake_del(snake *snkin, int *x, int *y):&#160;snakelib.c'],['../snakelib_8h.html#aa723bfe337f8108975b8d36292b422d1',1,'snake_del(snake *snkin, int *x, int *y):&#160;snakelib.c']]],
+  ['snake_5ffree',['snake_free',['../snakelib_8c.html#ae2b728ff11f9b12d88715ddef95639c9',1,'snake_free(snake *snkin):&#160;snakelib.c'],['../snakelib_8h.html#ae2b728ff11f9b12d88715ddef95639c9',1,'snake_free(snake *snkin):&#160;snakelib.c']]],
+  ['snake_5fgetl',['snake_getl',['../snakelib_8c.html#a9f15dca26b0f46aae4e1e5cf30db9ab9',1,'snake_getl(snake *snkin, int *x, int *y):&#160;snakelib.c'],['../snakelib_8h.html#a9f15dca26b0f46aae4e1e5cf30db9ab9',1,'snake_getl(snake *snkin, int *x, int *y):&#160;snakelib.c']]],
+  ['snake_5finit',['snake_init',['../snakelib_8c.html#ac696fcc76930ea0badb2f263dd479c93',1,'snake_init(board *brdin, snake *snkin, int len, char id):&#160;snakelib.c'],['../snakelib_8h.html#ac696fcc76930ea0badb2f263dd479c93',1,'snake_init(board *brdin, snake *snkin, int len, char id):&#160;snakelib.c']]],
+  ['snake_5fnext',['snake_next',['../snakelib_8c.html#a332568bbdd587cd7a0d14b1fa22df233',1,'snakelib.c']]],
+  ['snake_5fprint',['snake_print',['../snakelib_8c.html#a08f653b84e023db977cc57ff5fc8debf',1,'snake_print(const snake *snkin):&#160;snakelib.c'],['../snakelib_8h.html#a08f653b84e023db977cc57ff5fc8debf',1,'snake_print(const snake *snkin):&#160;snakelib.c']]],
+  ['snake_5fx',['snake_x',['../snakelib_8c.html#a01c30f2556498b7887cc5ff5a88119ca',1,'snakelib.c']]],
+  ['snake_5fy',['snake_y',['../snakelib_8c.html#ad0e10e1a230ae236d8b5fe92e2559378',1,'snakelib.c']]]
+];

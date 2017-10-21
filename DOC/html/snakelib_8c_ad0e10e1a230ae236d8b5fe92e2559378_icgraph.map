@@ -1,0 +1,6 @@
+<map id="snake_y" name="snake_y">
+<area shape="rect" id="node2" href="$snakelib_8h.html#a9c77869dc19e2c9bc443ab997aad1f4f" title="snake_apple" alt="" coords="124,31,219,57"/>
+<area shape="rect" id="node3" href="$snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="272,5,340,32"/>
+<area shape="rect" id="node5" href="$snake_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="267,56,345,83"/>
+<area shape="rect" id="node4" href="$snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="393,31,444,57"/>
+</map>

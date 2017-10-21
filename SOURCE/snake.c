@@ -1,0 +1,210 @@
+#include "../INCLUDE/snakelib.h"
+#include <SDL/SDL.h>
+#include <pthread.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include <time.h>
+
+#define BOARD_SIZE_X 51
+#define BOARD_SIZE_Y 31
+#define SNAKE_LEN 6
+#define SLEEP 100000
+
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+SDL_Surface *E, *A, *B, *C, *D;
+board b;
+snake s;
+int apple_x, apple_y;
+int last_x, last_y;
+bool X;
+
+void *sdl_turn();
+void *sdl_move();
+void sdl_print();
+
+int main() 
+{
+	/* la variable globale du jeu */
+	X = true;
+	/* rand init */
+	srand(time(0));
+	/* init board + snake */
+	b = board_init(BOARD_SIZE_X,BOARD_SIZE_Y);
+	snake_init(&b,&s,SNAKE_LEN,'@');
+	/* init sdl en mode video */
+	SDL_Init(SDL_INIT_VIDEO);
+	/* init surface E avec une taille 20*BOARD_SIZE_X et 20*BOARD_SIZE_Y */
+	E = SDL_SetVideoMode(20*BOARD_SIZE_X, 20*BOARD_SIZE_Y, 32, SDL_HWSURFACE);
+	/* creer le reste des surfaces avec une taille de 20*20 px */
+	A = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+	B = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+	C = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+	D = SDL_CreateRGBSurface(SDL_HWSURFACE, 20, 20, 32, 0, 0, 0, 0);
+	/* init avec couleur rgb */
+	SDL_FillRect(A, 0, SDL_MapRGB(E->format, 95, 0, 0));
+	SDL_FillRect(B, 0, SDL_MapRGB(E->format, 137, 137, 137));
+	SDL_FillRect(C, 0, SDL_MapRGB(E->format, 47, 47, 47));
+	SDL_FillRect(D, 0, SDL_MapRGB(E->format, 157, 62, 12));
+	/* init barre de fenetre */
+	SDL_WM_SetCaption("Snack", 0);
+	/* nos variabe de thread */
+	pthread_t thread_turn;
+	pthread_t thread_move;
+	/* creer les thread */
+	pthread_create (&thread_turn, 0, &sdl_turn, 0);
+	pthread_create (&thread_move, 0, &sdl_move,0);
+	/* attendre leurs fin */
+	pthread_join(thread_turn, 0);
+	pthread_join(thread_move, 0);
+	/* libere surface */
+	SDL_FreeSurface(E);
+	SDL_FreeSurface(A);
+	SDL_FreeSurface(B);
+	SDL_FreeSurface(C);
+	/* libere board + snake */
+	board_free(&b);
+	snake_free(&s);
+	SDL_Quit();
+	return 0;
+}
+
+
+
+void *sdl_turn () 
+{
+	SDL_Event event;
+	while (X) 
+	{
+	SDL_WaitEvent(&event);
+		switch (event.type) 
+		{
+			case SDL_QUIT:
+				X = false;
+				break;
+			case SDL_KEYDOWN:
+				switch (event.key.keysym.sym) 
+				{
+					case SDLK_ESCAPE:
+						X = false;
+						break;
+					case SDLK_RIGHT:/* key right */
+					case SDLK_KP3:/* keypad 3 */
+					case SDLK_KP9:/* keypad 3 */
+					case 'e':/* code ascii */
+						/* on ferme la variable mutex */
+						pthread_mutex_lock(&mutex);
+						/* on cherche le dernier de notre liste */
+						snake_getl(&s,&last_x,&last_y);
+						/* turn snake */
+						turn(&b,&s,1,'@');
+						/* teste snake/pomme */
+						if(snake_apple(&s,&apple_x,&apple_y))
+						{
+							/* si oui on ajoute le dernier avant de tourner */
+							snake_addl(&s, last_x, last_y);
+							/* on l'ajoute aussi pour le plateau */
+							board_set(&b,last_x,last_y,'@');
+							/* genere nouvelle pomme */
+							board_apple(&b, &apple_x, &apple_y);
+						}
+						if ((X = !(choc_snake(&s,&s)) && !(choc_wall(&b,&s))))
+							sdl_print();
+						pthread_mutex_unlock(&mutex);
+						break;
+					case SDLK_LEFT:/* key left */
+					case SDLK_KP1:/* keypad 1*/
+					case SDLK_KP7:/* keypad 7*/
+					case 'a':/* code ascii */
+						/* on ferme la variable mutex */
+						pthread_mutex_lock(&mutex);
+						/* on cherche le dernier de notre liste */
+						snake_getl(&s,&last_x,&last_y);
+						/* turn snake */
+						turn(&b,&s,-1,'@');
+						/* teste snake/pomme */
+						if(snake_apple(&s,&apple_x,&apple_y))
+						{
+							/* si oui on ajoute le dernier avant de tourner */
+							snake_addl(&s, last_x, last_y);
+							/* on l'ajoute aussi pour le plateau */
+							board_set(&b,last_x,last_y,'@');
+							/* genere nouvelle pomme */
+							board_apple(&b, &apple_x, &apple_y);
+						}
+						/* affiche SDL */
+						if ((X = !(choc_snake(&s,&s)) && !(choc_wall(&b,&s))))
+						sdl_print();
+						/* libere le mutex pour les autres thread */
+						pthread_mutex_unlock(&mutex);
+						break;
+					default:/* ne fait rien */break;
+				}	
+			default:/* ne fait rien */break;
+		}
+	}
+	pthread_exit(0);
+}
+void* sdl_move () 
+{
+	board_apple(&b, &apple_x, &apple_y);
+	while(X) 
+	{
+			/* on ferme la variable mutex */
+			pthread_mutex_lock(&mutex);
+			/* on cherche le dernier de notre liste */
+			snake_getl(&s,&last_x,&last_y);
+			/* move snake */
+			move(&b,&s,'@');
+			/* teste snake/pomme */
+			if(snake_apple(&s,&apple_x,&apple_y))
+			{
+				/* si oui on ajoute le dernier avant de tourner */
+				snake_addl(&s, last_x, last_y);
+				/* on l'ajoute aussi pour le plateau */
+				board_set(&b,last_x,last_y,'@');
+				/* genere nouvelle pomme */
+				board_apple(&b, &apple_x, &apple_y);
+			}
+			/* affiche SDL */
+			if ((X = !(choc_snake(&s,&s)) && !(choc_wall(&b,&s))))
+				sdl_print();
+			/* libere le mutex pour les autres thread */
+			pthread_mutex_unlock(&mutex);
+			usleep (SLEEP);
+		}
+		pthread_exit(0);
+}
+
+
+
+void sdl_print() 
+{
+	int x,y, dx = board_size_x(&b), dy = board_size_y(&b);
+	/* def une position */
+	SDL_Rect p;
+	for (x = 0; x < dx; x++) 
+	{
+		for (y = 0; y < dy; y++) 
+		{
+			p.x = x * 20 ; p.y = y * 20 ;
+			/* lire dans le plateau et dessiner la surface */
+			switch (board_get (&b,x,y)) 
+			{
+				case '@':
+					SDL_BlitSurface(A, 0, E, &p);
+					break;
+				case ' ':
+					SDL_BlitSurface(B, 0, E, &p);
+					break;
+				case '#':
+					SDL_BlitSurface(C, 0, E, &p);
+					break;
+				case '$':
+					SDL_BlitSurface(D, 0, E, &p);
+					break;
+				}
+		}
+	}
+	/* reafficher un nouvelle ecran */
+	SDL_Flip(E);
+}

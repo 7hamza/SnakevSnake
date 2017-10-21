@@ -1,0 +1,159 @@
+\hypertarget{unittesting_8c}{}\section{Référence du fichier S\+O\+U\+R\+C\+E/unittesting.c}
+\label{unittesting_8c}\index{S\+O\+U\+R\+C\+E/unittesting.\+c@{S\+O\+U\+R\+C\+E/unittesting.\+c}}
+{\ttfamily \#include \char`\"{}../\+I\+N\+C\+L\+U\+D\+E/snakelib.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+Graphe des dépendances par inclusion de unittesting.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unittesting_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{unittesting_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions}
+\index{unittesting.\+c@{unittesting.\+c}!main@{main}}
+\index{main@{main}!unittesting.\+c@{unittesting.\+c}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{unittesting_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{unittesting_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
+
+\begin{DoxyCode}
+5            \{
+6     srand(time(0));
+7     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n<<< test pour les fonctions type board\_# >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+8     \hyperlink{structboard}{board} \hyperlink{client_8c_a20fdbd342281b7b5b77945c79d176b9f}{b} = \hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(31,16);
+9     printf(\textcolor{stringliteral}{"<<< test board\_init | tabX=31 | tabY=16 >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+10     printf(\textcolor{stringliteral}{"<<< test board\_print >>>\(\backslash\)n"});
+11     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+12     printf(\textcolor{stringliteral}{"<<< test board\_size\_x & board\_size\_y >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+13     printf(\textcolor{stringliteral}{"[size\_x=%d : size\_y=%d]\(\backslash\)n"},\hyperlink{snakelib_8c_ab6926a5a512798dea6aa52f5f15ab8ad}{board\_size\_x}(&b),\hyperlink{snakelib_8c_a01be021996158cf01e830b56e41be904}{board\_size\_y}(&b));
+14     printf(\textcolor{stringliteral}{"<<< test board\_set & board\_get >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+15     \hyperlink{snakelib_8c_a12954721537f652c82e9cf23c1bfb0c3}{board\_set}(&b,5,9,\textcolor{charliteral}{'@'});
+16     printf(\textcolor{stringliteral}{"<<< board\_set(&b,5,9,'@') >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+17     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+18     printf(\textcolor{stringliteral}{"<<< board\_get(&b,5,9) >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+19     printf(\textcolor{stringliteral}{"char=%c\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n"},\hyperlink{snakelib_8c_ae49b60c78ec9b92e770c8eace9520447}{board\_get}(&b,5,9));
+20     \textcolor{keywordtype}{int} x,y;
+21     printf(\textcolor{stringliteral}{"<<< test board\_apple(&b, &x, &y) >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+22     \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&b, &x, &y);
+23     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+24     printf(\textcolor{stringliteral}{"apple coord [x=%d:y=%d]\(\backslash\)n\(\backslash\)n\(\backslash\)n"},x,y);
+25     \hyperlink{snakelib_8c_ab4819fcf1df66683feca8ad73abd89dd}{board\_apple}(&b, &x, &y);
+26     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+27     printf(\textcolor{stringliteral}{"apple coord [x=%d:y=%d]\(\backslash\)n\(\backslash\)n\(\backslash\)n"},x,y);
+28     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&b);
+29     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n<<< test pour les fonctions type snake\_# >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+30     printf(\textcolor{stringliteral}{"<<< test snake\_init | len=5 >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+31     b=\hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(31,16);
+32     \hyperlink{structsnake}{snake} \hyperlink{client_8c_a71e92e96b65208605aca57598cc827f1}{s} = 0;
+33     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&b,&s,5,\textcolor{charliteral}{'@'});
+34     printf(\textcolor{stringliteral}{"<<< test snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+35     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+36     printf(\textcolor{stringliteral}{"<<< snake print avec board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+37     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+38     printf(\textcolor{stringliteral}{"<<< test move >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+39     \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&b,&s,\textcolor{charliteral}{'@'});
+40     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+41     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+42     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+43     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+44     \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&b,&s,\textcolor{charliteral}{'@'});
+45     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+46     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+47     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+48     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+49     \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&b,&s,\textcolor{charliteral}{'@'});
+50     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+51     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+52     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+53     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+54     printf(\textcolor{stringliteral}{"<<< test turn >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+55     \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&b,&s,-1,\textcolor{charliteral}{'@'});
+56     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+57     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+58     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+59     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+60     \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&b,&s,1,\textcolor{charliteral}{'@'});
+61     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+62     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+63     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+64     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+65     \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&b,&s,-1,\textcolor{charliteral}{'@'});
+66     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+67     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+68     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+69     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+70     \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&b,&s,1,\textcolor{charliteral}{'@'});
+71     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+72     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+73     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+74     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+75     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&b);
+76     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&s);
+77     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n<<< test choc\_wall >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+78     b=\hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(31,16);
+79     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&b,&s,5,\textcolor{charliteral}{'@'});
+80     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+81     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+82     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+83     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+84     \textcolor{keywordtype}{bool} test=\textcolor{keyword}{false};
+85     \textcolor{keywordflow}{while}(!test) \{
+86         \hyperlink{snakelib_8c_aa7c9d4fed2b3edb453a4501ba019dc00}{move}(&b,&s,\textcolor{charliteral}{'@'});
+87         test=\hyperlink{snakelib_8c_a50fa8a047abfa006a3371a94809e72c4}{choc\_wall}(&b,&s);
+88         printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+89         \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+90         printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+91         \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+92         \textcolor{keywordflow}{if}(test)
+93             printf(\textcolor{stringliteral}{"<<< choc\_wall=>true >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+94         \textcolor{keywordflow}{else}
+95             printf(\textcolor{stringliteral}{"<<< choc\_wall=>false >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+96     \}
+97     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&b);
+98     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&s);
+99     printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n\(\backslash\)n<<< test choc\_snake >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+100     b=\hyperlink{snakelib_8c_a9625331c000178d2cf90ef40d2a8fbf7}{board\_init}(31,16);
+101     \hyperlink{snakelib_8c_ac696fcc76930ea0badb2f263dd479c93}{snake\_init}(&b,&s,5,\textcolor{charliteral}{'@'});
+102     printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+103     \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+104     printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+105     \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+106     test=\textcolor{keyword}{false};
+107     \textcolor{keywordflow}{while}(!test) \{
+108         \hyperlink{snakelib_8c_afa428ecb4385e08a82520bec11bafe36}{turn}(&b,&s,-1,\textcolor{charliteral}{'@'});
+109         test=\hyperlink{snakelib_8c_ab96735ae82693727289ffe22fc940235}{choc\_snake}(&s,&s);
+110         printf(\textcolor{stringliteral}{"<<< snake\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+111         \hyperlink{snakelib_8c_a08f653b84e023db977cc57ff5fc8debf}{snake\_print}(&s);
+112         printf(\textcolor{stringliteral}{"<<< board\_print >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+113         \hyperlink{snakelib_8c_a34e4ffa89cbd5062286074398f897bcf}{board\_print}(&b);
+114         \textcolor{keywordflow}{if}(test)
+115             printf(\textcolor{stringliteral}{"<<< choc\_snake=>true >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+116         \textcolor{keywordflow}{else}
+117             printf(\textcolor{stringliteral}{"<<< choc\_snake=>false >>>\(\backslash\)n\(\backslash\)n\(\backslash\)n"});
+118     \}
+119     \hyperlink{snakelib_8c_a223ea5e585467eee652b6b3b7a59e0c9}{board\_free}(&b);
+120     \hyperlink{snakelib_8c_ae2b728ff11f9b12d88715ddef95639c9}{snake\_free}(&s);
+121     \textcolor{keywordflow}{return} 0;
+122 \}\end{DoxyCode}
+
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{unittesting_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+

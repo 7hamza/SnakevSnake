@@ -1,0 +1,11 @@
+<map id="board_get" name="board_get">
+<area shape="rect" id="node2" href="$client_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="143,56,213,83"/>
+<area shape="rect" id="node6" href="$snakelib_8h.html#ab4819fcf1df66683feca8ad73abd89dd" title="board_apple" alt="" coords="132,157,224,184"/>
+<area shape="rect" id="node10" href="$unittesting_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="286,208,337,235"/>
+<area shape="rect" id="node3" href="$client_8c.html#af424c7fd4c84203cddfb7230bbe15401" title="sdl_move" alt="" coords="272,5,351,32"/>
+<area shape="rect" id="node5" href="$client_8c.html#ace514d3ea0e685be64430b930ef23b46" title="sdl_turn" alt="" coords="277,56,345,83"/>
+<area shape="rect" id="node4" href="$client_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="399,44,449,71"/>
+<area shape="rect" id="node7" href="$snake_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="277,107,345,133"/>
+<area shape="rect" id="node9" href="$snake_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="272,157,351,184"/>
+<area shape="rect" id="node8" href="$snake_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="399,120,449,147"/>
+</map>

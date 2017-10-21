@@ -1,0 +1,7 @@
+<map id="exist_in_snake" name="exist_in_snake">
+<area shape="rect" id="node2" href="$schlangalib_8c.html#a2655a50383ab9680d1a3a72ea9de562d" title="schlanga_next_to" alt="" coords="163,31,287,57"/>
+<area shape="rect" id="node3" href="$schlangalib_8h.html#a28adbac02fbdf8816543c25878bfd81d" title="schlanga_ia" alt="" coords="335,31,425,57"/>
+<area shape="rect" id="node4" href="$schlanga_8c.html#ab6f22cbb52dc4a7603d7c42a3521a7c6" title="sdl_turn" alt="" coords="479,5,547,32"/>
+<area shape="rect" id="node6" href="$schlanga_8c.html#aa4bd8217532482639db456d8d6a59598" title="sdl_move" alt="" coords="473,56,552,83"/>
+<area shape="rect" id="node5" href="$schlanga_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="600,31,651,57"/>
+</map>

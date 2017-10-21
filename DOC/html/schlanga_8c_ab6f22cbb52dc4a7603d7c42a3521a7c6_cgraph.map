@@ -1,0 +1,21 @@
+<map id="sdl_turn" name="sdl_turn">
+<area shape="rect" id="node2" href="$snakelib_8c.html#afa428ecb4385e08a82520bec11bafe36" title="turn" alt="" coords="466,109,510,135"/>
+<area shape="rect" id="node6" href="$schlangalib_8c.html#a28adbac02fbdf8816543c25878bfd81d" title="schlanga_ia" alt="" coords="122,159,213,186"/>
+<area shape="rect" id="node14" href="$snakelib_8c.html#ab96735ae82693727289ffe22fc940235" title="test choc entre deux snake " alt="" coords="121,210,213,237"/>
+<area shape="rect" id="node15" href="$snakelib_8c.html#a50fa8a047abfa006a3371a94809e72c4" title="test choc snake contre le mur " alt="" coords="127,261,207,287"/>
+<area shape="rect" id="node16" href="$schlanga_8c.html#a2cfeae643e415db24e85db6c4994b071" title="sdl_print" alt="" coords="132,387,203,414"/>
+<area shape="rect" id="node3" href="$snakelib_8c.html#aa723bfe337f8108975b8d36292b422d1" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet de..." alt="" coords="593,109,674,135"/>
+<area shape="rect" id="node4" href="$snakelib_8c.html#a12954721537f652c82e9cf23c1bfb0c3" title="board_set" alt="" coords="594,159,673,186"/>
+<area shape="rect" id="node5" href="$snakelib_8c.html#a17492ac4841b98e25c682f9ff358ea2c" title="un snake est équivalent à une file d&#39;attente (FIFO « first in, first out »), cette fonction permet d&#39;..." alt="" coords="591,210,676,237"/>
+<area shape="rect" id="node7" href="$schlangalib_8c.html#a2655a50383ab9680d1a3a72ea9de562d" title="schlanga_next_to" alt="" coords="261,286,385,313"/>
+<area shape="rect" id="node9" href="$snakelib_8c.html#aa7c9d4fed2b3edb453a4501ba019dc00" title="move" alt="" coords="461,210,515,237"/>
+<area shape="rect" id="node10" href="$schlangalib_8c.html#a08f1c27d2a4dd425ca550057e8856240" title="schlanga_corner" alt="" coords="265,33,382,59"/>
+<area shape="rect" id="node11" href="$schlangalib_8c.html#a4cb830baa18247d13d465075c869d1d7" title="schlanga_bow" alt="" coords="271,83,376,110"/>
+<area shape="rect" id="node12" href="$schlangalib_8c.html#a5b8413626002409e9465985272966386" title="schlanga_wall" alt="" coords="271,185,375,211"/>
+<area shape="rect" id="node13" href="$schlangalib_8c.html#af3fdd05c8d6e18536c1f89f1814969d4" title="min_abs" alt="" coords="288,134,359,161"/>
+<area shape="rect" id="node8" href="$schlangalib_8c.html#a6c97e3271fe6b65bd31bdbaf03bf6b9c" title="exist_in_snake" alt="" coords="433,286,543,313"/>
+<area shape="rect" id="node17" href="$snakelib_8c.html#ab6926a5a512798dea6aa52f5f15ab8ad" title="taille x du plateau " alt="" coords="274,387,373,414"/>
+<area shape="rect" id="node18" href="$snakelib_8c.html#a01be021996158cf01e830b56e41be904" title="board_size_y" alt="" coords="274,438,373,465"/>
+<area shape="rect" id="node19" href="$snakelib_8c.html#ae49b60c78ec9b92e770c8eace9520447" title="return la valeur " alt="" coords="284,489,363,515"/>
+<area shape="rect" id="node20" href="$snakelib_8c.html#a34e4ffa89cbd5062286074398f897bcf" title="pour afficher un plateau " alt="" coords="280,337,367,363"/>
+</map>
